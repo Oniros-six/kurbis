@@ -1,0 +1,28 @@
+---
+import "../styles/rueda.css";
+---
+<a href="#" class="circle-container">
+  <div class="circle-text bg-white rounded-full"></div>
+  <div class="circle-center">
+    <img
+      src="/AustriaUruguay.svg"
+      alt="Banderas"
+      class="flags-icon"
+    />
+  </div>
+</a>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const texto = "BIENVENIDOS A KÜRBIS — WILLKOMMEN BEI KÜRBIS — ";
+    const contenedor = document.querySelector(".circle-text");
+    const totalChars = texto.length;
+    contenedor.style.setProperty("--total", totalChars);
+    texto.split("").forEach((char, idx) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.setProperty("--i", idx);
+      contenedor.appendChild(span);
+    });
+  });
+</script>
