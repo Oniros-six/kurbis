@@ -1,0 +1,140 @@
+---
+import { Menu, ChevronDown, X } from "lucide-react";
+import { NavbarDesktop } from "./NavbarDesktop";
+---
+
+<div class="w-full py-3">
+    <div
+        class="flex justify-between items-center w-full h-9 max-w-6xl mx-auto px-4"
+    >
+        <img
+            src="/logo.png"
+            alt="Kürbis"
+            class="w-10 z-40 mx-2 drop-shadow-lg"
+        />
+        <!-- Mobile Menu -->
+        <nav class="relative md:hidden">
+            <button
+                id="menuButton"
+                class="flex items-center space-x-2 text-sm font-medium cursor-pointer p-2 hover:bg-[#5b6841] rounded-lg transition-colors z-40 relative"
+                aria-expanded="false"
+            >
+                <div class="relative w-5 h-5">
+                    <Menu
+                        className="w-5 h-5 text-black absolute inset-0 transition-opacity duration-300"
+                        id="menuIcon"
+                    />
+                    <X
+                        className="w-5 h-5 text-white absolute inset-0 opacity-0 transition-opacity duration-300"
+                        id="closeIcon"
+                    />
+                </div>
+            </button>
+
+            <div
+                id="menuContent"
+                class="fixed inset-0 bg-gradient-to-b from-[#495334]/95 to-[#495334] translate-x-full transition-all duration-700 ease-in-out backdrop-blur-sm"
+            >
+                <div
+                    class="container mx-auto px-8 h-full flex flex-col justify-center"
+                >
+                    <div class="mx-auto space-y-6 text-white">
+                        <a
+                            href="/"
+                            class="text-2xl font-medium text-[#f19700] block relative group active:scale-95 transition-all duration-300"
+                        >
+                            <span class="relative z-10">Inicio</span>
+                            <span
+                                class="absolute inset-0 bg-[#f19700]/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"
+                            ></span>
+                        </a>
+                        <a
+                            href="/productos"
+                            class="text-2xl font-medium text-[#f19700] block relative group active:scale-95 transition-all duration-300"
+                        >
+                            <span class="relative z-10">Productos</span>
+                            <span
+                                class="absolute inset-0 bg-[#f19700]/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"
+                            ></span>
+                        </a>
+
+                        <div class="relative">
+                            <button
+                                class="flex items-center space-x-2 text-2xl font-medium text-[#f19700] relative group active:scale-95 transition-all duration-300 w-full"
+                                id="kurbisButton"
+                            >
+                                <span class="relative z-10">Kurbis</span>
+                                <ChevronDown
+                                    className="w-6 h-6 transition-transform duration-300"
+                                />
+                                <span
+                                    class="absolute inset-0 bg-[#f19700]/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"
+                                ></span>
+                            </button>
+                            <div
+                                id="kurbisSubmenu"
+                                class="absolute top-full left-0 hidden opacity-0 transform scale-95 transition-all duration-300 ease-in-out ml-4 bg-[#495334]/80 backdrop-blur-sm rounded-lg p-4"
+                            >
+                                <a
+                                    href="/mision"
+                                    class="text-xl font-medium text-white block py-2 relative group active:scale-95 transition-all duration-300"
+                                >
+                                    <span class="relative z-10">Misión</span>
+                                    <span
+                                        class="absolute inset-0 bg-white/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"
+                                    ></span>
+                                </a>
+                                <a
+                                    href="/sostenibilidad"
+                                    class="text-xl font-medium text-white block py-2 relative group active:scale-95 transition-all duration-300"
+                                >
+                                    <span class="relative z-10"
+                                        >Sostenibilidad</span
+                                    >
+                                    <span
+                                        class="absolute inset-0 bg-white/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"
+                                    ></span>
+                                </a>
+                                <a
+                                    href="/nosotros"
+                                    class="text-xl font-medium text-white block py-2 relative group active:scale-95 transition-all duration-300"
+                                >
+                                    <span class="relative z-10">Nosotros</span>
+                                    <span
+                                        class="absolute inset-0 bg-white/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"
+                                    ></span>
+                                </a>
+                            </div>
+                        </div>
+                        <a
+                            href="/recetas"
+                            class="text-2xl font-medium text-[#f19700] block relative group active:scale-95 transition-all duration-300"
+                            id="recetasLink"
+                        >
+                            <span class="relative z-10">Recetas</span>
+                            <span
+                                class="absolute inset-0 bg-[#f19700]/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"
+                            ></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden md:flex w-full items-center justify-center">
+            <NavbarDesktop client:load />
+        </div>
+    </div>
+
+    <style>
+        @keyframes shimmer {
+            0% {
+                background-position: -100% 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+    </style>
+
+    <script src="../scripts/navbar.ts"></script>
+</div>
