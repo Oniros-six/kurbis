@@ -74,6 +74,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Kurbis color palette - User Defined */
+  --color-primario: #d35806;
+  --color-secundario: #424f34;
+  --color-complementario: #ffca68;
+
+  /* Original Kurbis design colors from navbar mobile */
+  --kurbis-accent-orange: #f19700;   /* Was text-[#f19700], bg-[#f19700]/10 */
+  --kurbis-hover-green: #5b6841;     /* Was hover:bg-[#5b6841] */
+  --kurbis-gradient-green: #495334;  /* Was from-[#495334]/95, to-[#495334], bg-[#495334]/80 */
 }
 
 .dark {
