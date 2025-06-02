@@ -12,7 +12,7 @@ import {
 export function NavbarDesktop() {
 
     return (
-        <NavigationMenu>
+        <NavigationMenu viewport={false}>
             <NavigationMenuList>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild>
