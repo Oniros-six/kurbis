@@ -9,6 +9,7 @@ const menuContent = document.getElementById("menuContent");
 const kurbisButton = document.getElementById("kurbisButton");
 const kurbisSubmenu = document.getElementById("kurbisSubmenu");
 const recetasLink = document.getElementById("recetasLink") as HTMLElementWithStyle | null;
+const comprarOnlineButton = document.getElementById("comprarOnlineButton") as HTMLElementWithStyle | null;
 const menuIcon = document.getElementById("menuIcon");
 const closeIcon = document.getElementById("closeIcon");
 const chevronIcon = kurbisButton?.querySelector("svg");
@@ -51,6 +52,9 @@ function openSubmenu(): void {
         if (recetasLink) {
             recetasLink.style.transform = `translateY(${displacement}px)`;
         }
+        if (comprarOnlineButton) {
+            comprarOnlineButton.style.transform = `translateY(${displacement}px)`;
+        }
     });
     chevronIcon?.classList.add("rotate-180");
     isSubmenuOpen = true;
@@ -64,6 +68,9 @@ function closeSubmenu(): void {
     kurbisSubmenu.classList.add("opacity-0", "-translate-y-2");
     if (recetasLink) {
         recetasLink.style.transform = "translateY(0)";
+    }
+    if (comprarOnlineButton) {
+        comprarOnlineButton.style.transform = "translateY(0)";
     }
     chevronIcon?.classList.remove("rotate-180");
     setTimeout(() => {
