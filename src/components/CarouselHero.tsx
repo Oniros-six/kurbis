@@ -19,11 +19,12 @@ export function CarouselHero() {
       }}
       plugins={[plugin]}
       >
-      <CarouselContent className="static h-[28vh] md:h-[40vh] lg:h-[50vw] xl:h-[92vh] ">
+      <CarouselContent className="static h-[28vh] md:h-[40vh] lg:h-[50vw] xl:h-[92vh] 2xl:h-[95vh]">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="w-full">
                 <img src={`/carousel/slider${index}.webp`} alt="Austria Uruguay" className="w-full object-cover" />
+                {/* // TODO Agregar un texto con un div de color verde pero con transparencia */}
             </div>
           </CarouselItem>
         ))}
