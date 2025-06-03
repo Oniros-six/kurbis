@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel"
 
 export function CarouselHero() {
-  //TODO Deshardcodear el numero de slides
+  // TODO Deshardcodear el numero de slides
   const totalSlides = 4;
   const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
   return (
@@ -29,7 +29,7 @@ export function CarouselHero() {
         ))}
       </CarouselContent>
 
-      // TODO Asegurarme que no les importe si los manejadores no se ven
+      {/* // TODO Asegurarme que no les importe si los manejadores no se ven */}
       <div className="flex justify-center -mt-10">
         <CarouselPrevious
           className="static translate-y-0 mr-2 hover:bg-primary hover:text-white transition-colors hidden"
