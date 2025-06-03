@@ -5,7 +5,7 @@ import Button from "./Button";
 ---
 
 <div
-    class="flex justify-end md:justify-center items-center w-full h-9 max-w-6xl mx-auto px-4 md:mt-3"
+    class="flex justify-end md:justify-center items-center w-full h-9 max-w-6xl mx-auto px-4 md:my-2"
 >
     <img
         src="/logo.png"
@@ -21,11 +21,11 @@ import Button from "./Button";
         >
             <div class="relative w-5 h-5">
                 <Menu
-                    className="w-7 h-7 text-black absolute inset-0 transition-opacity duration-300"
+                    className="w-7 h-7 text-black absolute inset-0 transition-opacity duration-300 m-auto"
                     id="menuIcon"
                 />
                 <X
-                    className="w-7 h-7 text-white absolute inset-0 opacity-0 transition-opacity duration-300"
+                    className="w-7 h-7 text-white absolute inset-0 opacity-0 transition-opacity duration-300 m-auto"
                     id="closeIcon"
                 />
             </div>
@@ -33,7 +33,7 @@ import Button from "./Button";
 
         <div
             id="menuContent"
-            class="fixed inset-0 bg-gradient-to-b from-[var(--kurbis-gradient-green)]/95 to-[var(--kurbis-gradient-green)] translate-x-full transition-all duration-700 ease-in-out backdrop-blur-sm"
+            class="fixed inset-0 bg-gradient-to-b from-[var(--kurbis-gradient-green)]/95 to-[var(--kurbis-gradient-green)] translate-x-full transition-all duration-700 ease-in-out backdrop-blur-sm z-10"
         >
             <div
                 class="container mx-auto px-8 h-full flex flex-col justify-center"

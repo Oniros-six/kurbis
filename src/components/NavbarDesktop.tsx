@@ -29,7 +29,7 @@ export function NavbarDesktop() {
 
                 <NavigationMenuItem >
                     <NavigationMenuTrigger className="text-lg font-medium hover:bg-[var(--color-complementario)] data-[state=open]:bg-[var(--color-complementario)] data-[state=open]:hover:bg-[var(--color-complementario)] data-[state=open]:focus:bg-[var(--color-complementario)]">Kurbis</NavigationMenuTrigger>
-                    <NavigationMenuContent >
+                    <NavigationMenuContent className="z-10">
                         <NavigationMenuLink className="text-md hover:bg-[var(--color-complementario)]">
                             <a href="/mision">Mision</a>
                         </NavigationMenuLink>
