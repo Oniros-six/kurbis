@@ -8,37 +8,78 @@ import {
 } from "@/components/ui/carousel"
 
 export function CarouselHero() {
-  // TODO Deshardcodear el numero de slides
-  const totalSlides = 4;
+  // TODO Contenido esta hardcodeado, cuando se haga el cms lo deshardcodeo
+  // TODO buscar imagenes que tengan la resolucion correcta
+  const contenido = [
+    {
+      imagen: "/carousel/slider1.webp",
+      titulo: "el 'oro' verde de austria",
+      subtitulo: "- Ahora en Uruguay -",
+    },
+    // TODO Encontrar la foto correcta
+    {
+      imagen: "/carousel/slider2.webp",
+      titulo: "El Rey del bienestar y la salud",
+      subtitulo: "",
+    },
+    {
+      imagen: "/carousel/slider0.webp",
+      titulo: "Un patrimonio biológico & cultural",
+      subtitulo: "- Desde Austria a Uruguay -",
+    },
+    // TODO Encontrar la foto correcta
+    {
+      imagen: "/carousel/slider3.webp",
+      titulo: "El regalo ideal",
+      subtitulo: "- Para los amantes de lo saludable y gourmet -",
+    },
+  ]
+  const totalSlides = contenido.length;
   const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
   return (
     <Carousel
-      opts={{
-        loop: true,
-        align: "start",
-      }}
-      plugins={[plugin]}
-      >
-      <CarouselContent className="static h-[28vh] md:h-[40vh] lg:h-[50vw] xl:h-[92vh] 2xl:h-[95vh]">
-        {Array.from({ length: totalSlides }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="w-full">
-                <img src={`/carousel/slider${index}.webp`} alt="Austria Uruguay" className="w-full object-cover" />
-                {/* // TODO Agregar un texto con un div de color verde pero con transparencia */}
+    opts={{ loop: true, align: "start" }}
+    plugins={[plugin]}
+  >
+    <CarouselContent className="xl:h-[92vh] 2xl:h-[95vh] aspect-video xl:aspect-auto">
+      {contenido.map((item, index) => (
+        <CarouselItem key={index}>
+          {/* Contenedor relativo para que el overlay se posicione sobre él */}
+          <div className="w-full relative">
+              <img src={contenido[index].imagen} alt="Austria Uruguay" className="w-full object-cover" />
+            
+            {/* Overlay centrado */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className="bg-[var(--color-secundario)]/50 backdrop-blur-xs rounded-lg p-4 sm:p-6 md:p-8
+                w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]
+                max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl
+                text-center"
+              >
+                <h2
+                  className="text-white text-base sm:text-lg md:text-xl lg:text-2xl 
+                  font-bold uppercase mb-2 leading-tight"
+                >
+                  {item.titulo}
+                </h2>
+                <p
+                  className="text-white text-sm sm:text-base md:text-lg 
+                  font-bold leading-relaxed break-words"
+                >
+                  {item.subtitulo}
+                </p>
+              </div>
             </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-
-      {/* // TODO Asegurarme que no les importe si los manejadores no se ven */}
-      <div className="flex justify-center -mt-10">
-        <CarouselPrevious
-          className="static translate-y-0 mr-2 hover:bg-primary hover:text-white transition-colors hidden"
-        />
-        <CarouselNext
-          className="static translate-y-0 ml-2 hover:bg-primary hover:text-white transition-colors hidden"
-        />
-      </div>
-    </Carousel>
+          </div>
+        </CarouselItem>
+      ))}
+    </CarouselContent>
+  
+    <div className="flex justify-center -mt-10">
+      <CarouselPrevious className="static translate-y-0 mr-2 hover:bg-primary hover:text-white transition-colors hidden" />
+      <CarouselNext className="static translate-y-0 ml-2 hover:bg-primary hover:text-white transition-colors hidden" />
+    </div>
+  </Carousel>
+  
   )
 }
