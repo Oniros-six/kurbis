@@ -1,11 +1,4 @@
-/* 1) Definimos variables por defecto para el tamaño del círculo */
-.circle-container {
-    position: relative;
-    width: 17rem;   /* Ajusta a tu gusto */
-    height: 17rem;  /* Ajusta a tu gusto */
-    display: inline-block;
-  }
-  
+
   /* 2) El contenedor de texto circular:
      - relative para que los hijos <span> puedan posicionarse respecto a su centro.
      - establecemos un ancho y alto idéntico (100% de .circle-container).
@@ -46,22 +39,6 @@
             user-select: none;      /* Para que no se pueda seleccionar letra por letra */
             color: #374151;         /* Color de las letras */
           }
-          
-  /* 4) El contenido centrado (banderas) debe estar encima, sin rotar */
-  .circle-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 30%;
-    height: 30%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;       /* Para que no interfiera con clicks */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;                /* Asegura que quede por encima del texto */
-  }
-  
   
   /* 5) Animación que rota todo el contenedor .circle-text  */
   @keyframes rotateCircle {
@@ -69,3 +46,27 @@
     to     { transform: rotate(360deg); }
   }
   
+  @media (max-width: 640px) {
+    .circle-text span {
+      transform: rotate(var(--rotate-deg)) translateY(-3.8rem);
+      font-size: 0.6rem
+    }
+  }
+  @media (min-width: 641px) and (max-width: 767px) {
+    .circle-text span {
+      transform: rotate(var(--rotate-deg)) translateY(-5rem);
+      font-size: 0.6rem
+    }
+  }
+  
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .circle-text span {
+      transform: rotate(var(--rotate-deg)) translateY(-6.5rem);
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .circle-text span {
+      transform: rotate(var(--rotate-deg)) translateY(-8.5rem);
+    }
+  }
