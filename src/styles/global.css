@@ -84,6 +84,7 @@
   --color-primario: #d35806;
   --color-secundario: #424f34;
   --color-complementario: #ffca68;
+  --color-background: #f5f5dc;
 
   /* Original Kurbis design colors from navbar mobile */
   --kurbis-accent-orange: #f19700;   /* Was text-[#f19700], bg-[#f19700]/10 */
