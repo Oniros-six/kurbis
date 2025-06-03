@@ -34,7 +34,7 @@ export function CarouselHero() {
       subtitulo: "- Para los amantes de lo saludable y gourmet -",
     },
   ]
-  const totalSlides = contenido.length;
+  
   const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
   return (
     <Carousel
