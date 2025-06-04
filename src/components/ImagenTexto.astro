@@ -7,11 +7,8 @@ const {
   srcProduct,
   altProduct,
   title,
-  description,
   buttonText,
   buttonLink,
-  textButtonText,
-  textButtonLink,
 } = Astro.props;
 ---
 
@@ -27,12 +24,12 @@ const {
   <div class="absolute inset-0 flex items-center justify-end p-2 sm:p-4 md:p-6">
     <div class="w-full flex flex-col items-center justify-center">
       <h1
-        class="text-nowrap font-bold text-xl md:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 lg:mb-6"
+        class="text-nowrap text-[var(--color-text-green)] font-bold text-xl md:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 lg:mb-6"
       >
         {title}
       </h1>
       <div
-        class="flex self-end min-[480px]:self-center sm:self-end min-[769px]:self-center lg:self-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 max-w-[15rem] xs:max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl"
+        class="flex self-end min-[310px]:self-center md:self-center lg:self-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 max-w-[15rem] xs:max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl"
       >
         {/* Product image - left side always */}
         <img
@@ -42,18 +39,8 @@ const {
         />
 
         {/* Text content - right side */}
-        <div class="text-black text-center justify-items-center xs:ml-8 xs:mr-3 mt-8">
-          <p
-            class="text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
-          >
-            {description}
-            <a
-              href={textButtonLink}
-              class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block"
-            >
-              {textButtonText}
-            </a>
-          </p>
+        <div class="text-[var(--color-text-green)] font-medium text-center justify-items-center min-[310px]:ml-12 xs:mr-3  mt-8 sm:ml-10 md:ml-16 ">
+            <slot name="description" />
 
           {/* Button */}
           <Button

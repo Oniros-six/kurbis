@@ -22,15 +22,30 @@ import ImagenTexto from "../components/ImagenTexto.astro";
       <ImagenTexto
         srcBackground="/img/marmol-1.webp"
         altBackground="Marble background"
-		srcProduct="/img/oil-bottle.webp"
-		altProduct="Oil bottle"
+        srcProduct="/img/oil-bottle.webp"
+        altProduct="Oil bottle"
         title="Aceite de Semillas de Zapallo"
-        description="El color verde oscuro con matices rojos de este aceite extra virgen sin filtrar, su exquisito aroma, su alto valor nutricional por su elevado contenido de ácidos grasos insaturados, omega 3 + omega 6 +  omega 9 de 10 mg por porción, su buen aporte en Magnesio, Zinc, Hierro, Potasio, Vitamina E, polifenoles, fitoesteroles y otros antioxidantes y su sabor almendrado y delicado, lo hacen único!. "
         buttonText="Comprar"
         buttonLink="/#"
-        textButtonText="Saber más →"
-        textButtonLink="/#"
-      />
+      >
+        <p
+          class="text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
+          slot="description"
+        >
+          El color verde oscuro con matices rojos de este aceite extra virgen
+          sin filtrar, su exquisito aroma, su alto valor nutricional por su
+          elevado contenido de ácidos grasos insaturados, <span
+            class="font-bold"
+            >omega 3 + omega 6 + omega 9 de 10 mg por porción</span
+          >, su buen aporte en Magnesio, Zinc, Hierro.
+          <a
+            href="/#"
+            class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block"
+          >
+            Saber más →
+          </a>
+        </p>
+      </ImagenTexto>
     </Layout>
   </body>
 </html>
