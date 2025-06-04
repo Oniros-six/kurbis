@@ -2,7 +2,7 @@
 import Hero from "../components/IndexComponents/Hero.astro";
 import Layout from "../layouts/layout.astro";
 import Recuadro from "../components/IndexComponents/Recuadro.astro";
-import ImagenTexto from "../components/ImagenTexto.astro";
+import ImageText from "@/components/ImageText.astro";
 ---
 
 <html lang="es">
@@ -19,15 +19,21 @@ import ImagenTexto from "../components/ImagenTexto.astro";
       <Recuadro
         texto="Aceite; puro, oscuro, sabroso, versátil y extraordinariamente saludable"
       />
-      <ImagenTexto
+      <ImageText
         srcBackground="/img/marmol-1.webp"
         altBackground="Marble background"
         srcProduct="/img/oil-bottle.webp"
         altProduct="Oil bottle"
-        title="Aceite de Semillas de Zapallo"
         buttonText="Comprar"
         buttonLink="/#"
+        productHeight="h-100 md:h-150"
       >
+        <h1
+          class="text-[var(--color-text-green)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
+          slot="title"
+        >
+          Aceite de Semillas de Zapallo
+        </h1>
         <p
           class="text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
           slot="description"
@@ -45,7 +51,50 @@ import ImagenTexto from "../components/ImagenTexto.astro";
             Saber más →
           </a>
         </p>
-      </ImagenTexto>
+      </ImageText>
+      <div>
+        <img
+          src="/carousel/slider1.webp"
+          alt="Aceite de Semillas de Zapallo"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <Recuadro
+        texto="Alimento; real, plant based, sabroso, versátil e increíblemente nutritivo"
+      />
+      <ImageText
+        srcBackground="/img/marmol-1.webp"
+        altBackground="Marble background"
+        srcProduct="/img/pack-protein.webp"
+        altProduct="Proteina pack"
+        buttonText="Comprar"
+        buttonLink="/#"
+        productHeight="h-auto"
+      >
+        <h1
+          class="text-[var(--color-text-green)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
+          slot="title"
+        >
+          Alimento vegetal de Semillas de Zapallo<br />Pumpkin Seed Plant Food
+        </h1>
+        <p
+          class="text-[var(--color-text-green)] text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
+          slot="description"
+        >
+          Por su excelente proteína vegetal de más de 20% por porción con los 9
+          aminoácidos esenciales y un apreciado contenido de triptófano, por el
+          aporte en Magnesio, Zinc, Potasio y Hierro, por ser una increíble
+          fuente de fibra, vitamina E, fitoesteroles y otros antioxidantes, por
+          la presencia de ácidos grasos insaturados, por su bajo contenido en
+          carbohidratos y por su fino sabor, es único!
+          <a
+            href="/#"
+            class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block"
+          >
+            Saber más →
+          </a>
+        </p>
+      </ImageText>
     </Layout>
   </body>
 </html>
