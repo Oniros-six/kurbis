@@ -4,6 +4,7 @@ import Layout from "../layouts/layout.astro";
 import Recuadro from "../components/IndexComponents/Recuadro.astro";
 import ImageText from "@/components/ImageText.astro";
 import Offer from "../components/Offer.astro";
+import Suscription from "../components/IndexComponents/Suscription.astro";
 ---
 
 <html lang="es">
@@ -117,26 +118,27 @@ import Offer from "../components/Offer.astro";
 
       {/* Responsive Grid */}
       <div class="min-h-screen p-4">
-          <div
-            class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center"
-          >
-            <Offer
-              image="/img/pack-protein-offer2.webp"
-              title="Duo Wellness"
-              description="Comprando el Dúo, llevás de regalo el 50% del Alimento Vegetal Kürbis."
-            />
-            <Offer
-              image="/img/pack-protein-offer2.webp"
-              title="Super Vital"
-              description="Comprando 2 Alimentos Vegetal Kürbis, llevás de obsequio el 50% del tercero"
-            />
-            <Offer
-              image="/img/pack-protein-offer2.webp"
-              title="Sabores de Austria"
-              description="Comprando 6 botellas de Aceite Kürbis, tenés 1 botella de Aceite Kürbis de regalo."
-            />
-          </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center"
+        >
+          <Offer
+            image="/img/pack-protein-offer2.webp"
+            title="Duo Wellness"
+            description="Comprando el Dúo, llevás de regalo el 50% del Alimento Vegetal Kürbis."
+          />
+          <Offer
+            image="/img/pack-protein-offer2.webp"
+            title="Super Vital"
+            description="Comprando 2 Alimentos Vegetal Kürbis, llevás de obsequio el 50% del tercero"
+          />
+          <Offer
+            image="/img/pack-protein-offer2.webp"
+            title="Sabores de Austria"
+            description="Comprando 6 botellas de Aceite Kürbis, tenés 1 botella de Aceite Kürbis de regalo."
+          />
         </div>
+      </div>
+      <Suscription />
     </Layout>
   </body>
 </html>
