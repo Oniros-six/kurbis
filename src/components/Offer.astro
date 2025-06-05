@@ -1,4 +1,6 @@
 ---
+import ButtonBasic from "./ButtonBasic.astro"
+
 const {
     title,
     description,
@@ -25,14 +27,6 @@ const {
         </div>
 
         {/* Button */}
-        <button
-          class="w-fit self-center bg-[var(--color-secundario)] hover:bg-[var(--color-pumpkin)] text-white font-semibold 
-                     py-3 px-8 rounded-full transition-all duration-200 
-                     transform hover:scale-105 active:scale-95
-                     focus:outline-none focus:ring-2 focus:ring-[#4A5D3A] focus:ring-opacity-50
-                     shadow-md hover:shadow-lg"
-        >
-          Comprar
-        </button>
+        <ButtonBasic text="Comprar" color="--color-secundario" hoverColor="--color-pumpkin"/>
       </div>
     </div>
