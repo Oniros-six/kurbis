@@ -85,8 +85,9 @@
   --color-secundario: #424f34;
   --color-complementario: #ffca68;
   --color-background: #f5f5dc;
-  --color-text-green: #424f34;
-
+  --color-background-golden: #edb86b;
+  --color-background-beige: #f5f5dc;
+  
   /* Original Kurbis design colors from navbar mobile */
   --kurbis-accent-orange: #f19700;   /* Was text-[#f19700], bg-[#f19700]/10 */
   --kurbis-hover-green: #5b6841;     /* Was hover:bg-[#5b6841] */

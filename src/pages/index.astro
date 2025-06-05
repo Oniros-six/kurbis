@@ -3,6 +3,7 @@ import Hero from "../components/IndexComponents/Hero.astro";
 import Layout from "../layouts/layout.astro";
 import Recuadro from "../components/IndexComponents/Recuadro.astro";
 import ImageText from "@/components/ImageText.astro";
+import Offer from "../components/Offer.astro";
 ---
 
 <html lang="es">
@@ -16,7 +17,9 @@ import ImageText from "@/components/ImageText.astro";
   <body>
     <Layout title="Kürbis">
       <Hero />
-      <Recuadro texto="Aceite; puro, oscuro, sabroso, versátil y extraordinariamente saludable" />
+      <Recuadro
+        texto="Aceite; puro, oscuro, sabroso, versátil y extraordinariamente saludable"
+      />
       <ImageText
         srcBackground="/img/marmol-1.webp"
         altBackground="Marble background"
@@ -24,9 +27,10 @@ import ImageText from "@/components/ImageText.astro";
         altProduct="Oil bottle"
         buttonText="Comprar"
         buttonLink="/#"
-        productHeight="h-100 md:h-150">
+        productHeight="h-100 md:h-150"
+      >
         <h1
-          class="text-[var(--color-text-green)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
+          class="text-[var(--color-secundario)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
           slot="title"
         >
           Aceite de Semillas de Zapallo
@@ -56,7 +60,9 @@ import ImageText from "@/components/ImageText.astro";
           class="w-full h-full object-cover"
         />
       </div>
-      <Recuadro texto="Alimento; real, plant based, sabroso, versátil e increíblemente nutritivo"/>
+      <Recuadro
+        texto="Alimento; real, plant based, sabroso, versátil e increíblemente nutritivo"
+      />
       <ImageText
         srcBackground="/img/marmol-1.webp"
         altBackground="Marble background"
@@ -64,15 +70,16 @@ import ImageText from "@/components/ImageText.astro";
         altProduct="Proteina pack"
         buttonText="Comprar"
         buttonLink="/#"
-        productHeight="h-auto">
+        productHeight="h-auto"
+      >
         <h1
-          class="text-[var(--color-text-green)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
+          class="text-[var(--color-secundario)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
           slot="title"
         >
           Alimento vegetal de Semillas de Zapallo<br />Pumpkin Seed Plant Food
         </h1>
         <p
-          class="text-[var(--color-text-green)] text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
+          class="text-[var(--color-secundario)] text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
           slot="description"
         >
           Por su excelente proteína vegetal de más de 20% por porción con los 9
@@ -90,15 +97,46 @@ import ImageText from "@/components/ImageText.astro";
         </p>
       </ImageText>
       <div class="w-full h-auto">
-      <img
-      src="/img/proteina-vaso.webp"
-      alt="proteina en un vaso"
-      class="w-full aspect-video"
-      />
+        <img
+          src="/img/proteina-vaso.webp"
+          alt="proteina en un vaso"
+          class="w-full aspect-video"
+        />
       </div>
 
-      <h2 class="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[var(--color-text-green)] font-bold uppercase mt-6 mb-0 text-center">Disfrutá nuestras exclusivas oportunidades</h2>
-      <h3 class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[var(--color-text-green)] font-medium mt-2 mb-4 text-center">— Compartí Sabor y Bienestar —</h3>
+      <h2
+        class="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[var(--color-secundario)] font-bold uppercase mt-20 mb-0 text-center"
+      >
+        Disfrutá nuestras exclusivas oportunidades
+      </h2>
+      <h3
+        class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[var(--color-secundario)] font-medium mt-2 mb-4 text-center"
+      >
+        — Compartí Sabor y Bienestar —
+      </h3>
+
+      {/* Responsive Grid */}
+      <div class="min-h-screen p-4">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center"
+          >
+            <Offer
+              image="/img/pack-protein-offer2.webp"
+              title="Duo Wellness"
+              description="Comprando el Dúo, llevás de regalo el 50% del Alimento Vegetal Kürbis."
+            />
+            <Offer
+              image="/img/pack-protein-offer2.webp"
+              title="Super Vital"
+              description="Comprando 2 Alimentos Vegetal Kürbis, llevás de obsequio el 50% del tercero"
+            />
+            <Offer
+              image="/img/pack-protein-offer2.webp"
+              title="Sabores de Austria"
+              description="Comprando 6 botellas de Aceite Kürbis, tenés 1 botella de Aceite Kürbis de regalo."
+            />
+          </div>
+        </div>
     </Layout>
   </body>
 </html>
