@@ -11,12 +11,14 @@ const { title } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
     </head>
-    <body class="bg-[var(--color-background)]">
-        <main class="bg-white">
+    <body class="bg-[var(--color-background-beige)]">
+        <section class="bg-white ">
             <InfoBar
                 message='Disfrutá nuestras exclusivas oportunidades! Visitá <a href="https://tienda.kurbis.com" class="underline hover:no-underline">tienda.kurbis.com</a>'
             />
             <Navbar />
+        </section>
+        <main class="bg-[var(--color-background-beige)]">
             <slot />
         </main>
     </body>
