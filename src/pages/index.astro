@@ -5,6 +5,7 @@ import Recuadro from "../components/IndexComponents/Recuadro.astro";
 import ImageText from "@/components/ImageText.astro";
 import Offer from "../components/Offer.astro";
 import Suscription from "../components/IndexComponents/Suscription.astro";
+import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.astro";
 ---
 
 <html lang="es">
@@ -137,9 +138,23 @@ import Suscription from "../components/IndexComponents/Suscription.astro";
             description="Comprando 6 botellas de Aceite Kürbis, tenés 1 botella de Aceite Kürbis de regalo."
           />
         </div>
-        <div class="w-fit bg-[var(--color-pumpkin)] font-medium xs:text-lg sm:text-2xl text-white mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto">Promociones por tiempo limitado</div>
+        <div
+          class="w-fit bg-[var(--color-pumpkin)] font-medium xs:text-lg sm:text-2xl text-white mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto"
+        >
+          Promociones por tiempo limitado
+        </div>
       </div>
       <Suscription />
+      <div class="min-h-screen p-4">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 place-items-center"
+        >
+        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Quienes somos" descripcion="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
+        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Misión" descripcion="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
+        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Sostenibilidad" descripcion="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
+        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Nuestros productos" descripcion="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
+        </div>
+      </div>
     </Layout>
   </body>
 </html>
