@@ -5,12 +5,12 @@ import Button from "./Button";
 ---
 
 <div
-    class="flex justify-end md:justify-center items-center w-full h-9 max-w-6xl mx-auto px-4 md:py-5"
+    class="flex justify-end md:justify-center items-center w-full h-9 mx-auto px-4 md:py-5 sticky top-0 z-70 bg-white"
 >
     <img
         src="/logo.png"
         alt="Kürbis"
-        class="w-14 md:w-16 lg:w-18 z-40 mx-2 absolute left-5 top-10.5 sm:top-8"
+        class="w-14 md:w-16 lg:w-18 z-40 mx-2 absolute left-5 top-7 sm:top-7.5   "
     />
     <!-- Mobile Menu -->
     <nav class="relative md:hidden">
@@ -129,7 +129,7 @@ import Button from "./Button";
     <Button
         className="hidden md:flex absolute right-5  hover:from-[var(--color-secundario)] hover:via-[var(--color-secundario)] hover:to-[var(--color-secundario)] hover:scale-105 transition-all duration-300 ease-in-out items-center group gap-2"
     >
-        <a href="#">Comprar Online</a> <ArrowRight
+        <a href="#">Comprar</a> <ArrowRight
             className="w-4 h-4 stroke-3"
         />
     </Button>
