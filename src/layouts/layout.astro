@@ -1,7 +1,7 @@
 ---
 import Footer from "@/components/Footer.astro";
-import InfoBar from "../components/infoBar.astro";
-import Navbar from "../components/navbar.astro";
+import InfoBar from "../components/InfoBar.astro";
+import Navbar from "../components/Navbar.astro";
 import "../styles/global.css";
 const { title } = Astro.props;
 ---
@@ -13,7 +13,7 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body class="bg-[var(--color-background-beige)]">
-        <section class="bg-white ">
+        <section class="bg-white">
             <InfoBar
                 message='Disfrutá nuestras exclusivas oportunidades! Visitá <a href="https://tienda.kurbis.com" class="underline hover:no-underline">tienda.kurbis.com</a>'
             />
@@ -22,6 +22,6 @@ const { title } = Astro.props;
         <main class="bg-[var(--color-background-beige)]">
             <slot />
         </main>
-        <Footer/>
+        <Footer />
     </body>
 </html>
