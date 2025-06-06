@@ -1,4 +1,9 @@
 ---
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Phone, Clock, MessageCircle } from "lucide-react";
 import Layout from "../layouts/layout.astro";
 ---
 
@@ -12,7 +17,172 @@ import Layout from "../layouts/layout.astro";
   </head>
   <body>
     <Layout title="Kürbis - Contacto">
-        
+      <div
+        class="min-h-screen"
+      >
+        <div class="max-w-6xl mx-auto px-6 py-12 lg:px-8">
+          {/* Header Section */}
+          <div class="text-center mb-16">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-full mb-6"
+            >
+              <MessageCircle className="w-8 h-8 text-white" />
+            </div>
+            <h1
+              class="text-4xl lg:text-5xl font-bold mb-4"
+            >
+              Dejanos un mensaje.
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto italic">
+              Comunicate directamente con nosotros a través del siguiente
+              formulario
+            </p>
+          </div>
+
+          {/* Contact Form */}
+          <div class="max-w-5xl mx-auto mb-16">
+            <div
+              class="bg-gradient-to-br from-green-700 to-[var(--color-secundario)] rounded-3xl p-8 lg:p-12 shadow-2xl"
+            >
+              <form class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Left Column */}
+                <div class="space-y-6">
+                  <div>
+                    <Label
+                      htmlFor="nombre"
+                      className="text-white text-lg font-medium mb-3 block"
+                    >
+                      Nombre
+                    </Label>
+                    <Input
+                      id="nombre"
+                      type="text"
+                      className="h-12 bg-white border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-pumpkin)] focus:ring-offset-2 focus:ring-offset-green-700"
+                      placeholder="Tu nombre completo"
+                    />
+                  </div>
+
+                  <div>
+                    <Label
+                      htmlFor="email"
+                      className="text-white text-lg font-medium mb-3 block"
+                    >
+                      Email
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      className="h-12 bg-white border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-pumpkin)] focus:ring-offset-2 focus:ring-offset-green-700"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+
+                  <div>
+                    <Label
+                      htmlFor="telefono"
+                      className="text-white text-lg font-medium mb-3 block"
+                    >
+                      Nro de Teléfono
+                    </Label>
+                    <Input
+                      id="telefono"
+                      type="tel"
+                      className="h-12 bg-white border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-pumpkin)] focus:ring-offset-2 focus:ring-offset-green-700"
+                      placeholder="094 123 456"
+                    />
+                  </div>
+                </div>
+
+                {/* Right Column */}
+                <div class="space-y-6">
+                  <div class="h-full flex flex-col">
+                    <Label
+                      htmlFor="mensaje"
+                      className="text-white text-lg font-medium mb-3 block"
+                    >
+                      Mensaje
+                    </Label>
+                    <Textarea
+                      id="mensaje"
+                      className="flex-1 min-h-[200px] lg:min-h-[280px] bg-white border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-pumpkin)] focus:ring-offset-2 focus:ring-offset-green-700 resize-none"
+                      placeholder="Escribe tu mensaje aquí..."
+                    />
+
+                    <div class="mt-6 flex justify-end">
+                      <Button
+                        type="submit"
+                        className="bg-gradient-to-r from-orange-400 to-amber-500 hover:from-orange-500 hover:to-amber-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+                      >
+                        Enviar Mensaje
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          {/* Information Section */}
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Respuestas Inmediatas */}
+            <div
+              class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300"
+            >
+              <div class="flex items-center gap-4 mb-6">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center"
+                >
+                  <MessageCircle className="w-6 h-6 text-white" />
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">
+                  Respuestas inmediatas
+                </h3>
+              </div>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Consultá la página de{" "}
+                <span
+                  class="font-semibold text-green-700 underline decoration-green-300 hover:decoration-green-500 cursor-pointer transition-colors"
+                >
+                  Preguntas Frecuentes
+                </span>{" "}
+                para obtener respuestas a las consultas más asiduas.
+              </p>
+            </div>
+
+            {/* Servicio al Cliente */}
+            <div
+              class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300"
+            >
+              <div class="flex items-center gap-4 mb-6">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-orange-400 to-amber-500 rounded-full flex items-center justify-center"
+                >
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">
+                  Servicio al Cliente
+                </h3>
+              </div>
+              <div class="space-y-4">
+                <p class="text-gray-600 text-lg">
+                  Comunicate por Teléfono al <span
+                    class="font-bold text-green-700">094 398 865</span
+                  >
+                </p>
+                <div class="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                  <p class="text-gray-600">
+                    <span class="font-semibold">
+                      Nuestro horario de atención regular es de Lunes a Viernes
+                      de 9:00 a 17:00h
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
-      </body>
+  </body>
 </html>
