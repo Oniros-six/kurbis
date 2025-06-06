@@ -34,7 +34,7 @@ export function NavbarDesktop() {
                             <a href="/mision">Mision</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink className="text-md hover:bg-[var(--color-complementario)]">
-                            <a href="/sustentabilidad">Sustentabilidad</a>
+                            <a href="/sostenibilidad">Sostenibilidad</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink className="text-md hover:bg-[var(--color-complementario)]">
                             <a href="/nosotros">Nosotros</a>
