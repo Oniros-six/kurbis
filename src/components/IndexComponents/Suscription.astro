@@ -1,24 +1,62 @@
+<div
+  class="w-full bg-white py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-y-8 md:gap-4 lg:gap-12 xl:px-[5rem]"
+>
+  <h1 class="font-bold text-5xl lg:order-1">Suscribite</h1>
+  <span class="font-medium text-lg text-center md:order-3 lg:order-2"
+    >Forma parte de nuestra lista de correo electrónico</span
+  >
+  <form
+    class="flex flex-col xl:flex-row gap-2 items-center md:row-span-2 lg:row-span-1 lg:order-3"
+  >
+    <div class="flex flex-col sm:flex-row gap-4 items-center max-w-md mx-auto">
+      <input
+        name="suscription"
+        type="email"
+        placeholder="Email"
+        class="w-full sm:flex-1 h-11 px-4 py-2
+                   bg-white
+                   border border-stone-200
+                   rounded-md
+                   shadow-sm
+                   focus:shadow-md focus:shadow-stone-100
+                   focus:border-[var(--color-pumpkin)]
+                   focus:outline-none focus:ring-1 focus:[var(--color-pumpkin)]
+                   text-stone-700 placeholder-stone-400
+                   font-normal
+                   transition-all duration-200 ease-out"
+      />
 
- <div
-        class="w-full bg-white py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-y-8 md:gap-4 lg:gap-12 xl:px-[5rem]"
+      <button
+        type="submit"
+        class="px-6 py-2 h-11
+                   bg-stone-100
+                   hover:bg-stone-50
+                   hover:border-[var(--color-pumpkin)]
+                   text-stone-700 font-medium
+                   rounded-md
+                   shadow-sm
+                   hover:shadow-md
+                   border border-stone-200
+                   transition-all duration-200
+                   flex items-center gap-2 group"
       >
-        <h1 class="font-bold text-5xl lg:order-1">Suscribite</h1>
-        <span class="font-medium text-lg text-center md:order-3 lg:order-2"
-          >Unite a nuestra lista de correo electrónico</span
+        <span>Suscribirme</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="transition-transform duration-200 group-hover:translate-x-0.5"
         >
-        <form class="flex flex-col xl:flex-row gap-2 items-center md:row-span-2 lg:row-span-1 lg:order-3">
-          <input
-            name="suscription"
-            type="email"
-            placeholder="Email"
-            class="w-67 h-10 py-2 pl-3 pr-12 border rounded-md border-[var(--color-complementario)] focus:border-cyan-300 text-[var(--color-secundario)] bg-[var(--color-background-beige)] font-medium"
-          />
-          <button
-            type="submit"
-            class="py-1 px-4 w-fit rounded-full border-2 border-black font-bold text-lg text-black bg-white hover:text-white hover:bg-[var(--color-secundario)] transition-all duration-300 flex items-center gap-2 group"
-          >
-            Suscribirme
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-right-dash-icon lucide-arrow-big-right-dash w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path d="M5 9v6"/><path d="M9 9h3V5l7 7-7 7v-4H9V9z"/></svg>
-          </button>
-        </form>
-      </div>
+          <path d="M5 9v6"></path>
+          <path d="M9 9h3V5l7 7-7 7v-4H9V9z"></path>
+        </svg>
+      </button>
+    </div>
+  </form>
+</div>
