@@ -81,13 +81,15 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* Kurbis color palette - User Defined */
-  --color-primario: #d35806;
+  --color-primario: #e0bc75;
   --color-secundario: #002400;
   --color-complementario: #ffca68;
-  --color-background: #f5f5dc;
+  --color-background: #0a0a0a;
+  --color-background-alt: #0c0c0c;
   --color-background-golden: #edb86b;
-  --color-background-beige: #f5f5dc;
-  --color-pumpkin: #f29823;
+  --color-background-beige: #f5f5dc; 
+  --color-infoBar: #d35806;
+  --color-perla: #d4d4d8;
   
   /* Original Kurbis design colors from navbar mobile */
   --kurbis-accent-orange: #f19700;   /* Was text-[#f19700], bg-[#f19700]/10 */

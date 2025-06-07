@@ -2,12 +2,12 @@
 const { title, subtitle, link, linkText } = Astro.props;
 ---
 
-<div class="w-full text-center my-6">
+<div class="w-full text-center py-6">
     <h1 class="text-xl xs:text-2xl sm:text-3xl md:px-6 lg:px-8 py-3 md:py-4 tracking-wider md:tracking-[.2em] font-bold uppercase text-center leading-tight">
         {title}
     </h1>
     <h2 class="text-lg md:text-xl lg:text-2xl md:px-6 lg:px-8 py-3 md:py-4 font-medium text-center leading-tight">
         {subtitle}
     </h2>
-    <a href={link} class="font-semibold text-xl underline underline-offset-8 decoration-[var(--color-pumpkin)] hover:text-[var(--color-pumpkin)] transition-all duration-300 ">{linkText}</a>
+    <a href={link} class="font-semibold text-xl underline underline-offset-8 decoration-[var(--color-primario)] hover:text-[var(--color-primario)] transition-all duration-300 ">{linkText}</a>
 </div>
