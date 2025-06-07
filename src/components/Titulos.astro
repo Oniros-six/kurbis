@@ -1,12 +1,28 @@
 ---
-const { title, subtitle } = Astro.props;
+const { title, subTitle } = Astro.props;
 ---
 
-<div class="w-full text-center my-6">
-    <h1 class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:px-6 lg:px-8 py-3 md:py-4 tracking-wider md:tracking-[.2em] font-bold uppercase text-center leading-tight">
-        {title}
-    </h1>
-    <h2 class="text-lg md:text-xl lg:text-2xl md:px-6 lg:px-8 py-3 md:py-4 font-medium text-center leading-tight">
-        {subtitle}
-    </h2>
-</div>
+<section class="py-24 px-4 bg-[var(--color-background)] relative">
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+        <!-- Decorative elements -->
+        <div
+            class="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
+        >
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
+        >
+        </div>
+
+        <h2
+            class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8"
+        >
+            {title}
+        </h2>
+        <p
+            class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
+        >
+            {subTitle}
+        </p>
+    </div>
+</section>

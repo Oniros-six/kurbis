@@ -1,18 +1,81 @@
 ---
+import Titulos from "@/components/Titulos.astro";
+import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
 import Layout from "../layouts/layout.astro";
+import Quote from "@/components/Quote.astro";
+import TextImage from "@/components/TextImage.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Kürbis - Misión</title>
-  </head>
-  <body>
-    <Layout title="Kürbis - Misión">
-        
-    </Layout>
-      </body>
-</html>
+<Layout title="Kürbis - Misión">
+  <div
+    class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
+  >
+    {/* Hero Section with Luxury Overlay */}
+    <TituloSobreImagen
+      img="/img/mision/ceibo.webp"
+      alt="Ceibos"
+      withTitle={false}
+      imgHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
+    />
+
+    {/* Elegant Introduction */}
+    <Titulos
+      title="El propósito de Kürbis"
+      subTitle="Nuestra misión con las personas y el planeta"
+    />
+    <Quote
+      quote="Buscamos crear una experiencia única, ayudando a las personas a llevar una vida saludable cuidando al planeta."
+    />
+    <!-- <h3 class="text-center justify-self-center max-w-5xl font-serif text-2xl md:text-4xl font-light text-[var(--color-primario)] mb-8">Buscamos crear una experiencia única, ayudando a las personas a llevar una vida saludable cuidando al planeta.</h3> -->
+    {/* Gold accent line */}
+    <div
+      class="h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
+    >
+    </div>
+    <!-- Wellness -->
+    <TextImage
+      img="/img/mision/yoga.webp"
+      alt="Pareja haciendo yoga"
+      imgOrder="1"
+      textOrder="2"
+      title="Buscar el bienestar de las personas en Uruguay"
+      text="Deseamos ayudar a las personas en nuestro país, a mejorar su bienestar general, logrando un fuerte compromiso y  conexión con los clientes de manera de complacer sus requerimientos y expectativas, cumpliendo responsablemente  los requisitos legales y reglamentarios aplicados al sector. "
+    />
+    <!-- Laboratorio -->
+    <TextImage
+      img="/img/mision/wellness.webp"
+      alt="Investigadores"
+      imgOrder="2"
+      textOrder="1"
+      title="Producir alimentos éticos"
+      text="Elaboramos artesanalmente alimentos,  alcanzando la mejor calidad de producción, con materia prima de primera calidad  producidas bajo las estrictas normas fitosanitarias, ambientales  y laborales de Austria y de la Unión Europea, sin explotación laboral ni infantil,  que conlleva a obtener estas excelentes semillas"
+    />
+    <!-- Familia -->
+    <TextImage
+      img="/img/mision/wellness.webp"
+      alt="Familia comiendo"
+      imgOrder="1"
+      textOrder="2"
+      title="Difundir sus ventajas saludables  y gastronómicas"
+      text="Queremos difundir cómo nuestros productos alimenticios pueden ayudar en el autocuidado personal y por supuesto cómo utilizarlos para preparar exquisitas comidas, para compartir en familia, con amigos y aún en el trabajo, además de agregar valor a la alta  gastronomía."
+    />
+    <!-- Foto  de las semillas e nlas manos -->
+    <TextImage
+      img="/img/mision/legado.webp"
+      alt="Semillas de zapallo en las manos de un hombre"
+      imgOrder="2"
+      textOrder="1"
+      title="Promulgar el legado"
+      text="En Kürbis esperamos ayudar a educar de dónde provienen estas semillas y alimentos,  transmitir el legado patrimonial biológico y cultural de Austria, buscamos la excelencia, la sostenibilidad ambiental, la alta calidad  y la pasión por la belleza del poder de los productos naturales, ofreciendo productos innovadores de primera calidad, ricos en nutrientes, sabrosos, que aseguren una sana alimentación."
+    />
+    <!-- Investigadores -->
+    <TextImage
+      img="/img/mision/investigadores.webp"
+      alt="Investigadores"
+      imgOrder="1"
+      textOrder="2"
+      title="Crear productos innovadores excepcionales"
+      text="Creemos que llevar una vida saludable es un derecho de todos , por lo cual estamos también en una búsqueda de otros productos innovadores excepcionales a base de plantas, éticos, respaldados por la ciencia, libres de crueldad animal y deliciosos para nuestros clientes, asegurándonos que cada artículo cumpla con nuestros estándares de calidad,  sostenibilidad  y nutrición."
+    />
+  </div>
+</Layout>
