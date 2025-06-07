@@ -1,19 +1,14 @@
 ---
 import Layout from "../layouts/layout.astro";
-import FAQ from "../components/FAQ.js"
+import FAQ from "../components/FAQ.js";
+import PieDePagina from "@/components/PieDePagina.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Kürbis - FAQ</title>
-  </head>
-  <body>
-    <Layout title="Kürbis - FAQ">
-        <FAQ client:load/>
-    </Layout>
-      </body>
-</html>
+<Layout title="Kürbis - FAQ">
+  <FAQ client:load />
+  <PieDePagina
+    title="¿Tienes más preguntas?"
+    subTitle="Nuestro equipo está aquí para ayudarte con cualquier consulta adicional"
+    button="Contactanos"
+  />
+</Layout>
