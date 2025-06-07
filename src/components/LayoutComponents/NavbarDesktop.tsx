@@ -13,14 +13,14 @@ export function NavbarDesktop() {
         <NavigationMenu viewport={false} className="hidden md:flex w-full items-center justify-center">
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavigationMenuLink className="text-lg font-medium hover:bg-[var(--color-complementario)]" asChild>
+                    <NavigationMenuLink className="text-lg font-medium hover:bg-[var(--color-complementario)] p-1" asChild>
                         <a href="/" className="flex items-center gap-2 ">
                             Inicio
                         </a>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink className="text-lg font-medium hover:bg-[var(--color-complementario)]" asChild>
+                    <NavigationMenuLink className="text-lg font-medium hover:bg-[var(--color-complementario)] p-1" asChild>
                         <a href="/productos" className="flex items-center gap-2">
                             Productos
                         </a>
@@ -43,7 +43,7 @@ export function NavbarDesktop() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <NavigationMenuLink className="text-lg font-medium hover:bg-[var(--color-complementario)]" asChild>
+                    <NavigationMenuLink className="text-lg font-medium hover:bg-[var(--color-complementario)] p-1" asChild>
                         <a href="/recetas" className="flex items-center gap-2">
                             Recetas
                         </a>

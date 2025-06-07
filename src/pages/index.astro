@@ -8,153 +8,159 @@ import Suscription from "../components/IndexComponents/Suscription.astro";
 import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Kürbis</title>
-  </head>
-  <body>
-    <Layout title="Kürbis">
-      <Hero />
-      <Recuadro
-        texto="Aceite; puro, oscuro, sabroso, versátil y extraordinariamente saludable"
-      />
-      <ImageText
-        srcBackground="/img/marmol-1.webp"
-        altBackground="Marble background"
-        srcProduct="/img/oil-bottle.webp"
-        altProduct="Oil bottle"
-        buttonText="Comprar"
-        buttonLink="/#"
-        productHeight="h-100 md:h-150"
+<Layout title="Kürbis">
+  <Hero />
+  <Recuadro
+    texto="Aceite; puro, oscuro, sabroso, versátil y extraordinariamente saludable"
+  />
+  <ImageText
+    srcBackground="/img/marmol-1.webp"
+    altBackground="Marble background"
+    srcProduct="/img/oil-bottle.webp"
+    altProduct="Oil bottle"
+    buttonText="Comprar"
+    buttonLink="/#"
+    productHeight="h-100 md:h-150"
+  >
+    <h1
+      class="text-[var(--color-secundario)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
+      slot="title"
+    >
+      Aceite de Semillas de Zapallo
+    </h1>
+    <p
+      class="text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
+      slot="description"
+    >
+      El color verde oscuro con matices rojos de este aceite extra virgen sin
+      filtrar, su exquisito aroma, su alto valor nutricional por su elevado
+      contenido de ácidos grasos insaturados, omega 3 + omega 6 + omega 9 de 10
+      mg por porción, su buen aporte en Magnesio, Zinc, Hierro.
+      <a
+        href="/#"
+        class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block"
       >
-        <h1
-          class="text-[var(--color-secundario)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
-          slot="title"
-        >
-          Aceite de Semillas de Zapallo
-        </h1>
-        <p
-          class="text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
-          slot="description"
-        >
-          El color verde oscuro con matices rojos de este aceite extra virgen
-          sin filtrar, su exquisito aroma, su alto valor nutricional por su
-          elevado contenido de ácidos grasos insaturados, <span
-            class="font-bold"
-            >omega 3 + omega 6 + omega 9 de 10 mg por porción</span
-          >, su buen aporte en Magnesio, Zinc, Hierro.
-          <a
-            href="/#"
-            class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block"
-          >
-            Saber más →
-          </a>
-        </p>
-      </ImageText>
-      <div>
-        <img
-          src="/carousel/slider1.webp"
-          alt="Aceite de Semillas de Zapallo"
-          class="w-full h-full object-cover"
-        />
-      </div>
-      <Recuadro
-        texto="Alimento; real, plant based, sabroso, versátil e increíblemente nutritivo"
-      />
-      <ImageText
-        srcBackground="/img/marmol-1.webp"
-        altBackground="Marble background"
-        srcProduct="/img/pack-protein.webp"
-        altProduct="Proteina pack"
-        buttonText="Comprar"
-        buttonLink="/#"
-        productHeight="h-auto"
+        Saber más →
+      </a>
+    </p>
+  </ImageText>
+  <div>
+    <img
+      src="/carousel/slider1.webp"
+      alt="Aceite de Semillas de Zapallo"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <Recuadro
+    texto="Alimento; real, plant based, sabroso, versátil e increíblemente nutritivo"
+  />
+  <ImageText
+    srcBackground="/img/marmol-1.webp"
+    altBackground="Marble background"
+    srcProduct="/img/pack-protein.webp"
+    altProduct="Proteina pack"
+    buttonText="Comprar"
+    buttonLink="/#"
+    productHeight="h-auto"
+  >
+    <h1
+      class="text-[var(--color-secundario)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
+      slot="title"
+    >
+      Alimento vegetal de Semillas de Zapallo<br />Pumpkin Seed Plant Food
+    </h1>
+    <p
+      class="text-[var(--color-secundario)] text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
+      slot="description"
+    >
+      Por su excelente proteína vegetal de más de 20% por porción con los 9
+      aminoácidos esenciales y un apreciado contenido de triptófano, por el
+      aporte en Magnesio, Zinc, Potasio y Hierro, por ser una increíble fuente
+      de fibra, vitamina E, fitoesteroles y otros antioxidantes, por la
+      presencia de ácidos grasos insaturados, por su bajo contenido en
+      carbohidratos y por su fino sabor, es único!
+      <a
+        href="/#"
+        class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block"
       >
-        <h1
-          class="text-[var(--color-secundario)] font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl"
-          slot="title"
-        >
-          Alimento vegetal de Semillas de Zapallo<br />Pumpkin Seed Plant Food
-        </h1>
-        <p
-          class="text-[var(--color-secundario)] text-center xs:text-left text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed"
-          slot="description"
-        >
-          Por su excelente proteína vegetal de más de 20% por porción con los 9
-          aminoácidos esenciales y un apreciado contenido de triptófano, por el
-          aporte en Magnesio, Zinc, Potasio y Hierro, por ser una increíble
-          fuente de fibra, vitamina E, fitoesteroles y otros antioxidantes, por
-          la presencia de ácidos grasos insaturados, por su bajo contenido en
-          carbohidratos y por su fino sabor, es único!
-          <a
-            href="/#"
-            class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block"
-          >
-            Saber más →
-          </a>
-        </p>
-      </ImageText>
-      <div class="w-full h-auto">
-        <img
-          src="/img/proteina-vaso.webp"
-          alt="proteina en un vaso"
-          class="w-full aspect-video"
-        />
-      </div>
+        Saber más →
+      </a>
+    </p>
+  </ImageText>
+  <div class="w-full h-auto">
+    <img
+      src="/img/proteina-vaso.webp"
+      alt="proteina en un vaso"
+      class="w-full aspect-video"
+    />
+  </div>
 
-      <h2
-        class="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[var(--color-secundario)] font-bold uppercase mt-20 mb-0 text-center"
-      >
-        Disfrutá nuestras exclusivas oportunidades
-      </h2>
-      <h3
-        class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[var(--color-secundario)] font-medium mt-2 mb-4 text-center"
-      >
-        — Compartí Sabor y Bienestar —
-      </h3>
-
-      {/* Responsive Grid */}
-      <div class="min-h-screen p-4 pb-0 content-center">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center"
-        >
-          <Offer
-            image="/img/pack-protein-offer2.webp"
-            title="Duo Wellness"
-            description="Comprando el Dúo, llevás de regalo el 50% del Alimento Vegetal Kürbis."
-          />
-          <Offer
-            image="/img/pack-protein-offer2.webp"
-            title="Super Vital"
-            description="Comprando 2 Alimentos Vegetal Kürbis, llevás de obsequio el 50% del tercero"
-          />
-          <Offer
-            image="/img/pack-protein-offer2.webp"
-            title="Sabores de Austria"
-            description="Comprando 6 botellas de Aceite Kürbis, tenés 1 botella de Aceite Kürbis de regalo."
-          />
-        </div>
-        <div
-          class="w-fit bg-[var(--color-pumpkin)] font-medium xs:text-lg sm:text-2xl text-white mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto"
-        >
-          Promociones por tiempo limitado
-        </div>
-      </div>
-      <Suscription />
-      <div class="min-h-screen p-4">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 place-items-center"
-        >
-        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Quienes somos" description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
-        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Misión" description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
-        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Sostenibilidad" description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
-        <CuadroInformativo imagen="oil-table.webp" alt="aceite en la mesa" title="Nuestros productos" description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
-        </div>
-      </div>
-    </Layout>
-  </body>
-</html>
+  {/* Responsive Grid */}
+  <div
+    class="min-h-screen p-4 pb-0 content-center bg-[var(--color-background-alt)]"
+  >
+    <h2
+      class="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[var(--color-perla)] font-bold uppercase mt-20 mb-0 text-center"
+    >
+      Disfrutá nuestras exclusivas oportunidades
+    </h2>
+    <h3
+      class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[var(--color-perla)] font-medium mt-2 mb-4 text-center"
+    >
+      — Compartí Sabor y Bienestar —
+    </h3>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center mt-17"
+    >
+      <Offer
+        image="/img/pack-protein-offer2.webp"
+        title="Duo Wellness"
+        description="Comprando el Dúo, llevás de regalo el 50% del Alimento Vegetal Kürbis."
+      />
+      <Offer
+        image="/img/pack-protein-offer2.webp"
+        title="Super Vital"
+        description="Comprando 2 Alimentos Vegetal Kürbis, llevás de obsequio el 50% del tercero"
+      />
+      <Offer
+        image="/img/pack-protein-offer2.webp"
+        title="Sabores de Austria"
+        description="Comprando 6 botellas de Aceite Kürbis, tenés 1 botella de Aceite Kürbis de regalo."
+      />
+    </div>
+    <div
+      class="w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto"
+    >
+      Promociones por tiempo limitado
+    </div>
+  </div>
+  <Suscription />
+  <div class="min-h-screen p-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 place-items-center">
+      <CuadroInformativo
+        imagen="oil-table.webp"
+        alt="aceite en la mesa"
+        title="Quienes somos"
+        description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      />
+      <CuadroInformativo
+        imagen="oil-table.webp"
+        alt="aceite en la mesa"
+        title="Misión"
+        description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      />
+      <CuadroInformativo
+        imagen="oil-table.webp"
+        alt="aceite en la mesa"
+        title="Sostenibilidad"
+        description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      />
+      <CuadroInformativo
+        imagen="oil-table.webp"
+        alt="aceite en la mesa"
+        title="Nuestros productos"
+        description="loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      />
+    </div>
+  </div>
+</Layout>

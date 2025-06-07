@@ -51,7 +51,7 @@ export function CarouselHero() {
             {/* Overlay centrado */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div
-                className="bg-[var(--color-secundario)]/50 backdrop-blur-xs rounded-lg p-4 sm:p-6 md:p-8
+                className="bg-[var(--color-secundario)]/50 backdrop-blur-xs p-4 sm:p-6 md:p-8
                 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]
                 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl
                 text-center"
@@ -74,11 +74,6 @@ export function CarouselHero() {
         </CarouselItem>
       ))}
     </CarouselContent>
-  
-    <div className="flex justify-center -mt-10">
-      <CarouselPrevious className="static translate-y-0 mr-2 hover:bg-primary hover:text-white transition-colors hidden" />
-      <CarouselNext className="static translate-y-0 ml-2 hover:bg-primary hover:text-white transition-colors hidden" />
-    </div>
   </Carousel>
   
   )

@@ -1,6 +1,4 @@
 ---
-import ButtonBasic from "./../ButtonBasic.astro"
-
 const {
     title,
     description,
@@ -8,7 +6,7 @@ const {
 } = Astro.props
 ---
 
-    <div class="bg-linear-to-t from-[var(--color-background-golden)] to-[#f1e4b2] rounded-2xl p-8 flex flex-col items-center text-center mx-auto h-full border-1 border-[var(--color-background-golden)] hover:border-[var(--kurbis-accent-orange)]">
+    <div class="bg-linear-to-t from-[var(--color-complementario)] to-[#f1e4b2] rounded-2xl p-8 flex flex-col items-center text-center mx-auto h-full border-2 border-[var(--color-primario)] hover:border-[var(--kurbis-accent-orange)]">
       {/* Image Container with Reflection Effect */}
       <div class="mb-4 w-full flex justify-center">
           {/* Main Image */}
@@ -27,6 +25,12 @@ const {
         </div>
 
         {/* Button */}
-        <ButtonBasic text="Comprar" color="--color-secundario" hoverColor="--color-pumpkin"/>
+        <button
+    class=`w-fit self-center bg-[var(--color-secundario)] hover:bg-transparent hover:text-[var(--color-secundario)] hover:ring-2 ring-[var(--color-secundario)] text-white font-semibold
+                     py-2 px-8 rounded-lg
+                     shadow-md hover:shadow-lg`
+>
+    Comprar
+</button>
       </div>
     </div>
