@@ -1,0 +1,21 @@
+---
+const { title, subTitle, button } = Astro.props;
+---
+
+<section class="py-24 px-4 bg-[var(--color-background)]">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2
+            class="font-serif text-3xl md:text-4xl font-light text-[var(--color-primario)] mb-6"
+        >
+            {title}
+        </h2>
+        <p class="text-lg text-gray-300 mb-12 font-light">
+            {subTitle}
+        </p>
+        <button
+            class="bg-transparent hover:bg-[var(--color-primario)]/10 text-[var(--color-primario)] border border-[var(--color-primario)] rounded-none px-12 py-6 text-lg font-light tracking-wider transition-all duration-300"
+        >
+            {button}
+        </button>
+    </div>
+</section>
