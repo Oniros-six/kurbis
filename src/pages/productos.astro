@@ -1,18 +1,101 @@
 ---
+import Titulos from "@/components/Titulos.astro";
+import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
 import Layout from "../layouts/layout.astro";
+import TimeLine from "@/components/TimeLine";
+import TextImage from "@/components/TextImage.astro";
+import Recuadro from "@/components/IndexComponents/Recuadro.astro";
+import IconoTexto from "@/components/IconoTexto.astro";
+import PieDePagina from "@/components/PieDePagina.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Kürbis - Productos</title>
-  </head>
-  <body>
-    <Layout title="Kürbis - Productos">
-        
-    </Layout>
-      </body>
-</html>
+<Layout title="Kürbis - Nosotros">
+  <div
+    class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
+  >
+    {/* Hero Section with Luxury Overlay */}
+    <TituloSobreImagen
+      img="/img/productos/newPanorama.webp"
+      alt="Austria y Piriapolis"
+      imgHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
+      withFilter={false}
+    />
+
+    {/* Elegant Introduction */}
+    <Titulos
+      title="NUESTROS PRODUCTOS"
+      subTitle="Sentí el poder de la naturaleza, Kürbis preserva todos los nutrientes de las semillas de zapallo, para una vida saludable"
+    />
+
+    <TextImage
+      img="/img/sostenibilidad/circular.webp"
+      alt="Mujer austriaca en la cocina"
+      ,
+      title="El verdadero sabor de una cocina Austríaca"
+      text="Nuestros productos Kürbis son producidos en forma totalmente artesanal, elaborados en Uruguay, con tradición austríaca, sostenibles, cien por ciento naturales y puros, genuinos, elaborados a partir del cien por ciento de semillas de zapallo Cucurbita pepo, var. Styriaca, importadas directamente de los campos de Styria, en Austria, con la trazabilidad garantizada. Son de excelente calidad, verdes oscuras y sin cáscara."
+    />
+
+    <Recuadro
+      texto="Los productos Kürbis ofrecen beneficios extraordinariamente saludables"
+    />
+    <section class="p-4 lg:p-8 xl:px-16 2xl:px-32">
+      <div class="relative flex flex-col">
+        <div
+          class="absolute -top-3 -left-3 lg:top-0 lg:-left-3 xl:-left-5 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
+        >
+        </div>
+        <div
+          class="absolute -bottom-3 -right-3 lg:-bottom-3 lg:-right-3 xl:right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
+        >
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8">
+          Increíblemente nutricionales para todas las dietas
+        </h2>
+        <div class="grid grid-col-1 md:grid-cols-5 gap-4 md:gap-6 lg:gap-16">
+          <p class="text-lg sm:text-xl md:col-span-3">
+            Tanto el aceite como el alimento vegetal, aportan compuestos
+            bioactivos, aceites omega 3, omega 6 y omega 9, minerales y
+            vitaminas que tienen el potencial de impartir beneficios
+            fisiológicos, promover el bienestar y reducir el riesgo de
+            enfermedades no transmisibles, lo que los hacen muy apreciados,
+            convirtiéndose en una valiosa adición a las <span
+              class="font-medium text-[var(--color-complementario)]"
+              >dietas veganas, whole 30, Keto, detox, clean, ayuno intermitente,
+              páleo, un estilo de vida wellness y más...</span
+            >
+          </p>
+          <p class="text-lg sm:text-xl font-medium md:col-span-2">
+            Nuestros productos están hechos con cariño, con alma, con pasión y
+            además, el entusiasmo que se ha puesto en estos productos, los hacen
+            únicos y exclusivos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class=" bg-[var(--color-background-alt)] px-4 md:px-10 lg:px-16 xl:px-32 2xl:px-64 py-10 mt-10"
+    >
+      <div class="flex flex-col">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">
+          Hecho con cuidado
+        </h2>
+        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
+          Elaboramos nuestros productos honrando a las personas y al planeta
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+        <IconoTexto img="/img/productos/icon-nogmo.svg" alt="Icono no modificado geneticamente" text="Nuestras semillas NO son genéticamente modificadas"/>
+        <IconoTexto img="/img/productos/icon-nopreserv.svg" alt="Icono proveta" text="Sin Conservantes"/>
+        <IconoTexto img="/img/productos/icon-noaditiv.svg" alt="Icono tubo de ensayo" text="Sin Ingredientes Artificiales, ni aditivos"/>
+        <IconoTexto img="/img/productos/icon-lactosefree.svg" alt="Icono no lactosa" text="Libre de Lactosa"/>
+        <IconoTexto img="/img/productos/icon-vegan.svg" alt="Icono apto vegano" text="Elaborado en base a plantas. Apto Veganos"/>
+        <IconoTexto img="/img/productos/.svg" alt="Icono libre de alergenos" text="Libre de Alérgenos"/>
+        <IconoTexto img="/img/productos/.svg" alt="Icono sin azucares agregados" text="Sin azúcares agregados"/>
+        <IconoTexto img="/img/productos/.svg" alt="Icono economia circular" text="Ambientalmente sostenibles"/>
+      </div>
+    </section>
+  <PieDePagina title="¿Necesitás más razones para experimentar este tesoro?" subTitle="Conocé diversas formas de consumir nuestros productos" button="Ver recetas" link="/recetas" />
+  </div>
+</Layout>

@@ -12,10 +12,13 @@ const { title, subTitle, button, link } = Astro.props;
         <p class="text-lg text-gray-300 mb-12 font-light">
             {subTitle}
         </p>
-        <button
-            class="bg-transparent hover:bg-[var(--color-primario)]/10 text-[var(--color-primario)] border border-[var(--color-primario)] rounded-none px-12 py-6 text-lg font-light tracking-wider transition-all duration-300"
-        >
-        <a href={link}>{button}</a>
-        </button>
+
+        <a href={link}>
+            <button
+                class="bg-transparent hover:bg-[var(--color-primario)]/10 text-[var(--color-primario)] border border-[var(--color-primario)] cursor-pointer rounded-none px-12 py-6 text-lg font-light tracking-wider transition-all duration-300"
+            >
+                {button}
+            </button>
+        </a>
     </div>
 </section>

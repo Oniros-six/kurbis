@@ -1,5 +1,4 @@
 ---
-import Titulos from "@/components/Titulos.astro";
 import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
 import Layout from "../layouts/layout.astro";
 import TimeLine from "@/components/TimeLine";
@@ -15,12 +14,6 @@ import TimeLine from "@/components/TimeLine";
       alt="Austria y Piriapolis"
       imgHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
       withFilter={false}
-    />
-
-    {/* Elegant Introduction */}
-    <Titulos
-      title="CULTURA FAMILIAR"
-      subTitle="Semillas, memorias que llevan vida, una apuesta por el patrimonio biológico y cultural de Austria"
     />
     <section class="bg-[url(/img/nosotros/laboratorio.jpeg)] bg-scroll">
       <TimeLine client:load/>
