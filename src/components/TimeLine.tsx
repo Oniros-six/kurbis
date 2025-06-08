@@ -200,21 +200,21 @@ export default function TimeLine() {
       description:
         "Este aceite es elaborado con las semillas de zapallo Cucurbita pepo, var. Styriaca, pertenecen a la familia de las cucurbitáceas, son oleaginosas, no son transgénicas, son grandes, verdes oscuras, sin cáscaras, cubiertas con una fina piel, libres de gluten, son una fuente inagotable de nutrientes, ricas en componentes funcionales, son un tesoro invaluable,  guardan  en su interior historias de generaciones, tradiciones y prácticas culturales propias del territorio de Austria, un legado vivo creado en Styria por los agricultores locales hace más de 100 años, reconocido esto por la Unión Europea desde el año 1996.",
       image: "/img/nosotros/dedos.webp?height=350&width=500",
-      alt: "",
+      alt: "Dedos con una semilla",
     },
     {
       title: "Somos pioneros en Uruguay y en la región",
       description:
         "Somos pioneros y lideramos la producción  artesanal de aceite y alimento vegetal de semillas de zapallo Cucurbita pepo, var Styriaca, en Uruguay y en la región,  con el nombre de  Kürbis y  la planta de elaboración ubicada en Piriápolis. Tenemos el afán de brindar alternativas saludables, innovadoras y sostenibles e inspirados en el impulso cultural y preservación de este  patrimonio biológico y cultural de Austria. Bajo la atenta mirada que nos dió el único experto austríaco en Uruguay, que se  dedicó más de 20 años a esta producción.",
       image: "/img/nosotros/manos.webp?height=350&width=500",
-      alt: "",
+      alt: "Manos con semillas",
     },
     {
       title: "El sabor auténtico de Austria transmitido a Kürbis",
       description:
         "Nuestro tutor adquirió un amplio conocimiento, experiencia y pasión en mantener la tradición de la receta original con un sabor y calidad verdaderamente representativa de los artesanos de Styria y nos transmitió su legado para preservarlo de generación en generación. Nos honra preservar el patrimonio biocultural y el sabor auténtico de Austria, con productos saludables, sabrosos y sostenibles de la más alta calidad",
       image: "/img/nosotros/mapa.webp?height=350&width=500",
-      alt: "",
+      alt: "Mapa señalando Austria y Uruguay",
     },
   ]
 

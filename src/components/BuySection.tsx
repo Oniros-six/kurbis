@@ -250,9 +250,6 @@ export default function BuySection() {
             </motion.div>
           </div>
         </div>
-
-        {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
       </section>
     </div>
   )

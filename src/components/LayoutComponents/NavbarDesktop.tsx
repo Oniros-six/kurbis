@@ -31,10 +31,10 @@ export function NavbarDesktop() {
                     <NavigationMenuTrigger className="text-lg font-medium hover:bg-[var(--color-complementario)] data-[state=open]:bg-[var(--color-complementario)] data-[state=open]:hover:bg-[var(--color-complementario)] data-[state=open]:focus:bg-[var(--color-complementario)]">Kurbis</NavigationMenuTrigger>
                     <NavigationMenuContent className="z-10">
                         <NavigationMenuLink className="text-md hover:bg-[var(--color-complementario)]">
-                            <a href="/mision">Mision</a>
+                            <a href="/sostenibilidad">Sostenibilidad</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink className="text-md hover:bg-[var(--color-complementario)]">
-                            <a href="/sostenibilidad">Sostenibilidad</a>
+                            <a href="/mision">Mision</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink className="text-md hover:bg-[var(--color-complementario)]">
                             <a href="/nosotros">Nosotros</a>

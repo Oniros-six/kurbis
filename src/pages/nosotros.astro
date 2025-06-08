@@ -2,6 +2,7 @@
 import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
 import Layout from "../layouts/layout.astro";
 import TimeLine from "@/components/TimeLine";
+import PieDePagina from "@/components/PieDePagina.astro";
 ---
 
 <Layout title="Kürbis - Nosotros">
@@ -10,7 +11,7 @@ import TimeLine from "@/components/TimeLine";
   >
     {/* Hero Section with Luxury Overlay */}
     <TituloSobreImagen
-      img="/img/nosotros/newPanorama.webp"
+      img="/img/nosotros/panorama.webp"
       alt="Austria y Piriapolis"
       imgHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
       withFilter={false}
@@ -18,4 +19,6 @@ import TimeLine from "@/components/TimeLine";
     <section class="bg-[url(/img/nosotros/laboratorio.jpeg)] bg-scroll">
       <TimeLine client:load/>
     </section>
+
+    <PieDePagina title="Pie de pagina" subTitle = "Subtitulo" button="Nuestros productos" link="/productos"/>
 </Layout>
