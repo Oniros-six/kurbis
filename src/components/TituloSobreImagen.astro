@@ -1,22 +1,35 @@
 ---
-const { img, alt, title, subTitle, imgHeight, withTitle } = Astro.props;
+const {
+    img,
+    alt = '',
+    title,
+    subTitle,
+    imgHeight = 'h-[500px]',
+    withTitle = false,
+    withFilter = true,
+    withDivider = true,
+} = Astro.props;
 ---
 
 <section class={`relative ${imgHeight}`}>
-    <div class="absolute inset-0 ">
+    <div class="absolute inset-0">
         <img
-            src=`${img}`
-            alt=`${alt}`
-            class={`object-cover w-full`}
+            src={`${img}`}
+            alt=""
+            role="presentation"
+            aria-hidden="true"
+            class="object-cover w-full"
         />
-        <div
-            class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"
-        >
-        </div>
-        <div
-            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-        >
-        </div>
+        {
+            withFilter && (
+                <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+            )
+        }
+        {
+            withDivider && (
+                <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0" />
+            )
+        }
     </div>
     {
         withTitle && (
@@ -25,7 +38,7 @@ const { img, alt, title, subTitle, imgHeight, withTitle } = Astro.props;
                     <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-wide mb-6">
                         {title}
                     </h1>
-                    <div class="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-6"></div>
+                    <div class="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-6" />
                     <p class="text-xl md:text-2xl font-light tracking-widest uppercase">
                         {subTitle}
                     </p>
