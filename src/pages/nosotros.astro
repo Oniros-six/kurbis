@@ -1,18 +1,28 @@
 ---
+import Titulos from "@/components/Titulos.astro";
+import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
 import Layout from "../layouts/layout.astro";
+import TimeLine from "@/components/TimeLine";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Kürbis - Nosotros</title>
-  </head>
-  <body>
-    <Layout title="Kürbis - Nosotros">
-        
-    </Layout>
-      </body>
-</html>
+<Layout title="Kürbis - Nosotros">
+  <div
+    class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
+  >
+    {/* Hero Section with Luxury Overlay */}
+    <TituloSobreImagen
+      img="/img/nosotros/newPanorama.webp"
+      alt="Austria y Piriapolis"
+      imgHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
+      withFilter={false}
+    />
+
+    {/* Elegant Introduction */}
+    <Titulos
+      title="CULTURA FAMILIAR"
+      subTitle="Semillas, memorias que llevan vida, una apuesta por el patrimonio biológico y cultural de Austria"
+    />
+    <section class="bg-[url(/img/nosotros/laboratorio.jpeg)] bg-scroll">
+      <TimeLine client:load/>
+    </section>
+</Layout>
