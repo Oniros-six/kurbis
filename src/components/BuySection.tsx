@@ -3,6 +3,10 @@ import { motion } from "framer-motion"
 import { MessageCircle, User, CreditCard, Truck, Phone } from "lucide-react"
 
 export default function BuySection() {
+  const phone = "59892601809";
+  const message = "Hola, quiero más información sobre sus productos";
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
   const steps = [
     {
       number: "01",
@@ -60,13 +64,15 @@ export default function BuySection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
           >
-            <Button
-              size="lg"
-              className="bg-[#25D366] hover:bg-[#20BA5A] text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-secundario)]/30"
-            >
-              <MessageCircle className="w-6 h-6 mr-3" />
-              Hablar por WhatsApp
-            </Button>
+            <a href={url} target="new_blank">
+              <Button
+                size="lg"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-secundario)]/30"
+              >
+                <MessageCircle className="w-6 h-6 mr-3" />
+                Hablar por WhatsApp
+              </Button>
+            </a>
           </motion.div>
         </div>
 
@@ -152,15 +158,15 @@ export default function BuySection() {
             <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
               Nuestro equipo está esperando para ayudarte con tu compra personalizada
             </p>
-
-            <Button
-              size="lg"
-              className="bg-[#25D366] hover:bg-[#20BA5A] text-[var(--color-perla)] px-16 py-8 text-xl font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-secundario)]/30 mb-12"
-            >
-              <MessageCircle className="w-7 h-7 mr-4" />
-              Hablar por WhatsApp
-            </Button>
-
+            <a href={url} target="new_blank">
+              <Button
+                size="lg"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-[var(--color-perla)] px-16 py-8 text-xl font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-secundario)]/30 mb-12"
+              >
+                <MessageCircle className="w-7 h-7 mr-4" />
+                Hablar por WhatsApp
+              </Button>
+            </a>
             {/* Disclaimer */}
             <motion.p
               initial={{ opacity: 0 }}
