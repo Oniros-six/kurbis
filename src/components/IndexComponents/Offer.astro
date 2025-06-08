@@ -1,36 +1,44 @@
 ---
-const {
-    title,
-    description,
-    image
-} = Astro.props
+const { title, description, image } = Astro.props;
 ---
 
-    <div class="bg-linear-to-t from-[var(--color-complementario)] to-[#f1e4b2] rounded-2xl p-8 flex flex-col items-center text-center mx-auto h-full border-2 border-[var(--color-primario)] hover:border-[var(--kurbis-accent-orange)]">
-      {/* Image Container with Reflection Effect */}
-      <div class="mb-4 w-full flex justify-center">
-          {/* Main Image */}
-          <img
-            src={image}
-            alt={title}
-            class="size-62 xs:size-88 sm:size-63 md:size-88 object-contain relative z-10"
-          />
-      </div>
+<div
+  class="bg-linear-to-t from-[var(--color-complementario)] to-[#f1e4b2] rounded-2xl p-8 flex flex-col items-center text-center mx-auto h-full border-2 border-[var(--color-primario)] hover:border-[var(--kurbis-accent-orange)]"
+>
+  {/* Image Container with Reflection Effect */}
+  <div class="mb-4 w-full flex justify-center">
+    {/* Main Image */}
+    <img
+      src={image}
+      alt={title}
+      class="size-62 xs:size-88 sm:size-63 md:size-88 object-contain relative z-10"
+    />
+  </div>
 
-      {/* Content */}
-      <div class="flex-1 flex flex-col justify-between w-full">
-        <div class="mb-6 flex flex-col items-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-[var(--color-secundario)] mb-4 leading-tight">{title}</h2>
-          <p class="xs:max-w-[30rem] text-[var(--color-secundario)] font-medium text-sm sm:text-base leading-relaxed px-2">{description}</p>
-        </div>
+  {/* Content */}
+  <div class="flex-1 flex flex-col justify-between w-full">
+    <div class="mb-6 flex flex-col items-center">
+      <h2
+        class="text-2xl sm:text-3xl font-bold text-[var(--color-secundario)] mb-4 leading-tight"
+      >
+        {title}
+      </h2>
+      <p
+        class="xs:max-w-[30rem] text-[var(--color-secundario)] font-medium text-sm sm:text-base leading-relaxed px-2"
+      >
+        {description}
+      </p>
+    </div>
 
-        {/* Button */}
-        <button
-    class=`w-fit self-center bg-[var(--color-secundario)] hover:bg-transparent hover:text-[var(--color-secundario)] hover:ring-2 ring-[var(--color-secundario)] text-white font-semibold
+    {/* Button */}
+    <a href="/comprar">
+      <button
+        class=`w-fit self-center bg-[var(--color-secundario)] hover:bg-transparent hover:text-[var(--color-secundario)] hover:ring-2 ring-[var(--color-secundario)] text-white font-semibold
                      py-2 px-8 rounded-lg
                      shadow-md hover:shadow-lg`
->
-    Comprar
-</button>
-      </div>
-    </div>
+      >
+        Comprar
+      </button>
+    </a>
+  </div>
+</div>

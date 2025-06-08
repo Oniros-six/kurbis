@@ -7,8 +7,6 @@ const {
   altBackground,
   srcProduct,
   altProduct,
-  buttonText,
-  buttonLink,
   productHeight
 } = Astro.props;
 ---
@@ -54,7 +52,7 @@ const {
           <Button
             className="flex items-center gap-2 text-sm sm:text-base hover:from-[var(--color-secundario)] hover:via-[var(--color-secundario)] hover:to-[var(--color-secundario)] hover:scale-105 transition-all duration-300 ease-in-out group"
           >
-            <a href={buttonLink}>{buttonText}</a>
+            <a href="/comprar">Comprar</a>
             <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 stroke-[3px] group-hover:translate-x-1 transition-transform duration-200" />
           </Button>
         </div>
