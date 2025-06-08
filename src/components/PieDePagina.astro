@@ -1,5 +1,5 @@
 ---
-const { title, subTitle, button } = Astro.props;
+const { title, subTitle, button, link } = Astro.props;
 ---
 
 <section class="py-24 px-4 bg-[var(--color-background)]">
@@ -15,7 +15,7 @@ const { title, subTitle, button } = Astro.props;
         <button
             class="bg-transparent hover:bg-[var(--color-primario)]/10 text-[var(--color-primario)] border border-[var(--color-primario)] rounded-none px-12 py-6 text-lg font-light tracking-wider transition-all duration-300"
         >
-            {button}
+        <a href={link}>{button}</a>
         </button>
     </div>
 </section>

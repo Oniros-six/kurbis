@@ -219,9 +219,10 @@ export default function TimeLine() {
   ]
 
   return (
-    <section className="py-32 px-4 bg-[var(--color-background)] relative overflow-hidden">
+    <section className="py-32 px-4 bg-[url(/img/nosotros/laboratorio.jpeg)] bg-fixed bg-cover bg-center relative overflow-hidden">
       {/* Luxury Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/5 via-transparent to-[var(--color-primario)]/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/80 pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
 
       <div className="max-w-7xl mx-auto relative">
