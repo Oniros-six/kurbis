@@ -30,7 +30,7 @@ export default function EmailInput() {
           />
           <button
             type="submit"
-            className="w-full bg-[var(--color-primario)] text-black hover:bg-[var(--color-secundario)]  hover:text-[var(--color-perla)] font-medium py-2.5 px-4 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 active:scale-[0.98]"
+            className="w-auto bg-[var(--color-primario)] text-black hover:bg-[var(--color-secundario)]  hover:text-[var(--color-perla)] font-medium py-2.5 px-4 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 active:scale-[0.98]"
           >
             Suscribirme
           </button>
