@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.86 67.8">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 67">
   <defs>
     <style>
       .cls-1 {
-        stroke-miterlimit: 10;
+        fill: none;
       }
 
       .cls-1, .cls-2 {
-        fill: none;
-        stroke: #424f34;
-        stroke-width: 2px;
+        stroke: #000;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
       }
 
       .cls-2 {
-        stroke-linejoin: round;
+        fill: #117300;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke: #222829;
       }
     </style>
   </defs>
-  <g id="Layer_1-2" data-name="Layer 1">
+  <circle class="cls-3" cx="33.5" cy="33.5" r="32"/>
+  <g>
+    <path class="cls-2" d="M26.6,48.79c1.13-9.53-.79-5.59-2.59-11.9-2.38-8.48,12.16-15.22,17.88-14.74,6.46,22.29-27.3,29.44-8.14,10.3"/>
     <g>
-      <path class="cls-1" d="M33.89,4.68c-12.43,0-23.05,7.8-27.21,18.77"/>
-      <path class="cls-1" d="M62.99,33.78c0-12.43-7.8-23.05-18.77-27.21"/>
-      <polyline class="cls-2" points="67.05 28.24 62.99 33.78 58.06 28.99"/>
-      <polyline class="cls-2" points="9.8 38.49 4.79 33.78 .82 39.38"/>
-      <polyline class="cls-2" points="28.2 .83 33.89 4.68 29.29 9.79"/>
-      <polyline class="cls-2" points="39.38 67 33.89 62.87 38.73 58"/>
-      <path class="cls-1" d="M33.89,62.87c12.43,0,23.05-7.8,27.21-18.77"/>
-      <path class="cls-1" d="M4.79,33.78c0,12.43,7.8,23.04,18.77,27.21"/>
-      <g>
-        <circle class="cls-2" cx="33.89" cy="33.78" r="14.94"/>
-        <polygon class="cls-2" points="33.89 31.53 42.73 31.53 31.86 45.57 33.89 36.03 25.05 36.03 35.91 21.99 33.89 31.53"/>
-        <path class="cls-2" d="M49.61,45.57c-3.59,4.77-9.3,7.86-15.73,7.86s-12.14-3.09-15.72-7.86"/>
-        <path class="cls-2" d="M18.16,21.98c3.59-4.77,9.3-7.86,15.73-7.86s12.14,3.09,15.73,7.86"/>
-      </g>
+      <path class="cls-1" d="M13.46,47.51c3.23,4.76,9.47,10.05,17.39,10.83,10.35,1.02,17.45-5.5,18.86-6.85,7.42-7.14,7.65-14.01,7.65-19.16"/>
+      <polygon points="11.25 40.43 10.69 51.7 13.9 47.94 18.74 48.87 11.25 40.43"/>
+    </g>
+    <g>
+      <path class="cls-1" d="M53.54,19.49c-3.23-4.76-9.47-10.05-17.39-10.83-10.35-1.02-17.45,5.5-18.86,6.85-7.42,7.14-7.65,14.01-7.65,19.16"/>
+      <polygon points="55.75 26.57 56.31 15.3 53.1 19.06 48.26 18.13 55.75 26.57"/>
     </g>
   </g>
 </svg>
