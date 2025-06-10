@@ -1,18 +1,9 @@
 ---
 import Layout from "../layouts/layout.astro";
+import Recetas from "../components/Recetas"
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Kürbis - Recetas</title>
-  </head>
-  <body>
     <Layout title="Kürbis - Recetas">
-        
+        <Recetas client:load/>
     </Layout>
-      </body>
-</html>
+
