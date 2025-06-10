@@ -53,7 +53,7 @@ export default function BuySection() {
             </h1>
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl text-gray-300 mb-16 font-light tracking-wide">
-              Coordinamos todo por WhatsApp
+              Solo vas a encontrar estos productos aquí
             </p>
           </motion.div>
 
