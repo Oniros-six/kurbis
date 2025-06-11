@@ -3,8 +3,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
 
 export function CarouselHero() {
@@ -16,9 +14,8 @@ export function CarouselHero() {
       titulo: "el 'oro' verde de austria",
       subtitulo: "- Ahora en Uruguay -",
     },
-    // TODO Encontrar la foto correcta
     {
-      imagen: "/carousel/slider2.webp",
+      imagen: "/carousel/slider2.jpg",
       titulo: "El Rey del bienestar y la salud",
       subtitulo: "",
     },
@@ -27,54 +24,53 @@ export function CarouselHero() {
       titulo: "Un patrimonio biológico & cultural",
       subtitulo: "- Desde Austria a Uruguay -",
     },
-    // TODO Encontrar la foto correcta
     {
-      imagen: "/carousel/slider3.webp",
+      imagen: "/carousel/slider3.jpg",
       titulo: "El regalo ideal",
       subtitulo: "- Para los amantes de lo saludable y gourmet -",
     },
   ]
-  
+
   const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
   return (
     <Carousel
-    opts={{ loop: true, align: "start" }}
-    plugins={[plugin]}
-  >
-    <CarouselContent className="xl:h-[92vh] 2xl:h-[95vh] aspect-video xl:aspect-auto">
-      {contenido.map((item, index) => (
-        <CarouselItem key={index}>
-          {/* Contenedor relativo para que el overlay se posicione sobre él */}
-          <div className="w-full relative">
+      opts={{ loop: true, align: "start" }}
+      plugins={[plugin]}
+    >
+      <CarouselContent className="xl:h-[92vh] 2xl:h-[95vh] aspect-video xl:aspect-auto">
+        {contenido.map((item, index) => (
+          <CarouselItem key={index}>
+            {/* Contenedor relativo para que el overlay se posicione sobre él */}
+            <div className="w-full relative">
               <img src={contenido[index].imagen} alt="Austria Uruguay" className="w-full object-cover" />
-            
-            {/* Overlay centrado */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className="bg-[var(--color-secundario)]/50 backdrop-blur-xs p-4 sm:p-6 md:p-8
+
+              {/* Overlay centrado */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div
+                  className="bg-[var(--color-secundario)]/50  p-4 sm:p-6 md:p-8
                 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]
                 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl
                 text-center"
-              >
-                <h2
-                  className="text-white text-base sm:text-lg md:text-xl lg:text-2xl 
+                >
+                  <h2
+                    className="text-[var(--color-perla)] text-base sm:text-lg md:text-xl lg:text-2xl 
                   font-bold uppercase mb-2 leading-tight"
-                >
-                  {item.titulo}
-                </h2>
-                <p
-                  className="text-white text-sm sm:text-base md:text-lg 
+                  >
+                    {item.titulo}
+                  </h2>
+                  <p
+                    className="text-[var(--color-perla)] text-sm sm:text-base md:text-lg 
                   font-bold leading-relaxed break-words"
-                >
-                  {item.subtitulo}
-                </p>
+                  >
+                    {item.subtitulo}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </CarouselItem>
-      ))}
-    </CarouselContent>
-  </Carousel>
-  
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+
   )
 }
