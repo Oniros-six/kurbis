@@ -17,23 +17,30 @@ export default function Component() {
       id: "item-3",
       question: "¿Los productos Kürbis son libres de gluten?",
       answer:
-        "Las semillas de zapallo Cucurbita pepo, var Styriaca, naturalmente no tienen gluten, pero aún no estamos certificados libres de gluten"
+        "Las semillas de zapallo Cucurbita pepo, var Styriaca, naturalmente no tienen gluten, pero aún la planta de elaboración no está certificada libre de gluten."
     },
     {
       id: "item-4",
       question:
         "¿Se puede consumir el Aceite Kürbis junto con el Alimento vegetal Kürbis para potenciar las propiedades nutricionales?",
       answer:
-        "Consultá con tu profesional de salud de confianza o en un sitio web fiable y seguro."
+        "Consulta con tu profesional de salud de confianza o en un sitio web fiable y seguro."
     },
     {
       id: "item-5",
-      question: "¿Se puede usar el aceite Kürbis para el cuidado de la piel, aromaterapia y hacer masaje terapéutico?",
+      question:
+        "¿Los Productos Kürbis tienen propiedades antihelmínticas intestinales?",
       answer:
-        "Consultá con expertos en cosmetología, masoterapia y aromaterapia.",
+        "Consulta con tu profesional de salud de confianza o en un sitio web fiable y seguro."
     },
     {
       id: "item-6",
+      question: "¿Se puede usar el aceite Kürbis para el cuidado de la piel, aromaterapia y hacer masaje terapéutico?",
+      answer:
+        "Consulta con expertos en cosmetología, masoterapia y aromaterapia.",
+    },
+    {
+      id: "item-7",
       question: "¿Es posible quitar una mancha de aceite kürbis de una prenda de vestir?",
       answer:
         "Sólo tenés que hacer el lavado habitual y luego colgar la prenda a pleno sol para que salga la mancha."
