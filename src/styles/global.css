@@ -86,15 +86,8 @@
   --color-complementario: #ffca68;
   --color-background: #0a0a0a;
   --color-background-alt: #0c0c0c;
-  --color-background-golden: #edb86b;
-  --color-background-beige: #f5f5dc; 
   --color-infoBar: #d35806;
   --color-perla: #d4d4d8;
-  
-  /* Original Kurbis design colors from navbar mobile */
-  --kurbis-accent-orange: #f19700;   /* Was text-[#f19700], bg-[#f19700]/10 */
-  --kurbis-hover-green: #5b6841;     /* Was hover:bg-[#5b6841] */
-  --kurbis-gradient-green: #495334;  /* Was from-[#495334]/95, to-[#495334], bg-[#495334]/80 */
 }
 
 .dark {
