@@ -27,7 +27,7 @@ export function CarouselHero() {
     {
       imagen: "/carousel/slider3.jpg",
       titulo: "El regalo ideal",
-      subtitulo: "- Para los amantes de lo saludable y gourmet -",
+      subtitulo: "- Para los amantes de lo saludable & gourmet -",
     },
   ]
 
