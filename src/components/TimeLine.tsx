@@ -212,7 +212,7 @@ export default function TimeLine() {
     {
       title: "El sabor auténtico de Austria transmitido a Kürbis",
       description:
-        "Nuestro tutor adquirió un amplio conocimiento, experiencia y pasión en mantener la tradición de la receta original con un sabor y calidad verdaderamente representativa de los artesanos de Styria y nos transmitió su legado para preservarlo de generación en generación. Nos honra preservar el patrimonio biocultural y el sabor auténtico de Austria, con productos saludables, sabrosos y sostenibles de la más alta calidad.",
+        "Nuestro tutor adquirió un amplio conocimiento, experiencia y pasión en mantener la tradición de la receta original con un sabor y calidad verdaderamente representativa de los artesanos de Styria y nos transmitió su legado para preservarlo de generación en generación.",
       image: "/img/nosotros/mapa.webp?height=350&width=500",
       alt: "Mapa señalando Austria y Uruguay",
     },

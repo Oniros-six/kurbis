@@ -3,6 +3,7 @@ import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
 import Layout from "../layouts/layout.astro";
 import TimeLine from "@/components/TimeLine";
 import PieDePagina from "@/components/PieDePagina.astro";
+import Quote from "@/components/Quote.astro";
 ---
 
 <Layout title="Kürbis - Nosotros">
@@ -19,6 +20,7 @@ import PieDePagina from "@/components/PieDePagina.astro";
     <section class="bg-[url(/img/nosotros/laboratorio.jpeg)] bg-scroll">
       <TimeLine client:load/>
     </section>
+      <Quote quote="Nos honra preservar el patrimonio biocultural y el sabor auténtico de Austria, con productos saludables, sabrosos y sostenibles de la más alta calidad."/>
 
     <PieDePagina title="Conoce nuestros productos" subTitle = "Mejor de lo que puedes imaginar" button="Nuestros productos" link="/productos"/>
 </Layout>
