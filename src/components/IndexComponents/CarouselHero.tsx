@@ -48,18 +48,18 @@ export function CarouselHero() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div
                   className="bg-[var(--color-secundario)]/50  p-4 sm:p-6 md:p-8
-                w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]
-                max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl
+                max-w-full
+                w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]
                 text-center"
                 >
                   <h2
-                    className="text-[var(--color-perla)] text-base sm:text-lg md:text-xl lg:text-2xl 
+                    className="text-[var(--color-perla)] text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl
                   font-bold uppercase mb-2 leading-tight"
                   >
                     {item.titulo}
                   </h2>
                   <p
-                    className="text-[var(--color-perla)] text-sm sm:text-base md:text-lg 
+                    className="text-[var(--color-perla)] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl
                   font-bold leading-relaxed break-words"
                   >
                     {item.subtitulo}
