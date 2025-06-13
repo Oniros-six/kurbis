@@ -65,7 +65,7 @@ Decorá con Aceite Kürbis y con semillas de zapallo tostadas y disfrutá de est
                         </h1>
                         <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
                         <p className="text-xl md:text-2xl text-gray-300 mb-16 font-light tracking-wide">
-                            Con los productos Kürbis, usá tu imaginación, crea recetas espectaculares, deléitate y compartilas en familia y con amigos.
+                            Con los productos Kürbis, usá tu imaginación, crea recetas espectaculares, deléitate y compartilas en familia y con amigos
                         </p>
                     </motion.div>
                 </div>
