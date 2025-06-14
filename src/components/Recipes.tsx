@@ -57,7 +57,7 @@ Deleítate con el sabor y la nutrición de esta receta.`
 obtener la consistencia y el sabor deseados.
 Colócalo encima de rebanadas tostadas del pan que elijas.
 Decora con Aceite Kürbis y con semillas de zapallo tostadas, y
-disfruta de esta delicatesen.`
+disfruta de esta delicatessen.`
   }
 ];
 
