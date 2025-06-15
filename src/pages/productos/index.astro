@@ -1,7 +1,7 @@
 ---
 import Titulos from "@/components/Titulos.astro";
 import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
-import Layout from "../layouts/layout.astro";
+import Layout from "@/layouts/layout.astro";
 import TextImage from "@/components/TextImage.astro";
 import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import IconoTexto from "@/components/IconoTexto.astro";
@@ -77,6 +77,52 @@ import Quote from "@/components/Quote.astro";
             además, el entusiasmo que se ha puesto en estos productos, los hacen
             únicos y exclusivos`
     />
+
+    <section class="py-32 px-4 bg-[var(--color-background)] relative">
+      {/* Luxury Background Effects */}
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/3 via-transparent to-[var(--color-primario)]/3 pointer-events-none"
+      >
+      </div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <Recuadro texto="Productos sin igual" />
+        <div class="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-2">
+            <img
+              src="/mision/etico.jpg"
+              width={500}
+              height={350}
+              class="w-full h-80 object-cover"
+            />
+            <a href="/productos/aceite">
+              <button
+                class="cursor-pointer w-full bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] font-serif"
+              >
+                Aceite de Semillas de Zapallo
+              </button>
+            </a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <img
+              src="/mision/etico.jpg"
+              width={500}
+              height={350}
+              class="w-full h-80 object-cover"
+            />
+            <a href="/productos/alimento">
+              <button
+                class="cursor-pointer w-full bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] font-serif"
+              >
+                Alimento Proteico Vegetal
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section
       class="bg-[var(--color-background-alt)] px-4 md:px-10 lg:px-16 xl:px-32 2xl:px-64 py-10 mt-10"
