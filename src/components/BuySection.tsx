@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { MessageCircle, User, CreditCard, Truck, Phone } from "lucide-react"
+import { smoothScroll } from "../scripts/smoothScroll"
 
 export default function BuySection() {
   const phone = "59892601809";
@@ -64,21 +65,75 @@ export default function BuySection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
           >
-            <a href={url} target="new_blank">
-              <Button
-                size="lg"
-                className="bg-[#25D366] hover:bg-[#20BA5A] text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-secundario)]/30"
-              >
-                <MessageCircle className="w-6 h-6 mr-3" />
-                Hablar por WhatsApp
-              </Button>
-            </a>
+
+            <Button
+              onClick={() => smoothScroll("#precios")}
+              size="lg"
+              className="bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)]"
+            >
+              Conoce nuestros precios
+            </Button>
+
           </motion.div>
         </div>
 
         {/* Bottom accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
       </section>
+
+      <section id="precios" className="py-32 px-4 bg-[var(--color-background)] relative">
+        {/* Luxury Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/3 via-transparent to-[var(--color-primario)]/3 pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-[var(--color-primario)] mb-8">
+              Productos que solo encontraras aqui
+            </h2>
+            <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-2">
+                <img src="/mision/etico.jpg"
+                  width={500}
+                  height={350}
+                  className="w-full h-80 object-cover" />
+                <Button
+                  size="lg"
+                  className="w-full bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] font-serif"
+                >
+                  $ 3.000,00
+                </Button>
+              </div>
+              <div className="flex flex-col gap-2">
+                <img src="/mision/etico.jpg"
+                  width={500}
+                  height={350}
+                  className="w-full h-80 object-cover" />
+                <Button
+                  size="lg"
+                  className="w-full bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] font-serif"
+                >
+                  $ 3.000,00
+                </Button>
+              </div>
+            </div>
+            <a href="/#promociones">
+              <button
+                className="cursor-pointer w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto transition-all duration-300 transform hover:scale-105 "
+              >
+                No olvide nuestras promociones por tiempo limitado!
+              </button>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
 
       {/* Process Steps */}
       <section className="py-24 px-4 bg-[var(--color-background-alt)] relative">
