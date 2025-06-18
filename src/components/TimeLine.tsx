@@ -243,7 +243,7 @@ export default function TimeLine() {
               CULTURA FAMILIAR
             </h2>
             <p className="text-lg md:text-xl text-[var(--color-perla)] max-w-3xl mx-auto leading-relaxed font-light">
-              Semillas, memorias que llevan vida <br />
+              Semillas,<br className="min-[420px]:hidden"/> memorias que llevan vida <br/>
               Una apuesta por el patrimonio biológico y cultural de Austria
             </p>
           </motion.div>

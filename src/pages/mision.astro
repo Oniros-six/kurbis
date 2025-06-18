@@ -26,56 +26,67 @@ import PieDePagina from "@/components/PieDePagina.astro";
     <Quote
       quote="Buscamos crear una experiencia única, ayudando a las personas a llevar una vida saludable cuidando al planeta"
     />
+
     {/* Gold accent line */}
     <div
       class="h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
     >
     </div>
-    <!-- Wellness -->
+
+    {/* Wellness */}
     <TextImage
       img="/img/mision/yoga.jpg"
       alt="Pareja haciendo yoga"
       imgOrder="1"
       textOrder="2"
       title="Buscar el bienestar de las personas en Uruguay"
-      text="Deseamos ayudar a las personas en nuestro país, a mejorar su bienestar general, logrando un fuerte compromiso y  conexión con los clientes de manera de complacer sus requerimientos y expectativas, cumpliendo responsablemente  los requisitos legales y reglamentarios aplicados al sector. "
+      text="Deseamos ayudar a las personas en nuestro país a mejorar su bienestar general, logrando un fuerte compromiso y conexión con los clientes, de manera de complacer sus requerimientos y expectativas, cumpliendo responsablemente con los requisitos legales y reglamentarios aplicables al sector."
     />
-    <!-- Laboratorio -->
+
+    {/* Laboratorio */}
     <TextImage
       img="/img/mision/etico.jpg"
       alt="Investigadores"
       imgOrder="2"
       textOrder="1"
       title="Producir alimentos éticos"
-      text="Elaboramos artesanalmente alimentos,  alcanzando la mejor calidad de producción, con materia prima de primera calidad  producidas bajo las estrictas normas fitosanitarias, ambientales  y laborales de Austria y de la Unión Europea, sin explotación laboral ni infantil,  que conlleva a obtener estas excelentes semillas."
+      text="Elaboramos artesanalmente alimentos, alcanzando la mejor calidad de producción con materia prima de primera calidad, producida bajo estrictas normas fitosanitarias, ambientales y laborales de Austria y de la Unión Europea, sin explotación laboral ni infantil, lo que permite obtener estas excelentes semillas."
     />
-    <!-- Familia -->
+
+    {/* Familia */}
     <TextImage
       img="/img/mision/perrito.png"
       alt="Familia comiendo"
       imgOrder="1"
       textOrder="2"
-      title="Difundir sus ventajas saludables  y gastronómicas"
-      text="Queremos difundir cómo nuestros productos alimenticios pueden ayudar en el autocuidado personal y por supuesto cómo utilizarlos para preparar exquisitas comidas, para compartir en familia, con amigos y aún en el trabajo, además de agregar valor a la alta  gastronomía."
+      title="Difundir sus ventajas saludables y gastronómicas"
+      text="Queremos difundir cómo nuestros productos alimenticios pueden ayudar en el autocuidado personal y, por supuesto, cómo utilizarlos para preparar exquisitas comidas para compartir en familia, con amigos e incluso en el trabajo, además de agregar valor a la alta gastronomía."
     />
-    <!-- Foto  de las semillas e nlas manos -->
+
+    {/* Foto de las semillas en las manos */}
     <TextImage
       img="/img/mision/legado.webp"
       alt="Semillas de zapallo en las manos de un hombre"
       imgOrder="2"
       textOrder="1"
       title="Promulgar el legado"
-      text="En Kürbis esperamos ayudar a educar de dónde provienen estas semillas y alimentos,  transmitir el legado patrimonial biológico y cultural de Austria, buscamos la excelencia, la sostenibilidad ambiental, la alta calidad  y la pasión por la belleza del poder de los productos naturales, ofreciendo productos innovadores de primera calidad, ricos en nutrientes, sabrosos, que aseguren una sana alimentación."
+      text="En Kürbis esperamos ayudar a educar sobre el origen de estas semillas y alimentos, y transmitir el legado patrimonial biológico y cultural de Austria. Buscamos la excelencia, la sostenibilidad ambiental, la alta calidad y la pasión por la belleza y el poder de los productos naturales, ofreciendo productos innovadores de primera calidad, ricos en nutrientes, sabrosos y que aseguren una sana alimentación."
     />
-    <!-- Investigadores -->
-    <TextImage
-      img="/img/mision/investigadores.webp"
-      alt="Investigadores"
-      imgOrder="1"
-      textOrder="2"
-      title="Crear productos innovadores excepcionales"
-      text="Creemos que llevar una vida saludable es un derecho de todos , por lo cual estamos también en una búsqueda de otros productos innovadores excepcionales a base de plantas, éticos, respaldados por la ciencia, libres de crueldad animal y deliciosos para nuestros clientes, asegurándonos que cada artículo cumpla con nuestros estándares de calidad,  sostenibilidad  y nutrición."
+
+    {/* Investigadores */}
+    <Titulos
+      title="Creamos productos innovadores y excepcionales"
     />
+    <Quote
+      quote="Creemos que llevar una vida saludable es un derecho de todos, por lo cual también estamos en la búsqueda de otros productos innovadores y excepcionales a base de plantas, éticos, respaldados por la ciencia, libres de crueldad animal y deliciosos para nuestros clientes. Nos aseguramos de que cada artículo cumpla con nuestros estándares de calidad, sostenibilidad y nutrición."
+      className="lg:text-3xl"
+      />
   </div>
-    <PieDePagina title="¿Sabes acerca de nosotros?" subTitle = "Te invitamos a conocer más acerca de nuestra cultura" button="Nuestra cultura" link="/nosotros"/>
+
+  <PieDePagina
+    title="¿Sabes acerca de nuestra ética?"
+    subTitle="Te invitamos a conocer más acerca de nuestra elaboración"
+    button="Sostenibilidad"
+    link="/sostenibilidad"
+  />
 </Layout>

@@ -7,7 +7,8 @@ export default function BuySection() {
   const phone = "59892601809";
   const message = "Hola, quiero más información sobre sus productos";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
+  const precioAceite = "850,00"
+  const precioAlimento = "1.450,00"
   const steps = [
     {
       number: "01",
@@ -69,7 +70,7 @@ export default function BuySection() {
             <Button
               onClick={() => smoothScroll("#precios")}
               size="lg"
-              className="bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)]"
+              className="bg-transparent text-[var(--color-perla)] cursor-pointer px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transform hover:scale-105 border border-[var(--color-primario)] transition-all duration-300"
             >
               Conoce nuestros precios
             </Button>
@@ -81,6 +82,7 @@ export default function BuySection() {
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
       </section>
 
+      {/* Price section */}
       <section id="precios" className="py-32 px-4 bg-[var(--color-background)] relative">
         {/* Luxury Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/3 via-transparent to-[var(--color-primario)]/3 pointer-events-none" />
@@ -105,9 +107,9 @@ export default function BuySection() {
                   className="w-full h-80 object-cover" />
                 <Button
                   size="lg"
-                  className="w-full bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] font-serif"
+                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
                 >
-                  $ 3.000,00
+                  $U {precioAceite}
                 </Button>
               </div>
               <div className="flex flex-col gap-2">
@@ -117,9 +119,9 @@ export default function BuySection() {
                   className="w-full h-80 object-cover" />
                 <Button
                   size="lg"
-                  className="w-full bg-[var(--color-complementario)] hover:bg-transparent text-black hover:text-[var(--color-perla)] px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] font-serif"
+                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
                 >
-                  $ 3.000,00
+                  $U {precioAlimento}
                 </Button>
               </div>
             </div>
@@ -132,8 +134,50 @@ export default function BuySection() {
             </a>
           </motion.div>
         </div>
-      </section>
 
+        {/* Soon section */}
+
+        <div className="max-w-4xl mx-auto text-center relative z-10 mt-15 md:mt-25">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-[var(--color-primario)] mb-8">
+              Proximamente...
+            </h2>
+            <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-2">
+                <img src="/mision/etico.jpg"
+                  width={500}
+                  height={350}
+                  className="w-full h-80 object-cover" />
+                <Button
+                  size="lg"
+                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
+                >
+                  Vainas de Vainilla
+                </Button>
+              </div>
+              <div className="flex flex-col gap-2">
+                <img src="/mision/etico.jpg"
+                  width={500}
+                  height={350}
+                  className="w-full h-80 object-cover" />
+                <Button
+                  size="lg"
+                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
+                >
+                  Cacao
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Process Steps */}
       <section className="py-24 px-4 bg-[var(--color-background-alt)] relative">

@@ -92,11 +92,7 @@ disfruta de esta delicatessen.`
 
             {/* Recipes Section with Background */}
             <section
-                className="min-h-screen relative"
-                style={{
-                    backgroundImage: `linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('/img/recetas/fondo.png')`,
-
-                }}
+                className="min-h-screen relative bg-[var(--color-background)]"
             >
                 {/* Content Container */}
                 <div className="relative z-10 py-20 px-4">
@@ -128,7 +124,7 @@ disfruta de esta delicatessen.`
                                             {/* Recipe Content */}
                                             <div className="flex flex-col md:flex-row gap-8 items-start">
                                                 {/* Image */}
-                                                <div className="flex-shrink-0 w-full md:w-48">
+                                                <div className="flex-shrink-0 w-full md:w-48 lg:w-[17rem]">
                                                     <div className="aspect-square bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-2">
                                                         <img
                                                             src={receta.imagen}

@@ -8,7 +8,7 @@ const { img, alt, title, text, textOrder, imgOrder } = Astro.props;
     <div class="grid md:grid-cols-2 gap-16 items-center">
       
       <!-- Imagen -->
-      <div class={`relative order-${imgOrder}`}>
+      <div class={`relative md:order-${imgOrder}`}>
         <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"></div>
         <div class="relative overflow-hidden">
           <img
@@ -22,7 +22,7 @@ const { img, alt, title, text, textOrder, imgOrder } = Astro.props;
       </div>
 
       <!-- Texto -->
-      <div class={`flex flex-col justify-center order-${textOrder}`}>
+      <div class={`flex flex-col justify-center md:order-${textOrder}`}>
         <div class="mb-4 w-16 h-[1px] bg-[var(--color-primario)]"></div>
         <h3 class="font-serif text-3xl md:text-4xl font-light text-[var(--color-perla)] mb-8">
           {title}

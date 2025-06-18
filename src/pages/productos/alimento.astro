@@ -5,12 +5,12 @@ import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import PieDePagina from "@/components/PieDePagina.astro";
 
 const beneficios = [
-  "¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?",
-  "¿El alto contenido de fibra favorece la salud intestinal y la flora, previene el estreñimiento, reduce el colesterol y ayuda a prevenir el cáncer de colon?",
-  "¿La presencia de triptófano ayuda a descansar mejor?",
-  "¿El contenido de zinc beneficia al sistema inmune y al metabolismo?",
-  "¿El contenido de magnesio beneficia la función muscular y nerviosa, así como la salud ósea?",
-  "¿El contenido de sodio presente puede afectar la presión arterial?",
+    "¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?",
+    "¿El alto contenido de fibra favorece la salud intestinal y la flora, previene el estreñimiento, reduce el colesterol y ayuda a prevenir el cáncer de colon?",
+    "¿La presencia de triptófano ayuda a descansar mejor?",
+    "¿El contenido de zinc beneficia al sistema inmune y al metabolismo?",
+    "¿El contenido de magnesio beneficia la función muscular y nerviosa, así como la salud ósea?",
+    "¿El contenido de sodio presente puede afectar la presión arterial?",
 ];
 ---
 
@@ -61,6 +61,9 @@ const beneficios = [
             </div>
         </section>
 
+        <!-- Quote Section -->
+        <Quote quote="Nutrición saludable que se adapta a tu estilo de vida" />
+
         <!-- Carousel Section Placeholder -->
         <section class="py-16 px-4 bg-[var(--color-background-alt)] relative">
             <div
@@ -94,9 +97,6 @@ const beneficios = [
             </div>
         </section>
 
-        <!-- Quote Section -->
-        <Quote quote="Nutrición saludable que se adapta a tu estilo de vida" />
-
         <!-- Content Sections -->
         <section class="py-16 px-4 bg-[var(--color-background-alt)]">
             <div class="max-w-4xl mx-auto space-y-12">
@@ -105,7 +105,7 @@ const beneficios = [
                     class="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-6 text-center fade-in-up"
                 >
                     <p class="text-gray-300 font-light">
-                        *37- Foto- chorro aceite
+                        *40 smoothie
                     </p>
                 </div>
 
@@ -121,27 +121,25 @@ const beneficios = [
                         las vitaminas E y B1, además de minerales, detacándose
                         el Magnesio, el Zinc, el Hierro y el Potasio, así
                         también antioxidantes y esteroles para respaldar el
-                        bienestar y la vitalidad general. <br/>
-                        Tiene algunas otras ventajas nutricionales por el bajo contenido de
-                        carbohidratos de 3,10g con 128kcal por porción y del
-                        total de ácidos grasos presentes, casi 80% son ácidos
-                        grasos insaturados prevaleciendo el ácido oléico y
-                        linoléico, que lo hacen deseable desde el punto de vista
-                        nutricional y gastronómico.
+                        bienestar y la vitalidad general. <br />
+                        Tiene algunas otras ventajas nutricionales por el bajo contenido
+                        de carbohidratos de 3,10g con 128kcal por porción y del total
+                        de ácidos grasos presentes, casi 80% son ácidos grasos insaturados
+                        prevaleciendo el ácido oléico y linoléico, que lo hacen deseable
+                        desde el punto de vista nutricional y gastronómico.
                     </p>
                     <!-- *40- Foto- batido texto iamgen -->
                     <p class="text-gray-300 font-light text-lg leading-relaxed">
                         El alimento vegetal Kürbis es delicioso, presentado en
                         sabor Natural y próximamente en sabor Cacao y Vaina de
                         Vainilla, es de primera calidad y la consistencia en
-                        polvo permite una fácil digestión y asimilación.<br/>
+                        polvo permite una fácil digestión y asimilación.<br />
                         Es una buena opción para aquellos que no incluyen productos
                         animales en su dieta o para alternar con otros alimentos
-                        que hay en el mercado, mejorando el aporte nutricional
-                        sobre todo para quienes siguen una dieta vegana, whole
-                        30, keto, clean, detox, ayuno intermitente,
-                        inmunonutritiva, páleo, un estilo de vida wellness y
-                        más...
+                        que hay en el mercado, mejorando el aporte nutricional sobre
+                        todo para quienes siguen una dieta vegana, whole 30, keto,
+                        clean, detox, ayuno intermitente, inmunonutritiva, páleo,
+                        un estilo de vida wellness y más...
                     </p>
                 </div>
                 <div class="flex flex-col space-y-1">
@@ -171,7 +169,7 @@ const beneficios = [
                     class="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-6 text-center fade-in-up"
                 >
                     <p class="text-gray-300 font-light">
-                        *38- Foto- 1 cucharada de aceite en ensalada
+                        *41 entrenamiento
                     </p>
                 </div>
 
@@ -220,8 +218,7 @@ const beneficios = [
                     <p
                         class="text-gray-300 font-light text-lg leading-relaxed text-center"
                     >
-                        Para conocer los beneficios del Aceite Kürbis en la
-                        salud, se recomienda consultar con un profesional de la
+                        Para conocer los beneficios del Alimento Kürbis, se recomienda consultar con un profesional de la
                         salud o acceder a fuentes confiables en línea.
                     </p>
                 </div>
@@ -249,7 +246,12 @@ const beneficios = [
         <!-- <Quote
             quote="El aceite Kürbis se integra a la perfección con un estilo de vida saludable y gourmet"
         /> -->
-     <PieDePagina title="¿Ya conoces nuestro aceite Kürbis?" subTitle = "Te invitamos a ver sus beneficios a la salud" button="Aceite Kürbis" link="/productos/aceite"/>
+        <PieDePagina
+            title="¿Ya conoces nuestro aceite Kürbis?"
+            subTitle="Te invitamos a ver sus beneficios"
+            button="Aceite Kürbis"
+            link="/productos/aceite"
+        />
     </div>
 
     <style>

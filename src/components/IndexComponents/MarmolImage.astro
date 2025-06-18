@@ -1,14 +1,9 @@
 ---
-import Button from "@/components/Button";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/LayoutComponents/button";
 
-const {
-  srcBackground,
-  altBackground,
-  srcProduct,
-  altProduct,
-  productHeight
-} = Astro.props;
+const { srcBackground, altBackground, srcProduct, altProduct, productHeight } =
+  Astro.props;
 ---
 
 <section class="relative w-full">
@@ -20,43 +15,44 @@ const {
   />
 
   <!-- Content Overlay -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center md:justify-start p-4 sm:p-6 md:p-8 md:pt-40 lg:p-12 lg:pt-40">
-    
+  <div
+    class="absolute inset-0 flex flex-col items-center justify-center md:justify-start p-4 sm:p-6 md:p-8 md:pt-40 lg:p-12 lg:pt-40"
+  >
     <!-- Title Section -->
     <div class="mb-6 sm:mb-8 md:mb-12 text-center">
       <slot name="title" />
     </div>
 
     <!-- Main Content Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:gap-16 items-center justify-items-center max-w-6xl w-full">
-      
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:gap-16 items-center justify-items-center max-w-6xl w-full"
+    >
       <!-- Product Image Container -->
-      <div class="flex justify-center items-center order-1 md:order-1 mask-b-from-80% mask-b-to-100%">
+      <div
+        class="flex justify-center items-center order-1 md:order-1 mask-b-from-80% mask-b-to-100%"
+      >
         <img
           src={srcProduct}
           alt={altProduct}
           class={`object-contain w-full max-w-[15rem] sm:max-w-[20rem] md:max-w-[25rem] lg:max-w-[30rem] xl:max-w-[35rem] ${productHeight}`}
-        /> 
+        />
       </div>
 
       <!-- Text Content Container -->
-      <div class="self-start text-[var(--color-secundario)] font-medium text-center md:text-left space-y-4 sm:space-y-6 order-2 md:order-2 lg:mt-8 xl:mt-12">
-        
+      <div
+        class="self-start text-[var(--color-secundario)] font-medium text-center md:text-left space-y-4 sm:space-y-6 order-2 md:order-2 lg:mt-8 xl:mt-12"
+      >
         <!-- Description -->
         <div class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
           <slot name="description" />
         </div>
 
         <!-- CTA Button -->
-        <div class="flex justify-center md:justify-start">
-          <Button
-            className="flex items-center gap-2 text-sm sm:text-base hover:from-[var(--color-secundario)] hover:via-[var(--color-secundario)] hover:to-[var(--color-secundario)] hover:scale-105 transition-all duration-300 ease-in-out group"
-          >
-            <a href="/comprar">Comprar</a>
-            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 stroke-[3px] group-hover:translate-x-1 transition-transform duration-200" />
-          </Button>
-        </div>
-        
+        <Button client:load
+          className="hover:scale-105 transition-all duration-300 ease-in-out items-center group gap-2"
+        >
+          <a href="/comprar">Comprar</a>
+        </Button>
       </div>
     </div>
   </div>
