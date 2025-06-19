@@ -26,10 +26,10 @@ export function NavbarDesktop() {
                             <a href="/productos">Productos</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink className="text-md w-28 hover:bg-[var(--color-complementario)]">
-                            <a href="/aceite">Aceite</a>
+                            <a href="/productos/aceite">Aceite</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink className="text-md w-28 hover:bg-[var(--color-complementario)]">
-                            <a href="/alimento">Alimento</a>
+                            <a href="/productos/alimento">Alimento</a>
                         </NavigationMenuLink>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
