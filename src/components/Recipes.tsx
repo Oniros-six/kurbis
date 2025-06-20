@@ -21,7 +21,7 @@ Cuando lo pruebes, vas a sentir que es un verdadero placer.`
   {
     id: 3,
     titulo: "Pesto Austríaco",
-    imagen: "/img/recetas/pesto3.jpg",
+    imagen: "/img/recetas/pesto.jpg",
     descripcion: `Mezcla los siguientes ingredientes:
 1/2 taza de semillas de zapallo tostadas sin aceite, o las semillas
 que prefieras. Agrega 2 cucharadas de queso parmesano, 2
@@ -125,7 +125,7 @@ disfruta de esta delicatessen.`
                                             <div className="flex flex-col md:flex-row gap-8 items-start">
                                                 {/* Image */}
                                                 <div className="flex-shrink-0 w-full md:w-48 lg:w-[17rem]">
-                                                    <div className="aspect-square bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-2">
+                                                    <div className=" bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-2">
                                                         <img
                                                             src={receta.imagen}
                                                             alt={receta.titulo}
