@@ -3,6 +3,34 @@ import { motion } from "framer-motion"
 import { MessageCircle, User, CreditCard, Truck, Phone } from "lucide-react"
 import { smoothScroll } from "../scripts/smoothScroll"
 
+const Image = ({ img, titulo }: { img: string, titulo: string }) => {
+  return (
+    <div className="relative flex flex-col gap-2 items-center">
+      <div
+        className="absolute -top-5  w-full h-full border border-[var(--color-primario)]/30"
+      />
+      <div
+        className="absolute -top-4 right-1 w-full h-full border border-[var(--color-primario)]/30"
+      />
+      <div className="relative overflow-hidden">
+        <img src={`/img/` + img}
+          width={500}
+          height={350}
+          className="w-min h-80" />
+      </div>
+      <Button
+        size="lg"
+        className="w-full bg-[var(--color-background)] z-10 px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium"
+      >
+        {titulo}
+      </Button>
+    </div>
+  )
+}
+
+
+
+
 export default function BuySection() {
   const phone = "59892601809";
   const message = "Hola, quiero más información sobre sus productos";
@@ -100,38 +128,33 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex flex-col gap-2">
-                <img src="/mision/etico.jpg"
-                  width={500}
-                  height={350}
-                  className="w-full h-80 object-cover" />
-                <Button
-                  size="lg"
-                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
-                >
-                  $U {precioAceite}
-                </Button>
-              </div>
-              <div className="flex flex-col gap-2">
-                <img src="/mision/etico.jpg"
-                  width={500}
-                  height={350}
-                  className="w-full h-80 object-cover" />
-                <Button
-                  size="lg"
-                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
-                >
-                  $U {precioAlimento}
-                </Button>
-              </div>
+              <Image img="comprar/oil-bottle.png" titulo={"$U " + precioAceite} />
+              <Image img="comprar/natural.png" titulo={"$U " + precioAlimento} />
             </div>
-            <a href="/#promociones">
+          </motion.div>
+        </div>
+        {/* promos section */}
+        <div className="max-w-7xl mx-auto text-center relative z-10 mt-15 ">
+           <a href="/#promociones">
               <button
                 className="cursor-pointer w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto transition-all duration-300 transform hover:scale-105 "
               >
                 No olvide nuestras promociones por tiempo limitado!
               </button>
             </a>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Image img="duo-wellness-sr.png" titulo="$$" />
+              <Image img="super-vital-sr.png" titulo="$$" />
+              <Image img="sabores-austria-sr.png" titulo="$$" />
+            </div>
           </motion.div>
         </div>
 
@@ -150,30 +173,8 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex flex-col gap-2">
-                <img src="/mision/etico.jpg"
-                  width={500}
-                  height={350}
-                  className="w-full h-80 object-cover" />
-                <Button
-                  size="lg"
-                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
-                >
-                  Vainas de Vainilla
-                </Button>
-              </div>
-              <div className="flex flex-col gap-2">
-                <img src="/mision/etico.jpg"
-                  width={500}
-                  height={350}
-                  className="w-full h-80 object-cover" />
-                <Button
-                  size="lg"
-                  className="w-full bg-transparent hover:bg-transparent:text-[var(--color-perla)] px-12 py-6 text-lg rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-primario)] tracking-wider font-[Roboto] font-medium  "
-                >
-                  Cacao
-                </Button>
-              </div>
+              <Image img="comprar/vainilla.png" titulo="Vainas de Vainilla" />
+              <Image img="comprar/cacao.png" titulo="Cacao" />
             </div>
           </motion.div>
         </div>
