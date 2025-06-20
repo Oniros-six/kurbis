@@ -17,9 +17,7 @@ import Layout from "../layouts/layout.astro";
   </head>
   <body>
     <Layout title="Kürbis - Contacto">
-      <div
-        class="min-h-screen"
-      >
+      <div class="min-h-screen">
         <div class="max-w-6xl mx-auto px-6 py-12 lg:px-8">
           {/* Header Section */}
           <div class="text-center mb-16">
@@ -28,12 +26,12 @@ import Layout from "../layouts/layout.astro";
             >
               <MessageCircle className="w-8 h-8 text-[var(--color-perla)]" />
             </div>
-            <h1
-              class="text-4xl lg:text-5xl font-bold mb-4"
-            >
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">
               Dejanos un mensaje.
             </h1>
-            <p class="text-xl text-[var(--color-perla)] max-w-3xl mx-auto italic">
+            <p
+              class="text-xl text-[var(--color-perla)] max-w-3xl mx-auto italic"
+            >
               Comunicate directamente con nosotros a través del siguiente
               formulario
             </p>
@@ -42,52 +40,52 @@ import Layout from "../layouts/layout.astro";
           {/* Contact Form */}
           <div class="max-w-5xl mx-auto mb-16">
             <div
-              class="bg-gradient-to-br from-[var(--color-secundario)] to-[var(--color-secundario)] p-8 lg:p-12 shadow-2xl"
+              class="bg-gradient-to-br from-[var(--color-secundario)] to-[var(--color-secundario)] rounded-lg p-8 lg:p-12 shadow-2xl"
             >
               <form class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left Column */}
-                <div class="space-y-6 sm:flex flex-col justify-around">
-                  <div class="sm:grid grid-cols-6 items-center">
+                <div class="space-y-6">
+                  <div>
                     <Label
                       htmlFor="nombre"
-                      className="text-[var(--color-perla)] col-span-2 text-lg font-medium mb-3 sm:mb-0 block"
+                      className="text-[var(--color-perla)] text-lg font-medium mb-3 block"
                     >
                       Nombre
                     </Label>
                     <Input
                       id="nombre"
                       type="text"
-                      className="h-12 bg-[var(--color-perla)] col-span-4 border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
+                      className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
                       placeholder="Tu nombre completo"
                     />
                   </div>
 
-                  <div class="sm:grid grid-cols-6 items-center">
+                  <div>
                     <Label
                       htmlFor="email"
-                      className="text-[var(--color-perla)] col-span-2 text-lg font-medium mb-3 sm:mb-0 block"
+                      className="text-[var(--color-perla)] text-lg font-medium mb-3 block"
                     >
                       Email
                     </Label>
                     <Input
                       id="email"
                       type="email"
-                      className="h-12 bg-[var(--color-perla)] col-span-4 border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
-                      placeholder="tu@email.com"
+                      className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
+                      placeholder="ejemplo@email.com"
                     />
                   </div>
 
-                  <div class="sm:grid grid-cols-6 items-center">
+                  <div>
                     <Label
                       htmlFor="telefono"
-                      className="text-[var(--color-perla)] col-span-2 text-lg font-medium mb-3 sm:mb-0 block"
+                      className="text-[var(--color-perla)] text-lg font-medium mb-3 block"
                     >
                       Nro de Teléfono
                     </Label>
                     <Input
                       id="telefono"
                       type="tel"
-                      className="h-12 bg-[var(--color-perla)] col-span-4 border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
+                      className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
                       placeholder="094 123 456"
                     />
                   </div>
@@ -98,13 +96,13 @@ import Layout from "../layouts/layout.astro";
                   <div class="h-full flex flex-col">
                     <Label
                       htmlFor="mensaje"
-                      className="text-[var(--color-perla)] grid-span-2 text-lg font-medium mb-3 sm:mb-0 block"
+                      className="text-[var(--color-perla)] text-lg font-medium mb-3 block"
                     >
                       Mensaje
                     </Label>
                     <Textarea
                       id="mensaje"
-                      className="flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded-xl text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none"
+                      className="flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none"
                       placeholder="Escribe tu mensaje aquí..."
                     />
 
@@ -132,7 +130,9 @@ import Layout from "../layouts/layout.astro";
                 <div
                   class="w-12 h-12 bg-gradient-to-r from-green-600 to-[var(--color-secundario)] rounded-full flex items-center justify-center"
                 >
-                  <MessageCircle className="w-6 h-6 text-[var(--color-perla)]" />
+                  <MessageCircle
+                    className="w-6 h-6 text-[var(--color-perla)]"
+                  />
                 </div>
                 <h3 class="text-2xl font-bold text-gray-800">
                   Respuestas inmediatas
@@ -166,11 +166,14 @@ import Layout from "../layouts/layout.astro";
               <div class="space-y-4">
                 <p class="text-gray-600 text-lg">
                   Comunicate por Teléfono al <span
-                    class="font-bold text-[var(--color-secundario)] text-nowrap">094 398 865</span
+                    class="font-bold text-[var(--color-secundario)] text-nowrap"
+                    >094 398 865</span
                   >
                 </p>
                 <div class="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                  <Clock
+                    className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0"
+                  />
                   <p class="text-gray-600">
                     <span class="font-semibold">
                       Nuestro horario de atención regular es de Lunes a Viernes
