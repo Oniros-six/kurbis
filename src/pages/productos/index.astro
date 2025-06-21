@@ -14,12 +14,22 @@ import Quote from "@/components/Quote.astro";
     class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
   >
     {/* Hero Section with Luxury Overlay */}
-    <TituloSobreImagen
-      img="/img/productos/Kurbis-montaje-packs.jpg"
-      alt="Austria y Piriapolis"
-      imgHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
-      withFilter={false}
-    />
+
+    <section class={`h-[56vw] overflow-hidden`}>
+      <div class="inset-0">
+        <img
+          src="/img/productos/moño.png"
+          alt={"alt"}
+          role="presentation"
+          aria-hidden="true"
+          class="object-cover w-full"
+        />
+        <div
+          class="h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
+        >
+        </div>
+      </div>
+    </section>
 
     {/* Elegant Introduction */}
     <Titulos

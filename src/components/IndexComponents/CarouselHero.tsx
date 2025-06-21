@@ -6,11 +6,9 @@ import {
 } from "@/components/ui/carousel"
 
 export function CarouselHero() {
-  // TODO Contenido esta hardcodeado, cuando se haga el cms lo deshardcodeo
-  // TODO buscar imagenes que tengan la resolucion correcta
   const contenido = [
     {
-      imagen: "/carousel/slider1.webp",
+      imagen: "/carousel/slider0.png",
       titulo: "el 'oro' verde de austria",
       subtitulo: "- Ahora en Uruguay -",
     },
@@ -20,7 +18,7 @@ export function CarouselHero() {
       subtitulo: "",
     },
     {
-      imagen: "/carousel/slider0.webp",
+      imagen: "/carousel/slider0.jpg",
       titulo: "Un patrimonio biológico & cultural",
       subtitulo: "- Desde Austria a Uruguay -",
     },
@@ -37,7 +35,7 @@ export function CarouselHero() {
       opts={{ loop: true, align: "start" }}
       plugins={[plugin]}
     >
-      <CarouselContent className="xl:h-[92vh] 2xl:h-[95vh] aspect-video xl:aspect-auto">
+      <CarouselContent className=" aspect-video xl:aspect-auto">
         {contenido.map((item, index) => (
           <CarouselItem key={index}>
             {/* Contenedor relativo para que el overlay se posicione sobre él */}
