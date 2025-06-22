@@ -12,11 +12,11 @@ const Image = ({ img, titulo }: { img: string, titulo: string }) => {
       <div
         className="absolute -top-4 right-1 w-full h-full border border-[var(--color-primario)]/30"
       />
-      <div className="relative overflow-hidden">
+      <div className="relative flex items-end overflow-hidden h-full p-4">
         <img src={`/img/` + img}
-          width={500}
-          height={350}
-          className="w-min h-80" />
+          width={300}
+          height={250}
+          className="w-min" />
       </div>
       <Button
         size="lg"
@@ -28,15 +28,15 @@ const Image = ({ img, titulo }: { img: string, titulo: string }) => {
   )
 }
 
-
-
-
 export default function BuySection() {
-  const phone = "59892601809";
+  const phone = "59894398865";
   const message = "Hola, quiero más información sobre sus productos";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-  const precioAceite = "850,00"
+  const precioAceite = "800,00"
   const precioAlimento = "1.450,00"
+  const duoWellness = "1.800,00"
+  const superVital = "3.600,00"
+  const saboresAustria = "4.000,00"
   const steps = [
     {
       number: "01",
@@ -95,23 +95,25 @@ export default function BuySection() {
             className="mb-16"
           >
 
-            <Button
-              onClick={() => smoothScroll("#precios")}
-              size="lg"
-              className="bg-transparent text-[var(--color-perla)] cursor-pointer px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transform hover:scale-105 border border-[var(--color-primario)] transition-all duration-300"
-            >
-              Conoce nuestros precios
-            </Button>
+
 
           </motion.div>
         </div>
-
+       <div className="flex justify-center">
+         <Button
+          onClick={() => smoothScroll("#precios")}
+          size="lg"
+          className="bg-transparent text-[var(--color-perla)] cursor-pointer px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transform hover:scale-105 border border-[var(--color-primario)] transition-all duration-300"
+        >
+          Conoce nuestros precios
+        </Button>
+       </div>
         {/* Bottom accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
       </section>
 
       {/* Price section */}
-      <section id="precios" className="py-32 px-4 bg-[var(--color-background)] relative">
+      <section id="precios" className="py-32 px-8 bg-[var(--color-background)] relative">
         {/* Luxury Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/3 via-transparent to-[var(--color-primario)]/3 pointer-events-none" />
 
@@ -127,21 +129,21 @@ export default function BuySection() {
             </h2>
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Image img="comprar/oil-bottle.png" titulo={"$U " + precioAceite} />
-              <Image img="comprar/natural.png" titulo={"$U " + precioAlimento} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10">
+              <Image img="comprar/oil-bottle.png" titulo={"$U  " + precioAceite} />
+              <Image img="comprar/natural.png" titulo={"$U  " + precioAlimento} />
             </div>
           </motion.div>
         </div>
         {/* promos section */}
         <div className="max-w-7xl mx-auto text-center relative z-10 mt-15 ">
-           <a href="/#promociones">
-              <button
-                className="cursor-pointer w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto transition-all duration-300 transform hover:scale-105 "
-              >
-                No olvide nuestras promociones por tiempo limitado!
-              </button>
-            </a>
+          <a href="/#promociones">
+            <button
+              className="cursor-pointer w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto transition-all duration-300 transform hover:scale-105 "
+            >
+              No olvides nuestras promociones por tiempo limitado
+            </button>
+          </a>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -150,10 +152,10 @@ export default function BuySection() {
           >
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Image img="duo-wellness-sr.png" titulo="$$" />
-              <Image img="super-vital-sr.png" titulo="$$" />
-              <Image img="sabores-austria-sr.png" titulo="$$" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10">
+              <Image img="duo-wellness-sr.png" titulo={"$U  " + duoWellness} />
+              <Image img="super-vital-sr.png" titulo={"$U  " + superVital} />
+              <Image img="sabores-austria-sr.png" titulo={"$U  " + saboresAustria} />
             </div>
           </motion.div>
         </div>
@@ -172,7 +174,7 @@ export default function BuySection() {
             </h2>
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10">
               <Image img="comprar/vainilla.png" titulo="Vainas de Vainilla" />
               <Image img="comprar/cacao.png" titulo="Cacao" />
             </div>
@@ -197,7 +199,7 @@ export default function BuySection() {
             <div className="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
             <div className="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
 
-            <div className="inline-block px-12 bg-[var(--color-background-alt)] relative">
+            <div className="inline-block px-4 bg-[var(--color-background-alt)] relative">
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-[var(--color-primario)] mb-6">
                 ¿Cómo funciona?
               </h2>
