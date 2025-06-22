@@ -1,6 +1,5 @@
 ---
 import Titulos from "@/components/Titulos.astro";
-import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
 import Layout from "@/layouts/layout.astro";
 import TextImage from "@/components/TextImage.astro";
 import Recuadro from "@/components/IndexComponents/Recuadro.astro";
@@ -18,8 +17,8 @@ import Quote from "@/components/Quote.astro";
     <section class={`h-[56vw] overflow-hidden`}>
       <div class="inset-0">
         <img
-          src="/img/productos/moño.png"
-          alt={"alt"}
+          src="/img/productos/hero.png"
+          alt="Productos Kurbis"
           role="presentation"
           aria-hidden="true"
           class="object-cover w-full"
@@ -47,6 +46,31 @@ import Quote from "@/components/Quote.astro";
     <Recuadro
       texto="Los productos Kürbis ofrecen beneficios extraordinariamente saludables"
     />
+
+    <section
+      class="py-24 px-4 m-2 md:m-0 bg-[var(--color-background-alt)] relative"
+    >
+      <div class="w-fit mx-auto">
+        <div class="grid gap-16 items-center">
+          <!-- Imagen -->
+          <div class={`relative`}>
+            <div
+              class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
+            >
+            </div>
+            <div class="relative overflow-hidden">
+              <img
+                src="/img/productos/wellness.jpg"
+                alt="Pareja trotando"
+                width={600}
+                height={600}
+                class="object-cover aspect-square"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="py-24 px-4 bg-[var(--color-background)] relative">
       <div class="max-w-6xl mx-auto text-center relative z-10">
@@ -81,24 +105,6 @@ import Quote from "@/components/Quote.astro";
       </div>
     </section>
 
-    <div class="w-full flex justify-center mb-10">
-      <div class="relative">
-        <div
-          class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
-        >
-        </div>
-        <div class="relative overflow-hidden">
-          <img
-            src="/img/productos/wellness.jpg"
-            alt="Pareja trotando"
-            width={600}
-            height={600}
-            class="object-cover aspect-square"
-          />
-        </div>
-      </div>
-    </div>
-
     <Quote
       quote=`Nuestros productos están hechos con cariño, con alma, con pasión y
             además, el entusiasmo que se ha puesto en estos productos, los hacen
@@ -113,7 +119,15 @@ import Quote from "@/components/Quote.astro";
       </div>
 
       <div class="max-w-4xl mx-auto text-center relative z-10">
-        <Recuadro texto="Productos sin igual" />
+        <div
+          class="flex justify-center items-center px-4 md:px-8 lg:px-16 mb-6 md:mb-8 lg:mb-10 z-15"
+        >
+          <h3
+            class="bg-[var(--color-primario)] mx-2 px-4 md:px-6 lg:px-8 py-3 md:py-4 tracking-wider md:tracking-[.2em] font-normal uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-black text-center leading-tight"
+          >
+            Productos sin igual
+          </h3>
+        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="flex flex-col gap-2">

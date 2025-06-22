@@ -3,6 +3,7 @@ import Layout from "@/layouts/layout.astro";
 import Quote from "@/components/Quote.astro";
 import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import PieDePagina from "@/components/PieDePagina.astro";
+import { CarouselHero } from "@/components/ProductsComponents/Carousel";
 
 const beneficios = [
     "¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?",
@@ -19,42 +20,24 @@ const beneficios = [
         class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
     >
         <!-- Hero Section -->
-        <section class="py-32 px-4 relative overflow-hidden">
-            <!-- Luxury Background Effects -->
-            <div
-                class="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/7 via-transparent to-[var(--color-primario)]/7 pointer-events-none"
-            >
-            </div>
-            <div
-                class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-            >
-            </div>
-
-            <div class="max-w-4xl mx-auto text-center relative z-10">
+        <section class="py-24 px-4 bg-[var(--color-background)] relative">
+            <div class="max-w-6xl mx-auto text-center relative z-10">
                 <!-- Decorative elements -->
                 <div
-                    class="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
+                    class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
                 >
                 </div>
                 <div
-                    class="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
+                    class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
                 >
                 </div>
 
-                <div class="fade-in">
-                    <h1
-                        class="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-[var(--color-primario)] mb-6 leading-tight"
-                    >
-                        Alimento vegetal Kürbis de Semillas de Zapallo Tostadas
-                    </h1>
-                    <div
-                        class="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"
-                    >
-                    </div>
-                </div>
+                <h2
+                    class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] py-8"
+                >
+                    Alimento vegetal Kürbis de Semillas de Zapallo Tostadas
+                </h2>
             </div>
-
-            <!-- Bottom accent line -->
             <div
                 class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
             >
@@ -71,28 +54,11 @@ const beneficios = [
             >
             </div>
 
-            <div class="max-w-6xl mx-auto fade-in-up">
+            <div class="max-w-100 mx-auto fade-in-up">
                 <div
                     class="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-8 text-center"
                 >
-                    <svg
-                        class="w-16 h-16 text-[var(--color-primario)] mx-auto mb-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                        ></path>
-                    </svg>
-                    <p class="text-gray-300 font-light text-lg">
-                        Aquí va un carousel - *39-Foto- alimento vegetal de
-                        semillas de zapallo kürbis NATURAL + 1 foto solo con
-                        composición química
-                    </p>
+                    <CarouselHero client:load />
                 </div>
             </div>
         </section>
@@ -100,31 +66,13 @@ const beneficios = [
         <!-- Content Sections -->
         <section class="py-16 px-4 bg-[var(--color-background-alt)]">
             <div class="max-w-4xl mx-auto space-y-12">
-                <div class="w-full flex justify-center mb-10">
-                    <div class="relative">
-                        <div
-                            class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
-                        >
-                        </div>
-                        <div class="relative overflow-hidden">
-                            <img
-                                src="/img/productos/smoothie.jpg"
-                                alt="Pareja trotando"
-                                width={400}
-                                height={400}
-                                class="object-cover aspect-square"
-                            />
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Description paragraphs -->
                 <div class="space-y-8 fade-in-up">
                     <p class="text-gray-300 font-light text-lg leading-relaxed">
                         Nuestro alimento Kürbis de excelente calidad, es una
                         fuente natural inagotable de nutrición, fácil de
-                        digerir, con excelentes propiedades funcionales, con más
-                        de 20 % de proteínas de excelente calidad por porción,
+                        digerir, con excelentes propiedades funcionales, con casi
+                        20% de proteínas de excelente calidad por porción,
                         con los 9 aminoácidos esenciales y un muy buen aporte de
                         triptófano, con alto contenido de fibra, distinguiéndose
                         las vitaminas E y B1, además de minerales, detacándose
@@ -132,7 +80,7 @@ const beneficios = [
                         también antioxidantes y esteroles para respaldar el
                         bienestar y la vitalidad general. <br />
                         Tiene algunas otras ventajas nutricionales por el bajo contenido
-                        de carbohidratos de 3,10g con 128kcal por porción y del total
+                        de carbohidratos de 2,45g con 121kcal por porción y del total
                         de ácidos grasos presentes, casi 80% son ácidos grasos insaturados
                         prevaleciendo el ácido oléico y linoléico, que lo hacen deseable
                         desde el punto de vista nutricional y gastronómico.
