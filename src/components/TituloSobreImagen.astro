@@ -1,49 +1,32 @@
 ---
 const {
     img,
-    alt = '',
-    title,
-    subTitle,
-    imgHeight = 'h-[500px]',
-    withTitle = false,
+    alt = "",
+    divHeight = "h-[500px]",
+    height,
     withFilter = true,
-    withDivider = true,
 } = Astro.props;
 ---
 
-<section class={`relative ${imgHeight}`}>
+<section class={`relative ${divHeight}`}>
     <div class="absolute inset-0">
         <img
             src={`${img}`}
             alt={alt}
             role="presentation"
             aria-hidden="true"
-            class="object-cover w-full"
+            class={`object-cover w-full ${height}`}
         />
         {
             withFilter && (
                 <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
             )
         }
-        {
-            withDivider && (
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0" />
-            )
-        }
+
+        <div
+            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
+        >
+        </div>
     </div>
-    {
-        withTitle && (
-            <div class="relative z-10 flex items-center justify-center h-full">
-                <div class="text-center px-4 max-w-4xl">
-                    <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-wide mb-6">
-                        {title}
-                    </h1>
-                    <div class="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-6" />
-                    <p class="text-xl md:text-2xl font-light tracking-widest uppercase">
-                        {subTitle}
-                    </p>
-                </div>
-            </div>
-        )
-    }
+    <slot name="title" />
 </section>

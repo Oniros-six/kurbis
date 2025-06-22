@@ -13,13 +13,29 @@ import Quote from "@/components/Quote.astro";
     >
         {/* Hero Section with Luxury Overlay */}
         <TituloSobreImagen
-            img="/img/sostenibilidad/sostenibilidad.webp"
+            img="/img/sostenibilidad/semillas.jpg"
             alt="Botella de aceite Kürbis"
-            title="KÜRBIS"
-            subTitle="Sostenibilidad de Lujo"
-            withTitle={true}
-            imgHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
-        />
+            divHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
+        >
+            <div slot="title" class="relative z-10 flex items-center justify-center h-full">
+                <div class="text-center px-4 max-w-4xl">
+                    <h1
+                        class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-wide mb-6"
+                    >
+                        KÜRBIS
+                    </h1>
+                    <div
+                        class="w-24 h-[1.5px] bg-[var(--color-primario)] mx-auto mb-6"
+                    >
+                    </div>
+                    <p
+                        class="text-xl md:text-2xl font-normal tracking-widest uppercase"
+                    >
+                        Sostenibilidad de Lujo
+                    </p>
+                </div>
+            </div>
+        </TituloSobreImagen>
 
         {/* Elegant Introduction */}
         <Titulos
@@ -33,10 +49,12 @@ import Quote from "@/components/Quote.astro";
         </div>
         {/* Zero Waste Luxury Section */}
         <TextImage
-            img="/img/sostenibilidad/circular.webp"
+            img="/img/sostenibilidad/circular.jpg"
             alt="Economia circular"
             title="0% de desecho de alimentos"
             text="Nuestro modelo de producción transita en prácticas sostenibles de economía circular, produciendo de forma responsable con el medio ambiente, gestionando y logrando cero residuos de producción, dando oídos a la demanda de aceites y alimentos vegetales producidos en forma sostenibles y enfocándonos también en la concientización e importancia en la salud y en el impacto ambiental de las elecciones alimentarias, teniendo el desafío de mejorar día a día nuestra empresa, ayudando al planeta a mitigar los efectos del cambio climático y a las personas a vivir mejor."
+            width="700"
+            height="700"
         />
 
         {/* Luxury Production Section */}
@@ -60,11 +78,11 @@ import Quote from "@/components/Quote.astro";
                     </h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-16 mb-20">
+                <div class="grid md:grid-cols-2 gap-16 md:gap-8 mb-20">
                     {/* Traditional Method */}
                     <div class="bg-[var(--color-background-alt)] p-1">
                         <div
-                            class="flex flex-col h-full border border-[var(--color-primario)]/20 p-8"
+                            class="flex flex-col h-full border border-[var(--color-primario)]/20 p-2"
                         >
                             <div class="relative mb-8 overflow-hidden">
                                 <img
@@ -72,7 +90,7 @@ import Quote from "@/components/Quote.astro";
                                     alt="Elaboración tradicional"
                                     width={600}
                                     height={400}
-                                    class="object-cover w-full h-[300px]"
+                                    class="object-cover w-full h-[300px] lg:h-[500px]"
                                 />
                             </div>
                             <h3
@@ -101,7 +119,7 @@ import Quote from "@/components/Quote.astro";
                     {/* Quality Products */}
                     <div class="bg-[var(--color-background-alt)] p-1">
                         <div
-                            class="flex flex-col h-full border border-[var(--color-primario)]/20 p-8"
+                            class="flex flex-col h-full border border-[var(--color-primario)]/20 p-2"
                         >
                             <div class="relative mb-8 overflow-hidden">
                                 <img
@@ -109,7 +127,7 @@ import Quote from "@/components/Quote.astro";
                                     alt="Productos de calidad"
                                     width={600}
                                     height={400}
-                                    class="object-cover w-full h-[300px]"
+                                    class="object-cover w-full h-[300px] lg:h-[500px]"
                                 />
                             </div>
                             <h3
