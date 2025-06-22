@@ -125,7 +125,7 @@ export default function Navbar() {
                     <span className="absolute inset-0 bg-white/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"></span>
                   </a>
                   <a
-                    href="/aceite-kurbis"
+                    href="/productos/aceite"
                     className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -133,7 +133,7 @@ export default function Navbar() {
                     <span className="absolute inset-0 bg-white/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"></span>
                   </a>
                   <a
-                    href="/alimento-kurbis"
+                    href="/productos/alimento"
                     className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
