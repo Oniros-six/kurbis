@@ -1,37 +1,51 @@
 ---
 // Props destructuring
-const { img, alt, title, text, textOrder, imgOrder } = Astro.props;
+const {
+  img,
+  alt,
+  title,
+  text,
+  textOrder,
+  imgOrder,
+  width = 600,
+  height = 600,
+} = Astro.props;
 ---
 
-<section class="py-24 px-4 bg-[var(--color-background-alt)] relative">
+<section class="py-24 px-4 m-2 md:m-0 bg-[var(--color-background-alt)] relative">
   <div class="max-w-6xl mx-auto">
     <div class="grid md:grid-cols-2 gap-16 items-center">
-      
       <!-- Imagen -->
       <div class={`relative md:order-${imgOrder}`}>
-        <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"></div>
+        <div
+          class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
+        >
+        </div>
         <div class="relative overflow-hidden">
           <img
             src={`${img}?height=600&width=600`}
             alt={alt}
-            width={600}
-            height={600}
+            width={width}
+            height={height}
             class="object-cover aspect-square"
           />
         </div>
       </div>
 
       <!-- Texto -->
-      <div class={`flex flex-col justify-center md:order-${textOrder}`}>
-        <div class="mb-4 w-16 h-[1px] bg-[var(--color-primario)]"></div>
-        <h3 class="font-serif text-3xl md:text-4xl font-light text-[var(--color-perla)] mb-8">
-          {title}
-        </h3>
-        <p class="text-gray-300 leading-relaxed text-lg font-light">
-          {text}
-        </p>
-      </div>
-
+      {
+        title && (
+          <div class={`flex flex-col justify-center md:order-${textOrder}`}>
+            <div class="mb-4 w-16 h-[1px] bg-[var(--color-primario)]" />
+            <h3 class="font-serif text-3xl md:text-4xl font-light text-[var(--color-perla)] mb-8">
+              {title}
+            </h3>
+            <p class="text-gray-300 leading-relaxed text-lg font-light">
+              {text}
+            </p>
+          </div>
+        )
+      }
     </div>
   </div>
 </section>
