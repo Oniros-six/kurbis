@@ -33,7 +33,7 @@ function LuxuryTimelineStep({
         {isEven ? (
           <>
             {/* Content Left */}
-            <div className="w-5/12 pr-12 text-right">
+            <div className="w-5/12 pr-1 text-right">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -62,7 +62,7 @@ function LuxuryTimelineStep({
             </div>
 
             {/* Image Right */}
-            <div className="w-5/12 pl-12">
+            <div className="w-5/12 pl-1">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -85,7 +85,7 @@ function LuxuryTimelineStep({
         ) : (
           <>
             {/* Image Left */}
-            <div className="w-5/12 pr-12">
+            <div className="w-5/12 pr-1">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -122,7 +122,7 @@ function LuxuryTimelineStep({
             </div>
 
             {/* Content Right */}
-            <div className="w-5/12 pl-12 text-left">
+            <div className="w-5/12 pl-1 text-left">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -141,7 +141,7 @@ function LuxuryTimelineStep({
       <div className="md:hidden w-full max-w-sm">
         <div className="flex">
           {/* Timeline Line and Circle */}
-          <div className="flex flex-col items-center mr-8 relative">
+          <div className="flex flex-col items-center mr-6 relative">
             <motion.div
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -220,7 +220,7 @@ export default function TimeLine() {
   ]
 
   return (
-    <section className="py-32 px-4 bg-[url(/img/nosotros/laboratorio.jpeg)] bg-fixed bg-cover bg-center relative overflow-hidden">
+    <section className="py-32 pr-4 md:px-4 bg-[url(/img/nosotros/laboratorio.jpeg)] bg-fixed bg-cover bg-center relative overflow-hidden">
       {/* Luxury Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/5 via-transparent to-[var(--color-primario)]/5 pointer-events-none" />
       <div className="absolute inset-0 bg-black/80 pointer-events-none" />
