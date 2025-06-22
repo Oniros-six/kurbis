@@ -93,47 +93,51 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
     />
   </div>
 
-  {/* Responsive Grid */}
-  <div
+  {/* Promos Grid */}
+  <section
     id="promociones"
-    class="min-h-screen p-4 pb-0 content-center bg-[var(--color-background-alt)]"
+    class="min-h-screen p-4 md:p-16 lg:p-6 pb-0 content-center bg-[var(--color-background-alt)]"
   >
-    <h2
-      class="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[var(--color-perla)] font-bold uppercase mt-20 mb-0 text-center"
-    >
-      Disfruta nuestras exclusivas oportunidades
-    </h2>
-    <h3
-      class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[var(--color-perla)] font-medium mt-2 mb-4 text-center"
-    >
-      — Puedes compartir Sabor y Bienestar —
-    </h3>
-    <div
-      class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center mt-17"
-    >
-      <Offer
-        image="/img/duo-wellness.png"
-        title="Duo Wellness"
-        description="Comprando el Dúo, te llevas de regalo el 50% del Alimento vegetal Kürbis natural"
-      />
-      <Offer
-        image="/img/super-vital.png"
-        title="Super Vital"
-        description="Comprando 3 Alimentos vegetal Kürbis natural, llevas de obsequio 50% off del tercero"
-      />
-      <Offer
-        image="/img/sabores-austria.png"
-        title="Sabores de Austria"
-        description="Comprando 5 botellas de Aceite Kürbis, tienes 1 botella de Aceite Kürbis de regalo"
-      />
+    <div class="border-2 border-[var(--color-primario)]/30">
+      <h2
+        class="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[var(--color-perla)] font-bold uppercase mt-20 mb-0 text-center"
+      >
+        Disfruta nuestras exclusivas oportunidades
+      </h2>
+      <h3
+        class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[var(--color-perla)] font-medium mt-2 mb-4 text-center"
+      >
+        — Puedes compartir Sabor y Bienestar —
+      </h3>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 place-items-center mt-17 mx-4"
+      >
+        <Offer
+          image="/img/duo-wellness.png"
+          title="Duo Wellness"
+          description="Comprando el Dúo, te llevas de regalo el 50% del Alimento vegetal Kürbis natural"
+        />
+        <Offer
+          image="/img/super-vital.png"
+          title="Super Vital"
+          description="Comprando 3 Alimentos vegetal Kürbis natural, llevas de obsequio 50% off del tercero"
+        />
+        <Offer
+          image="/img/sabores-austria.png"
+          title="Sabores de Austria"
+          description="Comprando 5 botellas de Aceite Kürbis, tienes 1 botella de Aceite Kürbis de regalo"
+        />
+      </div>
+      <div
+        class="w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto"
+      >
+        Promociones por tiempo limitado
+      </div>
     </div>
-    <div
-      class="w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto"
-    >
-      Promociones por tiempo limitado
-    </div>
-  </div>
+  </section>
+
   <Suscription />
+
   <div class="min-h-screen p-4">
     <div
       class="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-2 md:gap-0"
