@@ -3,7 +3,7 @@ import Layout from "@/layouts/layout.astro";
 import Quote from "@/components/Quote.astro";
 import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import PieDePagina from "@/components/PieDePagina.astro";
-import { CarouselHero } from "@/components/ProductsComponents/Carousel";
+import { CarouselProduct } from "@/components/ProductsComponents/Carousel";
 
 const beneficios = [
     "¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?",
@@ -48,20 +48,8 @@ const beneficios = [
         <Quote quote="Nutrición saludable que se adapta a tu estilo de vida" />
 
         <!-- Carousel Section Placeholder -->
-        <section class="py-16 px-4 bg-[var(--color-background-alt)] relative">
-            <div
-                class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-            >
-            </div>
+        <CarouselProduct client:visible/>
 
-            <div class="max-w-100 mx-auto fade-in-up">
-                <div
-                    class="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-8 text-center"
-                >
-                    <CarouselHero client:load />
-                </div>
-            </div>
-        </section>
 
         <!-- Content Sections -->
         <section class="py-16 px-4 bg-[var(--color-background-alt)]">
@@ -71,8 +59,8 @@ const beneficios = [
                     <p class="text-gray-300 font-light text-lg leading-relaxed">
                         Nuestro alimento Kürbis de excelente calidad, es una
                         fuente natural inagotable de nutrición, fácil de
-                        digerir, con excelentes propiedades funcionales, con casi
-                        20% de proteínas de excelente calidad por porción,
+                        digerir, con excelentes propiedades funcionales, con
+                        casi 20% de proteínas de excelente calidad por porción,
                         con los 9 aminoácidos esenciales y un muy buen aporte de
                         triptófano, con alto contenido de fibra, distinguiéndose
                         las vitaminas E y B1, además de minerales, detacándose

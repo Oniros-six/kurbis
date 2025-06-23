@@ -1,42 +1,82 @@
 import Autoplay from "embla-carousel-autoplay"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
+import { Carousel, CarouselContent, CarouselItem, } from "@/components/ui/carousel"
+import { useState, useCallback, type SetStateAction } from "react"
 
-} from "@/components/ui/carousel"
+export function CarouselProduct() {
+  const [currentSlide, setCurrentSlide] = useState(0)
 
-export function CarouselHero() {
-    const contenido = [
-        {
-            imagen: "/img/productos/Foto39.jpg",
-        },
-        {
-            imagen: "/img/productos/smoothie.jpg",
-        },
-        {
-            imagen: "/img/productos/infoAlimento.jpg",
-        },
+  const contenido = [
+    {
+      imagen: "/img/productos/polvo.png",
+      withInfo: false,
+    },
+    {
+      imagen: "/img/productos/smoothie.png",
+      withInfo: true,
+    },
+    {
+      imagen: "/img/productos/infoAlimento.png",
+      withInfo: false,
+    },
+  ]
 
-    ]
+  const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
 
-    const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
-    return (
-        <Carousel
+  const onSlideChange = useCallback((api: { selectedScrollSnap: () => SetStateAction<number> }) => {
+    if (!api) return
+    setCurrentSlide(api.selectedScrollSnap())
+  }, [])
+
+  // Verificar si el slide actual tiene withInfo: true
+  const shouldShowInfo = contenido[currentSlide]?.withInfo || false
+
+  return (
+    <section className="p-4 lg:py-16 lg:px-4 bg-[var(--color-background-alt)]">
+      <div className="max-w-100 mx-auto fade-in-up">
+        <div className="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-4 sm:p-8 text-center">
+          <Carousel
             opts={{ loop: true, align: "start" }}
             plugins={[plugin]}
-        >
-            <CarouselContent className=" aspect-video xl:aspect-auto">
-                {contenido.map((item, index) => (
-                    <CarouselItem key={index}>
-                        {/* Contenedor relativo para que el overlay se posicione sobre él */}
-                        <div className="w-full relative">
-                            <img src={contenido[index].imagen} alt="Austria Uruguay" className="w-full object-cover" />
-                        </div>
-                    </CarouselItem>
-                ))}
+            className="relative"
+            setApi={(api) => {
+              if (!api) return
+              
+              // Establecer slide inicial
+              setCurrentSlide(api.selectedScrollSnap())
+              
+              // Escuchar cambios de slide
+              api.on('select', () => onSlideChange(api))
+            }}
+          >
+            <CarouselContent>
+              {contenido.map((item, index) => (
+                <CarouselItem key={index}>
+                  <div className="h-full">
+                    <img
+                      src={contenido[index].imagen}
+                      alt="Austria Uruguay"
+                      className="h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
-        </Carousel>
-
-    )
+            
+            {/* Mostrar el div con transición desde la esquina */}
+            <div 
+              className={`absolute flex justify-center items-center size-25 border-[var(--color-primario)] border-1 bg-black backdrop-blur-sm shadow-lg transition-all duration-200 ease-out ${
+                shouldShowInfo 
+                  ? '-top-10 -right-10 opacity-100 scale-100' 
+                  : 'top-0 right-0 opacity-0 scale-75 pointer-events-none'
+              }`}
+            >
+              <span className="text-xs font-semibold text-center leading-tight text-[var(--color-primario)]">
+                Información
+              </span>
+            </div>
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  )
 }
