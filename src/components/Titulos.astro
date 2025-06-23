@@ -1,28 +1,29 @@
 ---
-const { title, subTitle="" } = Astro.props;
+const { title, subTitle = "" } = Astro.props;
 ---
 
 <section class="py-24 px-4 bg-[var(--color-background)] relative">
     <div class="max-w-6xl mx-auto text-center relative z-10">
         <!-- Decorative elements -->
-       <div
-          class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
+        <div
+            class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
         >
         </div>
         <div
-          class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
+            class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
         >
         </div>
-
-        <h2
-            class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8"
-        >
-            {title}
-        </h2>
-        <p
-            class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
-        >
-            {subTitle}
-        </p>
+        <div class="p-2">
+            <h2
+                class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8"
+            >
+                {title}
+            </h2>
+            <p
+                class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
+            >
+                {subTitle}
+            </p>
+        </div>
     </div>
 </section>
