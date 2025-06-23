@@ -213,7 +213,7 @@ export default function Navbar() {
 
       <Tooltip >
         <TooltipTrigger asChild>
-          <button className="flex absolute right-45 hover:scale-115 transition-all duration-300 ease-in-out items-center hover:border-1 border-black p-1 rounded-b-sm"><Languages /></button>
+          <button className="flex absolute right-15 md:right-35 lg:right-40 hover:scale-115 transition-all duration-300 ease-in-out items-center hover:border-1 border-black p-1 rounded-b-sm"><Languages /></button>
         </TooltipTrigger>
         <TooltipContent>
           <p>More lenguages available soon...</p>

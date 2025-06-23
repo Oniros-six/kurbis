@@ -87,6 +87,7 @@ export default function BuySection() {
             </p>
           </motion.div>
 
+        </div>
           {/* WhatsApp Button */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -94,20 +95,16 @@ export default function BuySection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
           >
-
-
-
+            <div className="flex justify-center">
+              <Button
+                onClick={() => smoothScroll("#precios")}
+                size="lg"
+                className="bg-transparent text-[var(--color-perla)] cursor-pointer px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transform hover:scale-105 border border-[var(--color-primario)] transition-all duration-300"
+              >
+                Conoce nuestros precios
+              </Button>
+            </div>
           </motion.div>
-        </div>
-       <div className="flex justify-center">
-         <Button
-          onClick={() => smoothScroll("#precios")}
-          size="lg"
-          className="bg-transparent text-[var(--color-perla)] cursor-pointer px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transform hover:scale-105 border border-[var(--color-primario)] transition-all duration-300"
-        >
-          Conoce nuestros precios
-        </Button>
-       </div>
         {/* Bottom accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
       </section>
