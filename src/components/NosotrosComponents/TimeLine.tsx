@@ -76,7 +76,7 @@ function LuxuryTimelineStep({
                     alt={step.alt}
                     width={500}
                     height={350}
-                    className="w-full h-80 object-cover"
+                    className="w-full h-fit  object-cover"
                   />
                 </div>
               </motion.div>
@@ -99,7 +99,7 @@ function LuxuryTimelineStep({
                     alt={step.alt}
                     width={500}
                     height={350}
-                    className="w-full object-cover"
+                    className="w-full h-fit  object-cover"
                   />
                 </div>
               </motion.div>
@@ -171,7 +171,7 @@ function LuxuryTimelineStep({
                   alt={step.alt}
                   width={300}
                   height={200}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-fit object-cover"
                 />
               </div>
             </motion.div>
@@ -206,14 +206,14 @@ export default function TimeLine() {
       title: "Somos pioneros en Uruguay y en la región",
       description:
         "Somos pioneros y lideramos la producción artesanal de aceite y alimento vegetal de semillas de zapallo Cucurbita pepo var. Styriaca en Uruguay y en la región, con el nombre de Kürbis y con la planta de elaboración ubicada en Piriápolis. Tenemos el afán de brindar alternativas saludables, innovadoras y sostenibles, inspirados en el impulso cultural y la preservación de este patrimonio biológico y cultural de Austria, bajo la atenta mirada que nos dio el único experto austríaco en Uruguay, quien se dedicó más de 20 años a esta producción.",
-      image: "/img/nosotros/manos.webp?height=350&width=500",
+      image: "/img/nosotros/manos.jpg?height=350&width=500",
       alt: "Manos con semillas",
     },
     {
       title: "El sabor auténtico de Austria transmitido a Kürbis",
       description:
         "Nuestro tutor adquirió un amplio conocimiento, experiencia y pasión en mantener la tradición de la receta original, con un sabor y calidad verdaderamente representativos de los artesanos de Styria, y nos transmitió su legado para preservarlo de generación en generación.",
-      image: "/img/nosotros/mapa.webp?height=350&width=500",
+      image: "/img/nosotros/mapa.jpg?height=350&width=500",
       alt: "Mapa señalando Austria y Uruguay",
     },
 
