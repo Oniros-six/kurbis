@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Titulos from "../components/Titulos.astro";
-import TituloSobreImagen from "../components/TituloSobreImagen.astro";
-import PieDePagina from "@/components/PieDePagina.astro";
+import HeroWithTitle from "../components/HeroWithTitle.astro";
+import EndPage from "@/components/EndPage.astro";
 import TextImage from "@/components/TextImage.astro";
 import Quote from "@/components/Quote.astro";
 ---
@@ -12,7 +12,7 @@ import Quote from "@/components/Quote.astro";
         class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
     >
         {/* Hero Section with Luxury Overlay */}
-        <TituloSobreImagen
+        <HeroWithTitle
             img="/img/sostenibilidad/semillas.jpg"
             alt="Botella de aceite Kürbis"
             divHeight="h-[56vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
@@ -35,7 +35,7 @@ import Quote from "@/components/Quote.astro";
                     </p>
                 </div>
             </div>
-        </TituloSobreImagen>
+        </HeroWithTitle>
 
         {/* Elegant Introduction */}
         <Titulos
@@ -163,7 +163,7 @@ import Quote from "@/components/Quote.astro";
         />
 
         {/* Luxury CTA Section */}
-        <PieDePagina
+        <EndPage
             title="Conoce nuestros productos"
             subTitle="Mejor de lo que puedes imaginar"
             button="Nuestros productos"

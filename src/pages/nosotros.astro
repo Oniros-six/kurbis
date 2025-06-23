@@ -1,8 +1,8 @@
 ---
-import TituloSobreImagen from "@/components/TituloSobreImagen.astro";
+import HeroWithTitle from "@/components/HeroWithTitle.astro";
 import Layout from "../layouts/layout.astro";
-import TimeLine from "@/components/TimeLine";
-import PieDePagina from "@/components/PieDePagina.astro";
+import TimeLine from "@/components/NosotrosComponents/TimeLine";
+import EndPage from "@/components/EndPage.astro";
 import Quote from "@/components/Quote.astro";
 ---
 
@@ -11,7 +11,7 @@ import Quote from "@/components/Quote.astro";
     class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
   >
     {/* Hero Section with Luxury Overlay */}
-    <TituloSobreImagen
+    <HeroWithTitle
       img="/img/nosotros/panorama.webp"
       alt="Austria y Piriapolis"
       divHeight="h-[48vw] lg:h-[45vw] xl:h-[40vw] 2xl:[20vw] overflow-hidden"
@@ -26,7 +26,7 @@ import Quote from "@/components/Quote.astro";
       quote="Nos honra preservar el patrimonio biocultural y el sabor auténtico de Austria, con productos saludables, sabrosos y sostenibles, de la más alta calidad."
     />
 
-    <PieDePagina
+    <EndPage
       title="¿Quieres conocer el origen de Kürbis?"
       subTitle="Conoce la tradición detrás del proyecto"
       button="Nuestra mision"

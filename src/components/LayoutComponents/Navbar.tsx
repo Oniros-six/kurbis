@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Menu, ChevronDown, X, ArrowRight } from "lucide-react"
 import { NavbarDesktop } from "./NavbarDesktop"
-import { Button } from "./button"
+import { Button } from "./NavbarButton"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
