@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
-import { Menu, ChevronDown, X, ArrowRight } from "lucide-react"
+import { Menu, ChevronDown, X, ArrowRight, Languages } from "lucide-react"
 import { NavbarDesktop } from "./NavbarDesktop"
 import { Button } from "./NavbarButton"
+import { Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -49,11 +50,11 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 flex justify-end md:justify-center items-center w-full h-9 mx-auto px-4 md:py-5 lg:py-6 z-[70] bg-white">
       {/* Logo */}
-     <img
+      <img
         src="/logo.webp"
         alt="Kürbis"
         className="w-14 md:w-16 lg:w-18 z-40 mx-2 absolute -inset-1 lg:-inset-2 lg:left-5"
-    />
+      />
       {/* Mobile Menu */}
       <nav className="relative md:hidden">
         <button
@@ -64,15 +65,13 @@ export default function Navbar() {
         >
           <div className="relative w-5 h-5">
             <Menu
-              className={`w-7 h-7 text-black absolute inset-0 transition-opacity duration-300 m-auto ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              }`}
+              className={`w-7 h-7 text-black absolute inset-0 transition-opacity duration-300 m-auto ${isMenuOpen ? "opacity-0" : "opacity-100"
+                }`}
               id="menuIcon"
             />
             <X
-              className={`w-7 h-7 text-[var(--color-perla)] absolute inset-0 transition-opacity duration-300 m-auto ${
-                isMenuOpen ? "opacity-100" : "opacity-0"
-              }`}
+              className={`w-7 h-7 text-[var(--color-perla)] absolute inset-0 transition-opacity duration-300 m-auto ${isMenuOpen ? "opacity-100" : "opacity-0"
+                }`}
               id="closeIcon"
             />
           </div>
@@ -81,9 +80,8 @@ export default function Navbar() {
         {/* Mobile Menu Content */}
         <div
           id="menuContent"
-          className={`fixed inset-0 bg-gradient-to-b from-[var(--color-secundario)]/95 to-[var(--color-secundario)] transition-all duration-700 ease-in-out backdrop-blur-sm z-10 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed inset-0 bg-gradient-to-b from-[var(--color-secundario)]/95 to-[var(--color-secundario)] transition-all duration-700 ease-in-out backdrop-blur-sm z-10 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="container mx-auto px-8 h-full flex flex-col justify-center">
             <div className="mx-auto space-y-6 text-orange-100">
@@ -105,16 +103,14 @@ export default function Navbar() {
                 >
                   <span className="relative z-10">Productos</span>
                   <ChevronDown
-                    className={`w-6 h-6 transition-transform duration-300 ${
-                      activeSubmenu === "productos" ? "rotate-180" : ""
-                    }`}
+                    className={`w-6 h-6 transition-transform duration-300 ${activeSubmenu === "productos" ? "rotate-180" : ""
+                      }`}
                   />
                   <span className="absolute inset-0 bg-[var(--color-primario)]/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"></span>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ml-4 rounded-lg ${
-                    activeSubmenu === "productos" ? "max-h-96 opacity-100 mt-2 p-4" : "max-h-0 opacity-0 mt-0 p-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ml-4 rounded-lg ${activeSubmenu === "productos" ? "max-h-96 opacity-100 mt-2 p-4" : "max-h-0 opacity-0 mt-0 p-0"
+                    }`}
                 >
                   <a
                     href="/productos"
@@ -151,16 +147,14 @@ export default function Navbar() {
                 >
                   <span className="relative z-10">Kürbis</span>
                   <ChevronDown
-                    className={`w-6 h-6 transition-transform duration-300 ${
-                      activeSubmenu === "kurbis" ? "rotate-180" : ""
-                    }`}
+                    className={`w-6 h-6 transition-transform duration-300 ${activeSubmenu === "kurbis" ? "rotate-180" : ""
+                      }`}
                   />
                   <span className="absolute inset-0 bg-[var(--color-primario)]/10 scale-x-0 group-active:scale-x-100 transition-transform duration-300 rounded-lg"></span>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ml-4 rounded-lg ${
-                    activeSubmenu === "kurbis" ? "max-h-96 opacity-100 mt-2 p-4" : "max-h-0 opacity-0 mt-0 p-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ml-4 rounded-lg ${activeSubmenu === "kurbis" ? "max-h-96 opacity-100 mt-2 p-4" : "max-h-0 opacity-0 mt-0 p-0"
+                    }`}
                 >
                   <a
                     href="/nosotros"
@@ -211,10 +205,20 @@ export default function Navbar() {
       {/* Desktop Navbar */}
       <NavbarDesktop />
 
+
       {/* Desktop Buy Button */}
       <Button className="hidden md:flex absolute right-5 hover:scale-105 transition-all duration-300 ease-in-out items-center group gap-2">
         <a href="/comprar">Comprar</a>
       </Button>
+
+      <Tooltip >
+        <TooltipTrigger asChild>
+          <button className="flex absolute right-45 hover:scale-115 transition-all duration-300 ease-in-out items-center hover:border-1 border-black p-1 rounded-b-sm"><Languages /></button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>More lenguages available soon...</p>
+        </TooltipContent>
+      </Tooltip>
     </div>
   )
 }
