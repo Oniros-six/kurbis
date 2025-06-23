@@ -4,6 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
+import Rueda from "./Rueda.jsx";
 
 export function CarouselHero() {
   const contenido = [
@@ -41,7 +42,6 @@ export function CarouselHero() {
             {/* Contenedor relativo para que el overlay se posicione sobre él */}
             <div className="w-full relative">
               <img src={contenido[index].imagen} alt="Austria Uruguay" className="w-full object-cover" />
-
               {/* Overlay centrado */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div
@@ -68,6 +68,9 @@ export function CarouselHero() {
           </CarouselItem>
         ))}
       </CarouselContent>
+        <div className="absolute left-3 -bottom-10 lg:-bottom-5 ">
+          <Rueda text="BIENVENIDOS A KÜRBIS — WILLKOMMEN BEI KÜRBIS — " />
+        </div>
     </Carousel>
 
   )

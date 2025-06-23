@@ -1,5 +1,5 @@
 ---
-import Hero from "../components/IndexComponents/Hero.astro";
+import { CarouselHero } from ".././components/IndexComponents/CarouselHero";
 import Layout from "../layouts/layout.astro";
 import Recuadro from "../components/IndexComponents/Recuadro.astro";
 import MarmolImage from "@/components/IndexComponents/MarmolImage.astro";
@@ -9,7 +9,7 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
 ---
 
 <Layout title="Kürbis">
-  <Hero />
+    <CarouselHero client:load />
   <Recuadro
     texto='<span class="font-medium">Aceite</span>; puro, oscuro, sabroso, versátil y extraordinariamente saludable'
   />

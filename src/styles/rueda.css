@@ -1,72 +1,38 @@
+.spinning-text-wrapper {
+  position: relative;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: monospace;
+  background-color: white;
+}
 
-  /* 2) El contenedor de texto circular:
-     - relative para que los hijos <span> puedan posicionarse respecto a su centro.
-     - establecemos un ancho y alto idéntico (100% de .circle-container).
-     - aplicamos la animación de rotación completa.
-  */
-  .circle-text {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateZ(0); /* promueve la capa a GPU */
-    animation: rotateCircle 10s linear infinite;
+.spinning-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  animation: spin 50s linear infinite;
+}
+
+.letter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+ 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  /* 3) Cada <span> (letra) se posiciona en el centro (50%,50%), 
-        y luego rotamos alrededor del punto medio de .circle-text usando transform-origin. */
-        .circle-text span {
-            /* 1) Calcular la rotación según su índice y total */
-            --rotate-deg: calc( var(--i) * (360deg / var(--total)) );
-          
-            /* 2) Colocamos el span en la posición (top:50%, left:50%) del contenedor .circle-text.
-                  Es decir, su ESQUINA superior-izquierda (su punto 0,0) queda en el centro de la rueda. */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-          
-            /* 3) Fijamos el origen de la rotación en su vértice (0,0) 
-                  porque ese vértice nosotros lo hemos colocado en el centro de la rueda. */
-            transform-origin: 0 0;
-          
-            /* 4) Primero rotamos el span según --rotate-deg, 
-                  luego lo “sacamos” hacia afuera con translateY(-radio). */
-            transform: rotate(var(--rotate-deg)) translateY(-8.5rem);
-                      /* <-- “75px” es el radio; ajústalo según el tamaño de tu rueda */
-          
-            font-size: 0.9rem;      /* Tamaño de letra, ajústalo si quieras */
-            font-weight: 700;
-            white-space: pre;       /* Para respetar espacios en blanco */
-            user-select: none;      /* Para que no se pueda seleccionar letra por letra */
-            color: #374151;         /* Color de las letras */
-          }
-  
-  /* 5) Animación que rota todo el contenedor .circle-text  */
-  @keyframes rotateCircle {
-    from   { transform: rotate(0deg); }
-    to     { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
   }
-  
-  @media (max-width: 640px) {
-    .circle-text span {
-      transform: rotate(var(--rotate-deg)) translateY(-3.8rem);
-      font-size: 0.6rem
-    }
-  }
-  @media (min-width: 641px) and (max-width: 767px) {
-    .circle-text span {
-      transform: rotate(var(--rotate-deg)) translateY(-5rem);
-      font-size: 0.6rem
-    }
-  }
-  
-  @media (min-width: 767px) and (max-width: 1024px) {
-    .circle-text span {
-      transform: rotate(var(--rotate-deg)) translateY(-6.5rem);
-    }
-  }
-  
-  @media (min-width: 1025px) {
-    .circle-text span {
-      transform: rotate(var(--rotate-deg)) translateY(-8.5rem);
-    }
-  }
+}
+
+.flags {
+  width: 30%;
+  height: 30%;
+  filter: drop-shadow(10px 10px 5px hsla(0, 0%, 0%, 0.461));
+}
