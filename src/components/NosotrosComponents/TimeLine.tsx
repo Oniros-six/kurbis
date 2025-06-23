@@ -192,7 +192,7 @@ export default function TimeLine() {
       title: "El oro verde de Austria",
       description:
         `Austria es mundialmente famoso por su aceite de semillas de zapallo, el “oro verde de Austria”, sin duda una especialidad culinaria emblemática, arraigada en la historia como patrimonio biológico y cultural del departamento de Styria. El color verde oscuro de este aceite, con matices rojos, su aroma almendrado, su alto valor nutricional, su sabor fino y delicado pero, al mismo tiempo, intenso, y sus propiedades saludables lo hacen único. Es un elemento indispensable en la cocina de esta región. Poco a poco se va conociendo en otros países del mundo y ahora en Uruguay.`,
-      image: "/placeholder.svg?height=350&width=500",
+      image: "/img/nosotros/aceite.jpg?height=350&width=500",
       alt: "",
     },
     {
