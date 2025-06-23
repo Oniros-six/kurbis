@@ -99,7 +99,7 @@ function LuxuryTimelineStep({
                     alt={step.alt}
                     width={500}
                     height={350}
-                    className="w-full h-80 object-cover"
+                    className="w-full object-cover"
                   />
                 </div>
               </motion.div>
