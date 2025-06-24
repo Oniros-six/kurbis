@@ -55,7 +55,7 @@ export function CarouselProduct() {
                     <img
                       src={contenido[index].imagen}
                       alt="Austria Uruguay"
-                      className="h-full object-cover"
+                      className="object-cover"
                     />
                   </div>
                 </CarouselItem>
