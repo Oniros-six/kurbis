@@ -192,7 +192,7 @@ export default function TimeLine() {
       title: "El oro verde de Austria",
       description:
         `Austria es mundialmente famoso por su aceite de semillas de zapallo, el “oro verde de Austria”, sin duda una especialidad culinaria emblemática, arraigada en la historia como patrimonio biológico y cultural del departamento de Styria. El color verde oscuro de este aceite, con matices rojos, su aroma almendrado, su alto valor nutricional, su sabor fino y delicado pero, al mismo tiempo, intenso, y sus propiedades saludables lo hacen único. Es un elemento indispensable en la cocina de esta región. Poco a poco se va conociendo en otros países del mundo y ahora en Uruguay.`,
-      image: "/img/nosotros/aceite.jpg?height=350&width=500",
+      image: "/img/nosotros/aceite.webp?height=350&width=500",
       alt: "",
     },
     {
@@ -206,21 +206,21 @@ export default function TimeLine() {
       title: "Somos pioneros en Uruguay y en la región",
       description:
         "Somos pioneros y lideramos la producción artesanal de aceite y alimento vegetal de semillas de zapallo Cucurbita pepo var. Styriaca en Uruguay y en la región, con el nombre de Kürbis y con la planta de elaboración ubicada en Piriápolis. Tenemos el afán de brindar alternativas saludables, innovadoras y sostenibles, inspirados en el impulso cultural y la preservación de este patrimonio biológico y cultural de Austria, bajo la atenta mirada que nos dio el único experto austríaco en Uruguay, quien se dedicó más de 20 años a esta producción.",
-      image: "/img/nosotros/manos.jpg?height=350&width=500",
+      image: "/img/nosotros/manos.webp?height=350&width=500",
       alt: "Manos con semillas",
     },
     {
       title: "El sabor auténtico de Austria transmitido a Kürbis",
       description:
         "Nuestro tutor adquirió un amplio conocimiento, experiencia y pasión en mantener la tradición de la receta original, con un sabor y calidad verdaderamente representativos de los artesanos de Styria, y nos transmitió su legado para preservarlo de generación en generación.",
-      image: "/img/nosotros/mapa.jpg?height=350&width=500",
+      image: "/img/nosotros/mapa.webp?height=350&width=500",
       alt: "Mapa señalando Austria y Uruguay",
     },
 
   ]
 
   return (
-    <section className="py-32 pr-4 md:px-4 bg-[url(/img/nosotros/laboratorio.jpeg)] bg-fixed bg-cover bg-center relative overflow-hidden">
+    <section className="py-32 pr-4 md:px-4 bg-[url(/img/nosotros/laboratorio.webp)] bg-fixed bg-cover bg-center relative overflow-hidden">
       {/* Luxury Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/5 via-transparent to-[var(--color-primario)]/5 pointer-events-none" />
       <div className="absolute inset-0 bg-black/80 pointer-events-none" />

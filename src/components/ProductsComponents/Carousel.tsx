@@ -7,15 +7,15 @@ export function CarouselProduct() {
 
   const contenido = [
     {
-      imagen: "/img/productos/polvo.png",
+      imagen: "/img/productos/polvo.webp",
       withInfo: false,
     },
     {
-      imagen: "/img/productos/smoothie.png",
+      imagen: "/img/productos/smoothie.webp",
       withInfo: true,
     },
     {
-      imagen: "/img/productos/infoAlimento.png",
+      imagen: "/img/productos/infoAlimento.webp",
       withInfo: false,
     },
   ]

@@ -9,22 +9,22 @@ import Rueda from "./Rueda.jsx";
 export function CarouselHero() {
   const contenido = [
     {
-      imagen: "/carousel/slider0.png",
+      imagen: "/carousel/slider0.webp",
       titulo: "el 'oro' verde de austria",
       subtitulo: "- Ahora en Uruguay -",
     },
     {
-      imagen: "/carousel/slider2.jpg",
+      imagen: "/carousel/slider2.webp",
       titulo: "El Rey del bienestar y la salud",
       subtitulo: "",
     },
     {
-      imagen: "/carousel/slider0.jpg",
+      imagen: "/carousel/slider0.webp",
       titulo: "Un patrimonio biológico & cultural",
       subtitulo: "- Desde Austria a Uruguay -",
     },
     {
-      imagen: "/carousel/slider3.jpg",
+      imagen: "/carousel/slider3.webp",
       titulo: "El regalo ideal",
       subtitulo: "- Para los amantes de lo saludable & gourmet -",
     },

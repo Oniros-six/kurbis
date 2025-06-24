@@ -127,8 +127,8 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10">
-              <Image img="comprar/oil-bottle.png" titulo={"$U  " + precioAceite} />
-              <Image img="comprar/natural.png" titulo={"$U  " + precioAlimento} />
+              <Image img="comprar/oil-bottle.webp" titulo={"$U  " + precioAceite} />
+              <Image img="comprar/natural.webp" titulo={"$U  " + precioAlimento} />
             </div>
           </motion.div>
         </div>
@@ -150,9 +150,9 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10">
-              <Image img="duo-wellness-sr.png" titulo={"$U  " + duoWellness} />
-              <Image img="super-vital-sr.png" titulo={"$U  " + superVital} />
-              <Image img="sabores-austria-sr.png" titulo={"$U  " + saboresAustria} />
+              <Image img="duo-wellness-sr.webp" titulo={"$U  " + duoWellness} />
+              <Image img="super-vital-sr.webp" titulo={"$U  " + superVital} />
+              <Image img="sabores-austria-sr.webp" titulo={"$U  " + saboresAustria} />
             </div>
           </motion.div>
         </div>
@@ -172,8 +172,8 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10">
-              <Image img="comprar/vainilla.png" titulo="Vainas de Vainilla" />
-              <Image img="comprar/cacao.png" titulo="Cacao" />
+              <Image img="comprar/vainilla.webp" titulo="Vainas de Vainilla" />
+              <Image img="comprar/cacao.webp" titulo="Cacao" />
             </div>
           </motion.div>
         </div>
