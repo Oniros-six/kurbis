@@ -53,7 +53,7 @@ export default function Navbar() {
       {/* Logo */}
       <img
         src="/logo.webp"
-        alt="Kürbis"
+        alt="Kürbis logo"
         className="w-14 md:w-16 lg:w-18 z-40 mx-2 absolute -inset-1 lg:-inset-2 lg:left-5"
       />
       {/* Mobile Menu */}

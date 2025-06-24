@@ -8,24 +8,28 @@ import Rueda from "./Rueda.jsx";
 
 export function CarouselHero() {
   const contenido = [
-    {
-      imagen: "/carousel/slider0.webp",
-      titulo: "el 'oro' verde de austria",
-      subtitulo: "- Ahora en Uruguay -",
-    },
+    // {
+    //   imagen: "/carousel/slider0.webp",
+    //   titulo: "el 'oro' verde de austria",
+    //   alt:"",
+    //   subtitulo: "- Ahora en Uruguay -",
+    // },
     {
       imagen: "/carousel/slider2.webp",
       titulo: "El Rey del bienestar y la salud",
+      alt:"Zapallo",
       subtitulo: "",
     },
+    // {
+    //   imagen: "/carousel/slider0.webp",
+    //   titulo: "Un patrimonio biológico & cultural",
+    //   alt:"Zapallo",
+    //   subtitulo: "- Desde Austria a Uruguay -",
+    // },
     {
       imagen: "/carousel/slider0.webp",
-      titulo: "Un patrimonio biológico & cultural",
-      subtitulo: "- Desde Austria a Uruguay -",
-    },
-    {
-      imagen: "/carousel/slider3.webp",
       titulo: "El regalo ideal",
+      alt:"Botella de aceite Kurbis como regalo",
       subtitulo: "- Para los amantes de lo saludable & gourmet -",
     },
   ]
@@ -41,7 +45,7 @@ export function CarouselHero() {
           <CarouselItem key={index}>
             {/* Contenedor relativo para que el overlay se posicione sobre él */}
             <div className="w-full relative">
-              <img src={contenido[index].imagen} alt="Austria Uruguay" className="w-full object-cover" />
+              <img src={item.imagen} alt={item.alt} className="w-full object-cover" />
               {/* Overlay centrado */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div

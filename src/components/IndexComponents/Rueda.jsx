@@ -22,7 +22,7 @@ function Rueda({ text }) {
                     ))}
                 </p>
             </div>
-            <img src="/AustriaUruguay.svg" alt="Banderas" className="flags-icon flags" />
+            <img src="/AustriaUruguay.svg" alt="Banderas Uruguay y Austria" className="flags-icon flags" />
         </div>
     );
 }
