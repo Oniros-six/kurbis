@@ -2,11 +2,12 @@ import { useState, useEffect } from "react"
 import { Menu, ChevronDown, X, ArrowRight, Languages } from "lucide-react"
 import { NavbarDesktop } from "./NavbarDesktop"
 import { Button } from "./NavbarButton"
-import { Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const [isOpen, setIsOpen] = useState(false)
 
   // Toggle main menu
   const toggleMenu = () => {
@@ -84,7 +85,7 @@ export default function Navbar() {
             }`}
         >
           <div className="container mx-auto px-8 h-full flex flex-col justify-center">
-            <div className="mx-auto space-y-6 text-orange-100">
+            <div className="mx-auto space-y-6 text-[var(--color-perla)]">
               {/* Inicio */}
               <a
                 href="/"
@@ -114,7 +115,7 @@ export default function Navbar() {
                 >
                   <a
                     href="/productos"
-                    className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
+                    className="text-xl font-medium text-[var(--color-perla)] block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10">Productos</span>
@@ -122,7 +123,7 @@ export default function Navbar() {
                   </a>
                   <a
                     href="/productos/aceite"
-                    className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
+                    className="text-xl font-medium text-[var(--color-perla)] block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10">Aceite Kürbis</span>
@@ -130,7 +131,7 @@ export default function Navbar() {
                   </a>
                   <a
                     href="/productos/alimento"
-                    className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
+                    className="text-xl font-medium text-[var(--color-perla)] block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10">Alimento Kürbis</span>
@@ -158,7 +159,7 @@ export default function Navbar() {
                 >
                   <a
                     href="/nosotros"
-                    className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
+                    className="text-xl font-medium text-[var(--color-perla)] block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10">Nosotros</span>
@@ -166,7 +167,7 @@ export default function Navbar() {
                   </a>
                   <a
                     href="/mision"
-                    className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
+                    className="text-xl font-medium text-[var(--color-perla)] block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10">Misión</span>
@@ -174,7 +175,7 @@ export default function Navbar() {
                   </a>
                   <a
                     href="/sostenibilidad"
-                    className="text-xl font-medium text-orange-100 block py-2 relative group active:scale-95 transition-all duration-300"
+                    className="text-xl font-medium text-[var(--color-perla)] block py-2 relative group active:scale-95 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10">Sostenibilidad</span>
@@ -211,14 +212,12 @@ export default function Navbar() {
         <a href="/comprar">Comprar</a>
       </Button>
 
-      <Tooltip >
-        <TooltipTrigger asChild>
+      <Popover open={isOpen} onOpenChange={setIsOpen}>
+        <PopoverTrigger asChild>
           <button className="flex absolute right-15 md:right-35 lg:right-40 hover:scale-115 transition-all duration-300 ease-in-out items-center hover:border-1 border-black p-1 rounded-b-sm"><Languages /></button>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>More lenguages available soon...</p>
-        </TooltipContent>
-      </Tooltip>
+        </PopoverTrigger>
+        <PopoverContent className="w-auto p-2"><p>More lenguages available soon...</p></PopoverContent>
+      </Popover>
     </div>
   )
 }
