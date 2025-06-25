@@ -47,9 +47,28 @@ const beneficios = [
         <!-- Quote Section -->
         <Quote quote="Nutrición saludable que se adapta a tu estilo de vida" />
 
-        <!-- Carousel Section Placeholder -->
-        <CarouselProduct client:visible/>
-
+        <!-- Carousel Section -->
+        <CarouselProduct
+            contenido={[
+                {
+                    imagen: "/img/productos/polvo.webp",
+                    withInfo: false,
+                    alt:"Polvo de alimento vegetal"
+                },
+                {
+                    imagen: "/img/productos/smoothie.webp",
+                    withInfo: true,
+                    info:"informacion sobre alimento",
+                    alt:"Smoothie de alimento vegetal"
+                },
+                {
+                    imagen: "/img/productos/infoAlimento.webp",
+                    withInfo: false,
+                    alt:"Información nutricional sobre alimento vegetal Kurbis"
+                },
+            ]}
+            client:visible
+        />
 
         <!-- Content Sections -->
         <section class="py-16 px-4 bg-[var(--color-background-alt)]">

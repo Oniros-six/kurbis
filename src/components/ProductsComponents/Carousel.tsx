@@ -2,23 +2,15 @@ import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem, } from "@/components/ui/carousel"
 import { useState, useCallback, type SetStateAction } from "react"
 
-export function CarouselProduct() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+type content = {
+  imagen: string
+  alt: string
+  withInfo: boolean
+  info?: string
+}
 
-  const contenido = [
-    {
-      imagen: "/img/productos/polvo.webp",
-      withInfo: false,
-    },
-    {
-      imagen: "/img/productos/smoothie.webp",
-      withInfo: true,
-    },
-    {
-      imagen: "/img/productos/infoAlimento.webp",
-      withInfo: false,
-    },
-  ]
+export function CarouselProduct({ contenido }: { contenido: content[] }) {
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
 
@@ -29,6 +21,7 @@ export function CarouselProduct() {
 
   // Verificar si el slide actual tiene withInfo: true
   const shouldShowInfo = contenido[currentSlide]?.withInfo || false
+  const info = shouldShowInfo ? contenido[currentSlide].info : ""
 
   return (
     <section className="p-4 lg:py-16 lg:px-4 bg-[var(--color-background-alt)]">
@@ -54,7 +47,7 @@ export function CarouselProduct() {
                   <div className="h-full">
                     <img
                       src={contenido[index].imagen}
-                      alt="Austria Uruguay"
+                      alt={contenido[index].alt}
                       className="object-cover"
                     />
                   </div>
@@ -71,7 +64,7 @@ export function CarouselProduct() {
               }`}
             >
               <span className="text-xs font-semibold text-center leading-tight text-[var(--color-primario)]">
-                Información
+                {info}
               </span>
             </div>
           </Carousel>

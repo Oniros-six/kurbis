@@ -3,6 +3,7 @@ import Layout from "@/layouts/layout.astro";
 import Quote from "@/components/Quote.astro";
 import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import EndPage from "@/components/EndPage.astro";
+import { CarouselProduct } from "@/components/ProductsComponents/Carousel";
 
 const beneficios = [
   "¿Los ácidos grasos omega 3, omega 6 y omega 9 pueden favorecer la salud cardiovascular?",
@@ -49,36 +50,24 @@ const beneficios = [
       quote="Cierra los ojos, huele el maravilloso aroma, disfruta del extraordinario sabor y nutrición inigualable, de nuestro aceite Kürbis"
     />
 
-    <!-- Carousel Section Placeholder -->
-    <section class="py-16 px-4 bg-[var(--color-background-alt)] relative">
-      <div
-        class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-      >
-      </div>
+    <!-- Carousel Section -->
+        <CarouselProduct
+            contenido={[
+                {
+                    imagen: "/img/productos/lechuga.webp",
+                    withInfo: true,
+                    info: "10 mg de omega 3, 6 y 9",
+                    alt: "Aceite Kürbis cayendo sobre lechuga"
+                },
+                {
+                    imagen: "/img/productos/infoAceite.webp",
+                    withInfo: false,
+                    alt: "Información nutricional sobre aceite Kürbis"
+                },
+            ]}
+            client:visible
+        />
 
-      <div class="max-w-6xl mx-auto fade-in-up">
-        <div
-          class="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-8 text-center"
-        >
-          <svg
-            class="w-16 h-16 text-[var(--color-primario)] mx-auto mb-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-            ></path>
-          </svg>
-          <p class="text-gray-300 font-light text-lg">
-            Aquí va un carousel - 37 Foto - + 1 foto composición química
-          </p>
-        </div>
-      </div>
-    </section>
     <!-- Content Sections -->
     <section class="py-16 px-4 bg-[var(--color-background-alt)]">
       <div class="max-w-4xl mx-auto space-y-12">
@@ -103,13 +92,22 @@ const beneficios = [
           </p>
         </div>
 
-        <!-- Another image placeholder -->
-        <div
-          class="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-6 text-center fade-in-up"
-        >
-          <p class="text-gray-300 font-light">
-            *38- Foto- 1 cucharada de aceite en ensalada
-          </p>
+        <div class="w-full flex justify-center mb-10">
+          <div class="relative">
+            <div
+              class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
+            >
+            </div>
+            <div class="relative overflow-hidden">
+              <img
+                src="/img/productos/cuchara.webp"
+                alt="Cuchara con aceite"
+                width={400}
+                height={400}
+                class="object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div class="space-y-6 fade-in-up">
