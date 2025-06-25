@@ -1,18 +1,37 @@
 import type React from "react"
 
 import { useState } from "react"
+import SuscriptionPopup from "./SuscriptionPopup"
 
 export default function EmailInput() {
   const [email, setEmail] = useState("")
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Email submitted:", email)
+    fetch("https://hook.us2.make.com/m2gs8g8zhapga69q5wn11hy315hixqbq", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+      }),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Error al enviar el email");
+        setEmail("")
+        setIsOpen(true)
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+      });
   }
 
   return (
     <div className="w-full">
+      <SuscriptionPopup isOpen={isOpen} setIsOpen={setIsOpen} />
+
       <form onSubmit={handleSubmit} className="space-y-6">
         <label htmlFor="email" className="text-[var(--color-perla)]/90 text-sm font-medium mb-1 block">
           Email
