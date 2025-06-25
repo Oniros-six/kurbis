@@ -7,7 +7,7 @@ export const SocialMediaLinks = () => {
     const socialIcons = (
         <div className="flex items-center space-x-2">
             <div
-                className="border-3 rounded-lg border-[var(--color-primario)]"
+                className="border-3 roundedLg border-[var(--color-primario)]"
             >
                 <svg
                     className="m-0.5"
@@ -17,9 +17,9 @@ export const SocialMediaLinks = () => {
                     viewBox="0 0 24 24"
                     fill="var(--color-primario)"
                     stroke="var(--color-primario)"
-                    stroke-width="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
                     <path
                         d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
@@ -34,7 +34,7 @@ export const SocialMediaLinks = () => {
                     viewBox="0 0 256 256"
                     fill="none"
                     stroke="var(--color-primario)"
-                    stroke-width="2"
+                    strokeWidth="2"
                 >
                     <g transform="scale(5.12,5.12)">
                         <path
@@ -51,7 +51,7 @@ export const SocialMediaLinks = () => {
                     viewBox="0 0 256 256"
                     fill="var(--color-primario)"
                     stroke="var(--color-primario)"
-                    stroke-width="2"
+                    strokeWidth="2"
                 >
                     <g transform="scale(5.12,5.12)">
                         <path
