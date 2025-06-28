@@ -42,7 +42,11 @@ import Layout from "../layouts/layout.astro";
             <div
               class="bg-gradient-to-br from-[var(--color-secundario)] to-[var(--color-secundario)] rounded-lg p-8 lg:p-12 shadow-2xl"
             >
-              <form class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <form
+                class="grid grid-cols-1 lg:grid-cols-2 gap-8"
+                action="https://formsubmit.co/14ea0da9a8bb20dda61676db831c09ab"
+                method="POST"
+              >
                 {/* Left Column */}
                 <div class="space-y-6">
                   <div>
@@ -54,9 +58,11 @@ import Layout from "../layouts/layout.astro";
                     </Label>
                     <Input
                       id="nombre"
+                      name="nombre"
                       type="text"
-                      className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
+                      className="capitalize h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
                       placeholder="Tu nombre completo"
+                      required
                     />
                   </div>
 
@@ -70,8 +76,10 @@ import Layout from "../layouts/layout.astro";
                     <Input
                       id="email"
                       type="email"
+                      name="email"
                       className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
                       placeholder="ejemplo@email.com"
+                      required
                     />
                   </div>
 
@@ -85,8 +93,10 @@ import Layout from "../layouts/layout.astro";
                     <Input
                       id="telefono"
                       type="tel"
+                      name="telefono"
                       className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
                       placeholder="094 123 456"
+                      required
                     />
                   </div>
                 </div>
@@ -102,10 +112,11 @@ import Layout from "../layouts/layout.astro";
                     </Label>
                     <Textarea
                       id="mensaje"
-                      className="flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none"
+                      name="mensaje"
+                      className="capitalize flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none"
                       placeholder="Escribe tu mensaje aquí..."
+                      required
                     />
-
                     <div class="mt-6 flex justify-end">
                       <Button
                         type="submit"
@@ -187,5 +198,14 @@ import Layout from "../layouts/layout.astro";
         </div>
       </div>
     </Layout>
+
+    <script type="module">
+      document.querySelectorAll(".capitalizar").forEach((input) => {
+        input.addEventListener("blur", () => {
+          const value = input.value;
+          input.value = value.charAt(0).toUpperCase() + value.slice(1);
+        });
+      });
+    </script>
   </body>
 </html>
