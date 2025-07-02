@@ -76,7 +76,7 @@ function LuxuryTimelineStep({
                     alt={step.alt}
                     width={500}
                     height={350}
-                    className="w-full h-fit  object-cover"
+                    className="w-full h-fit object-cover aspect-square"
                   />
                 </div>
               </motion.div>
@@ -99,7 +99,7 @@ function LuxuryTimelineStep({
                     alt={step.alt}
                     width={500}
                     height={350}
-                    className="w-full h-fit  object-cover"
+                    className="w-full h-fit object-cover aspect-square"
                   />
                 </div>
               </motion.div>
@@ -171,7 +171,7 @@ function LuxuryTimelineStep({
                   alt={step.alt}
                   width={300}
                   height={200}
-                  className="w-full h-fit object-cover"
+                  className="w-full h-fit object-cover aspect-square"
                 />
               </div>
             </motion.div>

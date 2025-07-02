@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { MessageCircle, User, CreditCard, Truck, Phone } from "lucide-react"
 import { smoothScroll } from "../scripts/smoothScroll"
+import { Separator } from "./ui/separator"
 
 const Image = ({ img, titulo }: { img: string, titulo: string }) => {
   return (
@@ -132,11 +133,12 @@ export default function BuySection() {
             </div>
           </motion.div>
         </div>
+        <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26"/>
         {/* promos section */}
-        <div className="max-w-7xl mx-auto text-center relative z-10 mt-15 ">
+        <div className="max-w-7xl mx-auto text-center relative z-10 ">
           <a href="/#promociones">
             <button
-              className="cursor-pointer w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mt-15 mb-5 py-2.5 px-4 sm:px-6 mx-auto transition-all duration-300 transform hover:scale-105 "
+              className="cursor-pointer w-fit bg-[var(--color-primario)] font-medium xs:text-lg sm:text-2xl text-black mb-5 py-2.5 px-4 sm:px-6 mx-auto transition-all duration-300 transform hover:scale-105 "
             >
               No olvides nuestras promociones por tiempo limitado
             </button>
@@ -156,10 +158,9 @@ export default function BuySection() {
             </div>
           </motion.div>
         </div>
-
+        <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26"/>
         {/* Soon section */}
-
-        <div className="max-w-4xl mx-auto text-center relative z-10 mt-15 md:mt-25">
+        <div className="max-w-4xl mx-auto text-center relative z-10 md:mt-25">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -260,9 +261,9 @@ export default function BuySection() {
             <a href={url} target="new_blank">
               <Button
                 size="lg"
-                className="bg-[#25D366] hover:bg-[#20BA5A] text-[var(--color-perla)] px-16 py-8 text-xl font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-secundario)]/30 mb-12"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-[var(--color-perla)] px-16 py-8 text-xl font-normal tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transition-all duration-300 transform hover:scale-105 border border-[var(--color-secundario)]/30 mb-12"
               >
-                <MessageCircle className="w-7 h-7 mr-4" />
+                <MessageCircle className="w-7 h-7 mr-2" />
                 Hablar por WhatsApp
               </Button>
             </a>

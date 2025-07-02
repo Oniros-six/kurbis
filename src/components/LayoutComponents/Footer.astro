@@ -5,6 +5,7 @@ import {
     Youtube,
     Facebook,
     Instagram,
+Phone,
 } from "lucide-react";
 import {SocialMediaLinks} from "@/components/LayoutComponents/SocialMediaLinks"
 const currentPath = Astro.url.pathname;
@@ -221,12 +222,11 @@ const linkBase = "flex items-center gap-2";
                                 office@kurbis.uy
                             </a>
                         </li>
-                        <li>
-                            <a href={url} target="new_blank">
-                                <span class="text-[var(--color-primario)]"
-                                    >☎︎</span
-                                > 094 398 865</a
-                            >
+                        <li class="flex gap-2 align-center">
+                            <Phone/>
+                            <a href={url} target="new_blank" >
+                              094 398 865
+                            </a>
                         </li>
                         <!-- <div class="flex items-center space-x-2">
                             <a
@@ -291,7 +291,7 @@ const linkBase = "flex items-center gap-2";
             </ul>
         </div>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center mt-10">
         <a
             href="www.digitalkingdom.lat"
             class="font-bold text-white text-sm hover:text-[var(--color-primario)] hover:scale-105 transition-all duration-100"

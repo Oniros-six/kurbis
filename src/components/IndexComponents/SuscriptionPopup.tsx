@@ -8,15 +8,15 @@ export default function Component({isOpen, setIsOpen}:  {isOpen: boolean, setIsO
 
 
   return (
-    <div className="p-8">
+    <div className="p-2">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="sm:max-w-md border-0 p-0">
           <Card className="border-0 shadow-lg py-0">
             <CardContent className="p-0">
               {/* Header con fondo de color */}
-              <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-center text-[var(--color-perla)] rounded-t-lg">
+              <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-2 md:p-6 text-center text-[var(--color-perla)] rounded-t-lg">
 
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center md:mb-4">
                   <div className="bg-white/20 p-3 rounded-full">
                     <CheckCircle className="h-12 w-12" />
                   </div>
@@ -31,7 +31,7 @@ export default function Component({isOpen, setIsOpen}:  {isOpen: boolean, setIsO
               </div>
 
               {/* Contenido principal */}
-              <div className="p-6 text-center space-y-4 bg-[var(--color-background)]">
+              <div className="p-2 md:p-6 text-center space-y-4 bg-[var(--color-background)]">
                 <div className="flex justify-center">
                   <div className="bg-green-50 p-3 rounded-full">
                     <Mail className="h-8 w-8 text-green-900" />

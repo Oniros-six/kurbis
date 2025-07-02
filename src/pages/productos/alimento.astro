@@ -4,6 +4,7 @@ import Quote from "@/components/Quote.astro";
 import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import EndPage from "@/components/EndPage.astro";
 import { CarouselProduct } from "@/components/ProductsComponents/Carousel";
+import CuadroInformativo from "@/components/ProductsComponents/CuadroInformativo";
 
 const beneficios = [
     "¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?",
@@ -35,7 +36,7 @@ const beneficios = [
                 <h2
                     class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] py-8"
                 >
-                    Alimento vegetal Kürbis de Semillas de Zapallo Tostadas
+                    Alimento Kürbis
                 </h2>
             </div>
             <div
@@ -46,25 +47,6 @@ const beneficios = [
 
         <!-- Quote Section -->
         <Quote quote="Nutrición saludable que se adapta a tu estilo de vida" />
-
-        <!-- Carousel Section -->
-        <CarouselProduct
-            contenido={[
-                {
-                    imagen: "/img/productos/polvo.webp",
-                    alt:"Polvo de alimento vegetal"
-                },
-                {
-                    imagen: "/img/productos/smoothie.webp",
-                    alt:"Smoothie de alimento vegetal"
-                },
-                {
-                    imagen: "/img/productos/infoAlimento.webp",
-                    alt:"Información nutricional sobre alimento vegetal Kurbis"
-                },
-            ]}
-            client:visible
-        />
 
         <!-- Content Sections -->
         <section class="py-16 px-4 bg-[var(--color-background-alt)]">
@@ -88,7 +70,30 @@ const beneficios = [
                         prevaleciendo el ácido oléico y linoléico, que lo hacen deseable
                         desde el punto de vista nutricional y gastronómico.
                     </p>
-                    <!-- *40- Foto- batido texto iamgen -->
+
+                    <!-- Carousel Section -->
+                    <CarouselProduct
+                        contenido={[
+                            {
+                                imagen: "/img/productos/polvo.webp",
+                                withInfo: false,
+                                alt: "Polvo de alimento vegetal",
+                            },
+                            {
+                                imagen: "/img/productos/smoothie.webp",
+                                withInfo: true,
+                                info: "informacion sobre alimento",
+                                alt: "Smoothie de alimento vegetal",
+                            },
+                            {
+                                imagen: "/img/productos/infoAlimento.webp",
+                                withInfo: false,
+                                alt: "Información nutricional sobre alimento vegetal Kurbis",
+                            },
+                        ]}
+                        client:visible
+                    />
+
                     <p class="text-gray-300 font-light text-lg leading-relaxed">
                         El alimento vegetal Kürbis es delicioso, presentado en
                         sabor Natural y próximamente en sabor Cacao y Vaina de
@@ -139,6 +144,9 @@ const beneficios = [
                                 class="object-cover aspect-square"
                             />
                         </div>
+                            <CuadroInformativo
+                                info="info" shouldShowInfo={true}
+                            />
                     </div>
                 </div>
 

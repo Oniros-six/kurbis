@@ -4,6 +4,7 @@ import Quote from "@/components/Quote.astro";
 import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import EndPage from "@/components/EndPage.astro";
 import { CarouselProduct } from "@/components/ProductsComponents/Carousel";
+import CuadroInformativo from "@/components/ProductsComponents/CuadroInformativo";
 
 const beneficios = [
   "¿Los ácidos grasos omega 3, omega 6 y omega 9 pueden favorecer la salud cardiovascular?",
@@ -50,21 +51,6 @@ const beneficios = [
       quote="Cierra los ojos, huele el maravilloso aroma, disfruta del extraordinario sabor y nutrición inigualable, de nuestro aceite Kürbis"
     />
 
-    <!-- Carousel Section -->
-        <CarouselProduct
-            contenido={[
-                {
-                    imagen: "/img/productos/lechuga.webp",
-                    alt: "Aceite Kürbis cayendo sobre lechuga"
-                },
-                {
-                    imagen: "/img/productos/infoAceite.webp",
-                    alt: "Información nutricional sobre aceite Kürbis"
-                },
-            ]}
-            client:visible
-        />
-
     <!-- Content Sections -->
     <section class="py-16 px-4 bg-[var(--color-background-alt)]">
       <div class="max-w-4xl mx-auto space-y-12">
@@ -78,6 +64,24 @@ const beneficios = [
             en el paladar, un delicado y armonioso aroma y un llamativo color
             verde oscuro con matices rojos.
           </p>
+
+          <!-- Carousel Section -->
+          <CarouselProduct
+            contenido={[
+              {
+                imagen: "/img/productos/lechuga.webp",
+                withInfo: true,
+                info: "10 mg de omega 3, 6 y 9",
+                alt: "Aceite Kürbis cayendo sobre lechuga",
+              },
+              {
+                imagen: "/img/productos/infoAceite.webp",
+                withInfo: false,
+                alt: "Información nutricional sobre aceite Kürbis",
+              },
+            ]}
+            client:visible
+          />
 
           <p class="text-gray-300 font-light text-lg leading-relaxed">
             El aceite Kürbis tiene increíbles beneficios nutricionales,
@@ -104,6 +108,7 @@ const beneficios = [
                 class="object-cover"
               />
             </div>
+            <CuadroInformativo info="info" shouldShowInfo={true} />
           </div>
         </div>
 
@@ -125,7 +130,7 @@ const beneficios = [
           >
             <p class="text-[var(--color-primario)] font-light italic">
               *Para preservar la calidad del aceite se recomienda no superar los
-              160 °C
+              140 °C
             </p>
           </div>
         </div>

@@ -49,7 +49,7 @@ export default function Component() {
 
   return (
     <div className="min-h-screen">
-      <div className="max-w-5xl mx-auto px-6 py-12 lg:px-8">
+      <div className="max-w-5xl mx-auto px-2 md:px-6 lg:px-8 py-12 ">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-[var(--color-primario)] rounded-full mb-6">
@@ -79,19 +79,19 @@ export default function Component() {
                 value={item.id}
                 className="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-orange-200 overflow-hidden"
               >
-                <AccordionTrigger className="text-left px-8 py-6 hover:no-underline hover:bg-gradient-to-r hover:from-orange-50 hover:to-amber-50 transition-all duration-300 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-orange-500 [&>svg]:transition-transform [&>svg]:duration-300">
-                  <div className="flex items-start gap-4 w-full">
+                <AccordionTrigger className="text-left items-center px-2 md:px-8 py-2 md:py-4 hover:no-underline hover:bg-gradient-to-r hover:from-orange-50 hover:to-amber-50 transition-all duration-300 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-orange-500 [&>svg]:transition-transform [&>svg]:duration-300">
+                  <div className="flex items-center gap-4 w-full">
                     <div className="flex-shrink-0 w-8 h-8 bg-[var(--color-primario)] rounded-full flex items-center justify-center text-white font-bold text-sm mt-1">
                       {index + 1}
                     </div>
-                    <span className="text-lg font-semibold text-gray-800 group-hover:text-gray-900 leading-relaxed pr-4">
+                    <span className="text-base md:text-lg font-semibold text-gray-800 group-hover:text-gray-900 leading-relaxed pr-2">
                       {item.question}
                     </span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-8">
+                <AccordionContent className="px-4 md:px-8 pb-8">
                   <div className="ml-12 pt-2">
-                    <div className="w-full h-px bg-gradient-to-r from-orange-200 to-transparent mb-6"></div>
+                    <div className="w-full h-px bg-gradient-to-r from-orange-200 to-transparent mb-3 md:mb-6"></div>
                     <p className="text-gray-700 text-base leading-relaxed">{item.answer}</p>
                   </div>
                 </AccordionContent>
