@@ -16,12 +16,12 @@ const slides = [
     alt: "Zapallo",
     subtitulo: "",
   },
-  // {
-  //   imagen: "/carousel/slider0.webp",
-  //   titulo: "Un patrimonio biológico & cultural",
-  //   alt:"Zapallo",
-  //   subtitulo: "- Desde Austria a Uruguay -",
-  // },
+  {
+    imagen: "/carousel/semillas.jpg",
+    titulo: "Un patrimonio biológico & cultural",
+    alt:"Semillas Kurbis",
+    subtitulo: "- Desde Austria a Uruguay -",
+  },
   {
     imagen: "/carousel/slider0.webp",
     titulo: "El regalo ideal",
