@@ -4,12 +4,12 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Rueda from "./Rueda.jsx";
 
 const slides = [
-  // {
-  //   imagen: "/carousel/slider0.webp",
-  //   titulo: "el 'oro' verde de austria",
-  //   alt:"",
-  //   subtitulo: "- Ahora en Uruguay -",
-  // },
+  {
+    imagen: "/carousel/ubicacion.jpg",
+    titulo: "el 'oro' verde de austria",
+    alt:"",
+    subtitulo: "- Ahora en Uruguay -",
+  },
   {
     imagen: "/carousel/slider2.webp",
     titulo: "El Rey del bienestar y la salud",
