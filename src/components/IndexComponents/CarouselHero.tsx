@@ -41,7 +41,7 @@ export function CarouselHero() {
     }
     timeoutRef.current = window.setTimeout(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 6000);
     return () => {
       if (timeoutRef.current !== undefined) {
         clearTimeout(timeoutRef.current);
