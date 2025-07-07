@@ -113,7 +113,7 @@ export default function Music() {
       </div>
 
       <audio ref={audioRef} loop preload="auto" autoPlay>
-        <source src="/img/nosotros/test.mp3" type="audio/mpeg" />
+        <source src="/img/nosotros/jodel.mp3" type="audio/mpeg" />
         Tu navegador no soporta audio.
       </audio>
 
