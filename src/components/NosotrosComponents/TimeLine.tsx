@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import Music from "@/components/NosotrosComponents/Music";
 
 // Timeline Step Component with Luxury Styling
 function LuxuryTimelineStep({
@@ -33,7 +34,7 @@ function LuxuryTimelineStep({
         {isEven ? (
           <>
             {/* Content Left */}
-            <div className="w-5/12 pr-1 text-right">
+            <div className="w-5/12 pr-1 text-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -41,7 +42,7 @@ function LuxuryTimelineStep({
               >
                 <div className="mb-4 w-16 h-[1px] bg-[var(--color-primario)] ml-auto"></div>
                 <h3 className="font-serif text-3xl lg:text-4xl font-light text-[var(--color-primario)] mb-6">{step.title}</h3>
-                <p className="text-[var(--color-perla)] leading-relaxed text-lg font-light">{step.description}</p>
+                <p className="text-[var(--color-perla)] leading-relaxed text-lg font-light whitespace-pre-line">{step.description}</p>
               </motion.div>
             </div>
 
@@ -122,7 +123,7 @@ function LuxuryTimelineStep({
             </div>
 
             {/* Content Right */}
-            <div className="w-5/12 pl-1 text-left">
+            <div className="w-5/12 pl-1 text-center">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -130,7 +131,7 @@ function LuxuryTimelineStep({
               >
                 <div className="mb-4 w-16 h-[1px] bg-[var(--color-primario)]"></div>
                 <h3 className="font-serif text-3xl lg:text-4xl font-light text-[var(--color-primario)] mb-6">{step.title}</h3>
-                <p className="text-[var(--color-perla)] leading-relaxed text-lg font-light">{step.description}</p>
+                <p className="text-[var(--color-perla)] leading-relaxed text-lg font-light whitespace-pre-line">{step.description}</p>
               </motion.div>
             </div>
           </>
@@ -138,7 +139,7 @@ function LuxuryTimelineStep({
       </div>
 
       {/* Mobile Layout */}
-      <div className="md:hidden w-full max-w-sm">
+      <div className="pr-4 md:hidden w-full max-w-sm">
         <div className="flex">
           {/* Timeline Line and Circle */}
           <div className="flex flex-col items-center mr-6 relative">
@@ -177,7 +178,7 @@ function LuxuryTimelineStep({
             </motion.div>
             <div className="mb-3 w-12 h-[1px] bg-[var(--color-primario)]"></div>
             <h3 className="font-serif text-xl font-light text-[var(--color-primario)] mb-4">{step.title}</h3>
-            <p className="text-[var(--color-perla)] leading-relaxed font-light">{step.description}</p>
+            <p className="text-[var(--color-perla)] leading-relaxed font-light whitespace-pre-line">{step.description}</p>
           </div>
         </div>
       </div>
@@ -191,14 +192,14 @@ export default function TimeLine() {
     {
       title: "El oro verde de Austria",
       description:
-        `Austria es mundialmente famoso por su aceite de semillas de zapallo, el “oro verde de Austria”, sin duda una especialidad culinaria emblemática, arraigada en la historia como patrimonio biológico y cultural del departamento de Styria. El color verde oscuro de este aceite, con matices rojos, su aroma almendrado, su alto valor nutricional, su sabor fino y delicado pero, al mismo tiempo, intenso, y sus propiedades saludables lo hacen único. Es un elemento indispensable en la cocina de esta región. Poco a poco se va conociendo en otros países del mundo y ahora en Uruguay.`,
+        `Austria es mundialmente famoso por su aceite de semillas de zapallo, el “oro verde de Austria”, sin duda una especialidad culinaria emblemática, arraigada en la historia como patrimonio biológico y cultural del departamento de Styria. El color verde oscuro de este aceite, con matices rojos, su aroma almendrado, su alto valor nutricional, su sabor fino y delicado pero, al mismo tiempo, intenso, y sus propiedades saludables lo hacen único. \n Es un elemento indispensable en la cocina de esta región. Poco a poco se va conociendo en otros países del mundo y ahora en Uruguay.`,
       image: "/img/nosotros/aceite.webp?height=350&width=500",
       alt: "",
     },
     {
       title: "Un tesoro invaluable",
       description:
-        "Este aceite es elaborado con las semillas de zapallo Cucurbita pepo var. Styriaca. Pertenecen a la familia de las cucurbitáceas, son oleaginosas, no son transgénicas, son grandes, verdes oscuras, sin cáscaras, cubiertas con una fina piel, libres de gluten. Son una fuente inagotable de nutrientes, ricas en componentes funcionales. Son un tesoro invaluable: guardan en su interior historias de generaciones, tradiciones y prácticas culturales propias del territorio de Austria. Un legado vivo creado en Styria por los agricultores locales hace más de 100 años, reconocido por la Unión Europea desde el año 1996.",
+        "Este aceite es elaborado con las semillas de zapallo Cucurbita pepo var. Styriaca. Pertenecen a la familia de las cucurbitáceas, son oleaginosas, no son transgénicas, son grandes, verdes oscuras, sin cáscaras, cubiertas con una fina piel, libres de gluten. Son una fuente inagotable de nutrientes, ricas en componentes funcionales. Son un tesoro invaluable: guardan en su interior historias de generaciones, tradiciones y prácticas culturales propias del territorio de Austria. \n Un legado vivo creado en Styria por los agricultores locales hace más de 100 años, reconocido por la Unión Europea desde el año 1996.",
       image: "/img/nosotros/dedos.webp?height=350&width=500",
       alt: "Dedos con una semilla",
     },
@@ -220,11 +221,13 @@ export default function TimeLine() {
   ]
 
   return (
-    <section className="py-32 pr-4 md:px-4 bg-[url(/img/nosotros/laboratorio.webp)] bg-fixed bg-cover bg-center relative overflow-hidden">
+    <section className="py-15 md:py-25 lg:py-30 md:px-4 bg-[url(/img/nosotros/laboratorio.webp)] bg-fixed bg-cover bg-center relative overflow-hidden">
       {/* Luxury Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/5 via-transparent to-[var(--color-primario)]/5 pointer-events-none" />
       <div className="absolute inset-0 bg-black/80 pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
+  
+      <Music />
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-24 relative">
@@ -243,7 +246,7 @@ export default function TimeLine() {
               CULTURA FAMILIAR
             </h2>
             <p className="text-lg md:text-xl text-[var(--color-perla)] max-w-3xl mx-auto leading-relaxed font-light">
-              Semillas,<br className="min-[420px]:hidden"/> memorias que llevan vida <br/>
+              Semillas,<br className="min-[420px]:hidden" /> memorias que llevan vida <br />
               Una apuesta por el patrimonio biológico y cultural de Austria
             </p>
           </motion.div>
