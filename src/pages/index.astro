@@ -5,11 +5,11 @@ import Recuadro from "../components/IndexComponents/Recuadro.astro";
 import MarmolImage from "@/components/IndexComponents/MarmolImage.astro";
 import Offer from "../components/IndexComponents/Offer.astro";
 import Suscription from "../components/IndexComponents/Suscription.astro";
-import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.astro";
+import SectionDirectAccess from "@/components/IndexComponents/SectionDirectAccess.astro";
 ---
 
 <Layout title="Kürbis">
-    <CarouselHero client:load />
+  <CarouselHero client:load />
   <Recuadro
     texto='<span class="font-medium">Aceite</span>; puro, oscuro, sabroso, versátil y extraordinariamente saludable'
   />
@@ -30,8 +30,8 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
       class="text-black text-center xs:text-left text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed font-[450]"
       slot="description"
     >
-      El color verde oscuro con matices rojos, su calidad extra virgen sin
-      filtrar, su exquisito aroma, su alto valor nutricional por su elevado
+      El color verde oscuro con matices rojos, su calidad cien por ciento virgen
+      sin filtrar, su exquisito aroma, su alto valor nutricional por su elevado
       contenido de ácidos grasos, omega 3 + omega 6 + omega 9 de 10 mg por
       porción, su buen aporte en Magnesio, Zinc, Hierro, Potasio, Vitamina E,
       polifenoles, fitoesteroles y otros antioxidantes y su sabor almendrado y
@@ -44,13 +44,35 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
       </a>
     </p>
   </MarmolImage>
-  <div class="relative">
+
+  <div
+    class="relative flex justify-center content-center md:h-full bg-[var(--color-background)] md:pt-20"
+  >
     <img
-      src="/img/lechuga.webp"
+      src="/img/lechuga.png"
       alt="Aceite Kurbis sobre una lechuga"
-      class="w-full object-cover"
+      class="w-full object-cover md:hidden"
     />
+
+    <div
+      class="hidden w-full md:flex justify-center mb-10 mx-50 lg:mx-70 xl:mx-100 2xl:mx-120"
+    >
+      <div class="relative">
+        <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"/>
+        
+        <div class="absolute -right-4 -bottom-4 w-full h-full border border-[var(--color-primario)]/30"/>
+        
+        <div class="relative overflow-hidden">
+          <img
+            src="/img/lechuga.png"
+            alt="Aceite Kurbis sobre una lechuga"
+            class="object-cover"
+          />
+        </div>
+      </div>
+    </div>
   </div>
+
   <Recuadro
     texto='<span class="font-medium">Alimento</span>; real, plant based, sabroso, versátil e increíblemente nutritivo'
   />
@@ -85,16 +107,39 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
       </a>
     </p>
   </MarmolImage>
-  <img
-    src="/img/gym.webp"
-    alt="Alimento vegetal en el gym"
-    class="w-full object-cover"
-  />
+
+  <div
+    class="relative flex justify-center content-center md:h-full bg-[var(--color-background)] md:pt-20"
+  >
+     <img
+      src="/img/gym.webp"
+      alt="Alimento Kürbis reposado en una maquina de gym"
+      class="w-full object-cover md:hidden"
+    />
+
+    <div
+      class="hidden w-full md:flex justify-center mb-10 mx-50 lg:mx-70 xl:mx-100 2xl:mx-120"
+    >
+      <div class="relative">
+        <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"/>
+        
+        <div class="absolute -right-4 -bottom-4 w-full h-full border border-[var(--color-primario)]/30"/>
+        
+        <div class="relative overflow-hidden">
+          <img
+            src="/img/gym.webp"
+            alt="Alimento Kürbis reposado en una maquina de gym"
+            class="object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 
   {/* Promos Grid */}
   <section
     id="promociones"
-    class="min-h-screen p-4 md:p-16 lg:p-6 pb-0 content-center bg-[var(--color-background-alt)]"
+    class="min-h-screen mt-10 p-4 md:p-16 lg:p-6 pb-0 content-center bg-[var(--color-background-alt)]"
   >
     <div class="border-2 border-[var(--color-primario)]/30">
       <h2
@@ -108,7 +153,7 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
         — Puedes compartir Sabor y Bienestar —
       </h3>
       <div
-        class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 place-items-center mt-17 mx-4"
+        class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-10 place-items-center mt-10 md:mt-14 mx-4"
       >
         <Offer
           image="/img/duo-wellness.webp"
@@ -138,9 +183,9 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
 
   <div class="min-h-screen p-4">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-2 md:gap-0"
+      class="grid grid-cols-1 lg:grid-cols-2 lg:[grid-template-rows:repeat(2,400px)] xl:[grid-template-rows:repeat(2,500px)] place-items-center gap-2 md:gap-0"
     >
-      <CuadroInformativo
+      <SectionDirectAccess
         imagen="/img/nosotros/panorama-index.webp"
         alt="Austria y Piriapolis"
         title="Quienes somos"
@@ -148,7 +193,7 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
         link="nosotros"
         buttonText="Conocer más"
       />
-      <CuadroInformativo
+      <SectionDirectAccess
         imagen="/img/mision/ceibo.webp"
         alt="Ceibos"
         title="Misión"
@@ -156,15 +201,15 @@ import CuadroInformativo from "@/components/IndexComponents/CuadroInformativo.as
         link="mision"
         buttonText="Ver misión"
       />
-      <CuadroInformativo
-        imagen="/img/sostenibilidad/semillas.webp"
+      <SectionDirectAccess
+        imagen="/img/sostenibilidad/semillas.jpg"
         alt="Semillas de zapallo"
         title="Sostenibilidad"
         description="Colaboramos para hacer de este mundo un lugar más sostenible para nosotros y las futuras generaciones"
         link="sostenibilidad"
         buttonText="Saber más"
       />
-      <CuadroInformativo
+      <SectionDirectAccess
         imagen="/img/productos/hero.webp"
         alt="Paisaje natural, con aceite y bolsa alimento natural"
         title="Nuestros productos"

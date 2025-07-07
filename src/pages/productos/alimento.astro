@@ -12,7 +12,7 @@ const beneficios = [
     "¿La presencia de triptófano ayuda a descansar mejor?",
     "¿El contenido de zinc beneficia al sistema inmune y al metabolismo?",
     "¿El contenido de magnesio beneficia la función muscular y nerviosa, así como la salud ósea?",
-    "¿El contenido de sodio presente puede afectar la presión arterial?",
+    "¿El contenido de sodio presente puede afectar la salud cardiovascular?",
 ];
 ---
 
@@ -77,7 +77,7 @@ const beneficios = [
                             {
                                 imagen: "/img/productos/smoothie.webp",
                                 withInfo: true,
-                                info: "informacion sobre alimento",
+                                info: "Plant Food \n Rico en Proteínas \n Bajo en Carbohidratos \n y Energía",
                                 alt: "Smoothie de alimento vegetal",
                             },
                             {
@@ -137,12 +137,12 @@ const beneficios = [
                         </div>
                         <div class="relative overflow-hidden">
                             <img
-                                src="/img/productos/training.webp"
+                                src="/img/productos/training.jpg"
                                 alt="Hombre tomando un brebaje mientras entrena"
-                                class="object-cover aspect-square"
+                                class="object-cover"
                             />
                         </div>
-                        <CuadroInformativo info="info" shouldShowInfo={true} />
+                        <CuadroInformativo atRight={false} info="Rico en Fibra \n Magnesio Zinc \n Triptófano \n Omega 3 + 6 + 9" shouldShowInfo={true} />
                     </div>
                 </div>
 
