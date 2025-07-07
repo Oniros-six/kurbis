@@ -13,8 +13,6 @@ type content = {
 export function CarouselProduct({ contenido }: { contenido: content[] }) {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const plugin = Autoplay({ delay: 3000, stopOnInteraction: true })
-
   const onSlideChange = useCallback((api: { selectedScrollSnap: () => SetStateAction<number> }) => {
     if (!api) return
     setCurrentSlide(api.selectedScrollSnap())
@@ -30,7 +28,6 @@ export function CarouselProduct({ contenido }: { contenido: content[] }) {
         <div className="bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-4 sm:p-8 text-center">
           <Carousel
             opts={{ loop: true, align: "start" }}
-            plugins={[plugin]}
             className="relative"
             setApi={(api) => {
               if (!api) return

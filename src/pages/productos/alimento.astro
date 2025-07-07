@@ -51,7 +51,7 @@ const beneficios = [
         <!-- Content Sections -->
         <section class="py-16 px-4 bg-[var(--color-background-alt)]">
             <div class="max-w-4xl mx-auto space-y-12">
-                <!-- Description paragraphs -->
+                <!-- Carrousel -->
                 <div class="space-y-8 fade-in-up">
                     <p class="text-gray-300 font-light text-lg leading-relaxed">
                         Nuestro alimento Kürbis de excelente calidad, es una
@@ -77,7 +77,7 @@ const beneficios = [
                             {
                                 imagen: "/img/productos/smoothie.webp",
                                 withInfo: true,
-                                info: "Plant Food \n Rico en Proteínas \n Bajo en Carbohidratos \n y Energía",
+                                info: "Plant Food \n Rico en Proteínas \n Bajo en Carbohidratos \n y Kcal",
                                 alt: "Smoothie de alimento vegetal",
                             },
                             {
@@ -107,7 +107,9 @@ const beneficios = [
                         un estilo de vida wellness y más...
                     </p>
                 </div>
-                <div class="flex flex-col space-y-1">
+
+                <!-- Notes -->
+                <div class="flex flex-col space-y-1 mb-30">
                     <div
                         class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4"
                     >
@@ -129,6 +131,7 @@ const beneficios = [
                     </div>
                 </div>
 
+                <!-- Image -->
                 <div class="w-full flex justify-center mb-10 px-8 sm:px-38 md:px-50 lg:px-70">
                     <div class="relative">
                         <div
@@ -142,10 +145,11 @@ const beneficios = [
                                 class="object-cover"
                             />
                         </div>
-                        <CuadroInformativo atRight={false} info="Rico en Fibra \n Magnesio Zinc \n Triptófano \n Omega 3 + 6 + 9" shouldShowInfo={true} />
+                        <CuadroInformativo atLeft={false} atTop={false} info="Rico en Fibra \n Magnesio Zinc \n Triptófano \n Omega 3 + 6 + 9" shouldShowInfo={true} />
                     </div>
                 </div>
 
+                <!-- Paragraph -->
                 <div class="fade-in-up">
                     <p class="text-gray-300 font-light text-lg leading-relaxed">
                         La cantidad de alimento vegetal Kürbis a usar depende de
