@@ -1,7 +1,7 @@
 ---
 import { Button } from "@/components/LayoutComponents/NavbarButton";
 
-const { srcBackground, altBackground, srcProduct, altProduct, productHeight } =
+const { srcBackground, altBackground, srcProduct, altProduct, productClases } =
   Astro.props;
 ---
 
@@ -10,15 +10,15 @@ const { srcBackground, altBackground, srcProduct, altProduct, productHeight } =
   <img
     src={srcBackground}
     alt={altBackground}
-    class="w-full object-cover h-[50rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem] xl:h-[70rem]"
+    class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]"
   />
 
   <!-- Content Overlay -->
   <div
-    class="absolute inset-0 flex flex-col items-center justify-center md:justify-start p-4 sm:p-6 md:p-8 md:pt-40 lg:p-12 lg:pt-40"
+    class="absolute inset-0 flex flex-col items-center justify-center md:justify-start p-4 sm:p-6 md:p-8 lg:p-12 lg:pt-20"
   >
     <!-- Title Section -->
-    <div class="mb-6 sm:mb-8 md:mb-12 text-center">
+    <div class="mb-14 mt-5 sm:mb-8 md:mb-12 text-center">
       <slot name="title" />
     </div>
 
@@ -33,7 +33,7 @@ const { srcBackground, altBackground, srcProduct, altProduct, productHeight } =
         <img
           src={srcProduct}
           alt={altProduct}
-          class={`object-contain w-full max-w-[15rem] sm:max-w-[20rem] md:max-w-[25rem] lg:max-w-[30rem] xl:max-w-[35rem] ${productHeight}`}
+          class={`object-contain w-full ${productClases}`}
         />
       </div>
 
