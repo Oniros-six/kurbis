@@ -6,25 +6,25 @@ import CarouselLayover from "./CarouselLayover.js";
 
 const slides = [
   {
-    imagen: "/carousel/ubicacion.png",
+    imagen: "/carousel/ubicacion.webp",
     titulo: "el 'oro' verde de austria",
     alt:"",
     subtitulo: "- Ahora en Uruguay -",
   },
   {
-    imagen: "/carousel/zapallo.jpg",
+    imagen: "/carousel/zapallo.webp",
     titulo: "El Rey del bienestar y la salud",
     alt: "Zapallo",
     subtitulo: "",
   },
   {
-    imagen: "/carousel/semillas.png",
+    imagen: "/carousel/semillas.webp",
     titulo: "Un patrimonio biológico & cultural",
     alt:"Semillas Kurbis",
     subtitulo: "- Desde Austria a Uruguay -",
   },
   {
-    imagen: "/carousel/regalo.png",
+    imagen: "/carousel/regalo.webp",
     titulo: "El regalo ideal",
     alt: "Botella de aceite Kurbis como regalo",
     subtitulo: "- Para los amantes de lo saludable & gourmet -",
