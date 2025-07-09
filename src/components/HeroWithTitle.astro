@@ -3,7 +3,7 @@ const {
     img,
     alt = "",
     divHeight = "h-[500px]",
-    height,
+    clases,
     withFilter = true,
 } = Astro.props;
 ---
@@ -15,7 +15,7 @@ const {
             alt={alt}
             role="presentation"
             aria-hidden="true"
-            class={`object-cover w-full ${height}`}
+            class={`object-cover w-full ${clases}`}
         />
         {
             withFilter && (

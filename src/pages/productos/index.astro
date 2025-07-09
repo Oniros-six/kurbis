@@ -14,7 +14,7 @@ import Quote from "@/components/Quote.astro";
   >
     {/* Hero Section with Luxury Overlay */}
 
-    <section class={`h-[56vw] overflow-hidden`}>
+    <section class={`relative h-[40vw] overflow-hidden`}>
       <div class="inset-0">
         <img
           src="/img/productos/hero.webp"
@@ -23,8 +23,8 @@ import Quote from "@/components/Quote.astro";
           aria-hidden="true"
           class="object-cover w-full"
         />
-        <div
-          class="h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
+         <div
+            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
         >
         </div>
       </div>
@@ -105,14 +105,14 @@ import Quote from "@/components/Quote.astro";
       </div>
     </section>
     <!-- Data -->
-      <div
-        class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4 max-w-6xl mx-auto mb-10"
-      >
-        <p class="text-[var(--color-primario)] font-light italic">
-          * Importante: Consulta siempre a un profesional de la salud antes de
-          incorporar nuevos alimentos a tu dieta.
-        </p>
-      </div>
+    <div
+      class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4 max-w-6xl mx-auto mb-10"
+    >
+      <p class="text-[var(--color-primario)] font-light italic">
+        * Importante: Consulta siempre a un profesional de la salud antes de
+        incorporar nuevos alimentos a tu dieta.
+      </p>
+    </div>
 
     <Quote
       quote=`Nuestros productos están hechos con cariño, con alma, con pasión y
@@ -235,7 +235,7 @@ import Quote from "@/components/Quote.astro";
           text="Ambientalmente sostenibles"
         />
       </div>
-    </section> 
+    </section>
     <EndPage
       title="¿Necesitas más razones para experimentar este tesoro?"
       subTitle="Conoce diversas formas de consumir nuestros productos"
