@@ -2,13 +2,15 @@
 const {
     img,
     alt = "",
-    divHeight = "h-[500px]",
-    clases,
-    withFilter = true,
+    clases = "",
+    withFilter = false,
 } = Astro.props;
 ---
 
-<section class={`relative ${divHeight}`}>
+<section
+
+    class={`relative overflow-hidden h-[47vw] xl:h-[46.5vw] 2xl:[20vw]`}
+>
     <div class="absolute inset-0">
         <img
             src={`${img}`}

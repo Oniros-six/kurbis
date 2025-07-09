@@ -6,6 +6,7 @@ import Recuadro from "@/components/IndexComponents/Recuadro.astro";
 import IconoTexto from "@/components/ProductsComponents/IconoTexto.astro";
 import EndPage from "@/components/EndPage.astro";
 import Quote from "@/components/Quote.astro";
+import HeroWithTitle from "@/components/HeroWithTitle.astro";
 ---
 
 <Layout title="Kürbis - Nosotros">
@@ -13,22 +14,10 @@ import Quote from "@/components/Quote.astro";
     class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
   >
     {/* Hero Section with Luxury Overlay */}
-
-    <section class={`relative h-[40vw] overflow-hidden`}>
-      <div class="inset-0">
-        <img
-          src="/img/productos/hero.webp"
-          alt="Productos Kurbis, alimento y aceite"
-          role="presentation"
-          aria-hidden="true"
-          class="object-cover w-full"
-        />
-         <div
-            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-        >
-        </div>
-      </div>
-    </section>
+    <HeroWithTitle
+      img="/img/productos/hero.webp"
+      alt="Productos Kurbis, alimento y aceite"
+    />
 
     {/* Elegant Introduction */}
     <Titulos
