@@ -1,262 +1,164 @@
 ---
-import Titulos from "@/components/Titulos.astro";
-import Layout from "@/layouts/layout.astro";
-import TextImage from "@/components/TextImage.astro";
-import Recuadro from "@/components/IndexComponents/Recuadro.astro";
-import IconoTexto from "@/components/ProductsComponents/IconoTexto.astro";
-import EndPage from "@/components/EndPage.astro";
-import Quote from "@/components/Quote.astro";
-import HeroWithTitle from "@/components/HeroWithTitle.astro";
+import Layout from '@/layouts/layout.astro';
+import TextImage from '@/components/TextImage.astro';
+import Recuadro from '@/components/IndexComponents/Recuadro.astro';
+import IconoTexto from '@/components/ProductsComponents/IconoTexto.astro';
+import EndPage from '@/components/EndPage.astro';
+import Quote from '@/components/Quote.astro';
+import HeroWithTitle from '@/components/HeroWithTitle.astro';
 ---
 
 <Layout title="Kürbis - Nosotros">
-  <div
-    class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
-  >
+  <div class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]">
     {/* Hero Section with Luxury Overlay */}
-    <HeroWithTitle
-      img="/img/productos/hero.webp"
-      alt="Productos Kurbis, alimento y aceite"
-    />
+    <HeroWithTitle img="/img/productos/hero.webp" alt="Productos Kurbis, alimento y aceite" />
 
-    <div
-      class="my-2 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-    >
-    </div>
+    <div class="my-2 h-1 bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
 
     {/* Elegant Introduction */}
     <div class="max-w-7xl mx-auto my-15 md:my-25 lg:my-30 relative">
       <div class="text-center mb-24 relative">
         {/* Decorative elements */}
-        <div
-          class="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"
-        >
-        </div>
-        <div
-          class="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"
-        >
-        </div>
-
         <div class="inline-block px-12 relative">
-          <h2
-            class="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-[var(--color-primario)] mb-8"
-          >
-            NUESTROS PRODUCTOS
-          </h2>
-          <p
-            class="text-lg md:text-xl text-[var(--color-perla)] max-w-3xl mx-auto leading-relaxed font-light"
-          >
-            Siente el poder de la naturaleza, Kürbis preserva todos los
-            nutrientes de las semillas de zapallo, para una vida saludable
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-[var(--color-primario)] mb-4">NUESTROS PRODUCTOS</h2>
+
+          <!-- Línea centrada entre h2 y p -->
+          <div class="relative h-3 my-4 flex items-center justify-between">
+            <div class="w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
+            <div class="w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
+          </div>
+
+          <p class="text-lg md:text-xl text-[var(--color-perla)] max-w-3xl mx-auto leading-relaxed font-light">
+            Siente el poder de la naturaleza, Kürbis preserva todos los nutrientes de las semillas de zapallo, para una vida saludable
           </p>
         </div>
       </div>
 
-    <TextImage
-      img="/img/productos/mujer.webp"
-      alt="Mujer austriaca en la cocina"
-      title="El verdadero sabor de una cocina Austríaca"
-      text="Nuestros productos Kürbis son producidos en forma totalmente artesanal, elaborados en Uruguay, con tradición austríaca, sostenibles, cien por ciento naturales y puros, genuinos, elaborados a partir del cien por ciento de semillas de zapallo Cucurbita pepo, var. Styriaca, importadas directamente de los campos de Styria, en Austria, con la trazabilidad garantizada. Son de excelente calidad, verdes oscuras y sin cáscara."
-    />
+      <TextImage
+        img="/img/productos/mujer.webp"
+        alt="Mujer austriaca en la cocina"
+        title="El verdadero sabor de una cocina Austríaca"
+        text="Nuestros productos Kürbis son producidos en forma totalmente artesanal, elaborados en Uruguay, con tradición austríaca, sostenibles, cien por ciento naturales y puros, genuinos, elaborados a partir del cien por ciento de semillas de zapallo Cucurbita pepo, var. Styriaca, importadas directamente de los campos de Styria, en Austria, con la trazabilidad garantizada. Son de excelente calidad, verdes oscuras y sin cáscara."
+      />
 
-    <Recuadro
-      texto="Los productos Kürbis ofrecen beneficios extraordinariamente saludables"
-    />
+      <Recuadro texto="Los productos Kürbis ofrecen beneficios extraordinariamente saludables" />
 
-    <section
-      class="py-24 px-4 m-2 md:m-0 bg-[var(--color-background-alt)] relative"
-    >
-      <div class="w-fit mx-auto">
-        <div class="grid gap-16 items-center">
-          <!-- Imagen -->
-          <div class={`relative`}>
-            <div
-              class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
-            >
-            </div>
-            <div class="relative overflow-hidden">
-              <img
-                src="/img/productos/wellness.webp"
-                alt="Pareja trotando"
-                width={600}
-                height={600}
-                class="object-cover aspect-square"
-              />
+      <section class="py-24 px-4 m-2 md:m-0 bg-[var(--color-background-alt)] relative">
+        <div class="w-fit mx-auto">
+          <div class="grid gap-16 items-center">
+            <!-- Imagen -->
+            <div class={`relative`}>
+              <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"></div>
+              <div class="relative overflow-hidden">
+                <img src="/img/productos/wellness.webp" alt="Pareja trotando" width={600} height={600} class="object-cover aspect-square" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="py-24 px-4 bg-[var(--color-background)] relative">
-      <div class="max-w-6xl mx-auto text-center relative z-10">
-        <!-- Decorative elements -->
-        <div
-          class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
-        >
+      <section class="py-24 px-4 bg-[var(--color-background)] relative">
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+          <!-- Decorative elements -->
+          <div class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"></div>
+          <div class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"></div>
+
+          <h2 class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8">Increíblemente nutricionales para todas las dietas</h2>
+          <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+            Tanto el aceite como el alimento vegetal, aportan compuestos bioactivos, aceites omega 3, omega 6 y omega 9, minerales y vitaminas que tienen el potencial de impartir beneficios
+            fisiológicos, promover el bienestar y reducir el riesgo de enfermedades no transmisibles, lo que los hacen muy apreciados, convirtiéndose en una valiosa adición a las <span
+              class="font-medium text-[var(--color-complementario)]"
+            >
+              dietas veganas, whole 30, Keto, detox, clean, ayuno intermitente, inmunonutritiva, páleo, un estilo de vida wellness y más...
+            </span>
+          </p>
         </div>
-        <div
-          class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
-        >
-        </div>
-
-        <h2
-          class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8"
-        >
-          Increíblemente nutricionales para todas las dietas
-        </h2>
-        <p
-          class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
-        >
-          Tanto el aceite como el alimento vegetal, aportan compuestos
-          bioactivos, aceites omega 3, omega 6 y omega 9, minerales y vitaminas
-          que tienen el potencial de impartir beneficios fisiológicos, promover
-          el bienestar y reducir el riesgo de enfermedades no transmisibles, lo
-          que los hacen muy apreciados, convirtiéndose en una valiosa adición a
-          las <span class="font-medium text-[var(--color-complementario)]"
-            >dietas veganas, whole 30, Keto, detox, clean, ayuno intermitente,
-            inmunonutritiva, páleo, un estilo de vida wellness y más...</span
-          >
-        </p>
+      </section>
+      <!-- Data -->
+      <div class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4 max-w-6xl mx-auto mb-10">
+        <p class="text-[var(--color-primario)] font-light italic">* Importante: Consulta siempre a un profesional de la salud antes de incorporar nuevos alimentos a tu dieta.</p>
       </div>
-    </section>
-    <!-- Data -->
-    <div
-      class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4 max-w-6xl mx-auto mb-10"
-    >
-      <p class="text-[var(--color-primario)] font-light italic">
-        * Importante: Consulta siempre a un profesional de la salud antes de
-        incorporar nuevos alimentos a tu dieta.
-      </p>
-    </div>
 
-    <Quote
-      quote=`Nuestros productos están hechos con cariño, con alma, con pasión y
+      <Quote
+        quote=`Nuestros productos están hechos con cariño, con alma, con pasión y
             además, el entusiasmo que se ha puesto en estos productos, los hacen
             únicos y exclusivos`
-    />
+      />
 
-    <section class="py-32 px-4 bg-[var(--color-background)] relative">
-      {/* Luxury Background Effects */}
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/3 via-transparent to-[var(--color-primario)]/3 pointer-events-none"
-      >
-      </div>
+      <section class="py-32 px-4 bg-[var(--color-background)] relative">
+        {/* Luxury Background Effects */}
+        <div class="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/3 via-transparent to-[var(--color-primario)]/3 pointer-events-none"></div>
 
-      <div class="max-w-4xl mx-auto text-center relative z-10">
-        <div
-          class="flex justify-center items-center px-4 md:px-8 lg:px-16 mb-6 md:mb-8 lg:mb-10 z-15"
-        >
-          <h3
-            class="bg-[var(--color-primario)] mx-2 px-4 md:px-6 lg:px-8 py-3 md:py-4 tracking-wider md:tracking-[.2em] font-normal uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-black text-center leading-tight"
-          >
-            Productos sin igual
-          </h3>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+          <div class="flex justify-center items-center px-4 md:px-8 lg:px-16 mb-6 md:mb-8 lg:mb-10 z-15">
+            <h3
+              class="bg-[var(--color-primario)] mx-2 px-4 md:px-6 lg:px-8 py-3 md:py-4 tracking-wider md:tracking-[.2em] font-normal uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-black text-center leading-tight"
+            >
+              Productos sin igual
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <a href="/productos/aceite">
+                <button
+                  class=`
+                w-full 
+                px-12 py-6 
+                rounded-lg 
+                text-lg text-black hover:text-[var(--color-perla)] font-medium font-serif tracking-wider 
+                bg-[var(--color-primario)] hover:bg-transparent
+                border border-[var(--color-primario)]
+                shadow-2xl hover:shadow-lg hover:shadow-[var(--color-secundario)]/20 
+                cursor-pointer 
+                transform hover:scale-105 
+                transition-all duration-300 ease-in-out`
+                >
+                  Ver Aceite Kürbis
+                </button>
+              </a>
+            </div>
+            <div class="flex flex-col gap-2">
+              <a href="/productos/alimento">
+                <button
+                  class=`
+                w-full 
+                px-12 py-6 
+                rounded-lg 
+                text-lg text-black hover:text-[var(--color-perla)] font-medium font-serif tracking-wider 
+                bg-[var(--color-primario)] hover:bg-transparent
+                border border-[var(--color-primario)]
+                shadow-2xl hover:shadow-lg hover:shadow-[var(--color-secundario)]/20 
+                cursor-pointer 
+                transform hover:scale-105 
+                transition-all duration-300 ease-in-out`
+                >
+                  Ver Alimento Kürbis
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[var(--color-background-alt)] px-4 md:px-10 lg:px-16 xl:px-32 2xl:px-64 py-10 mt-10">
+        <div class="flex flex-col">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">Hecho con cuidado</h2>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold mb-8">Elaboramos nuestros productos honrando a las personas y al planeta</h3>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="flex flex-col gap-2">
-            <a href="/productos/aceite">
-              <button
-                class=`
-                w-full 
-                px-12 py-6 
-                rounded-lg 
-                text-lg text-black hover:text-[var(--color-perla)] font-medium font-serif tracking-wider 
-                bg-[var(--color-primario)] hover:bg-transparent
-                border border-[var(--color-primario)]
-                shadow-2xl hover:shadow-lg hover:shadow-[var(--color-secundario)]/20 
-                cursor-pointer 
-                transform hover:scale-105 
-                transition-all duration-300 ease-in-out`
-              >
-                Ver Aceite Kürbis
-              </button>
-            </a>
-          </div>
-          <div class="flex flex-col gap-2">
-            <a href="/productos/alimento">
-              <button
-                class=`
-                w-full 
-                px-12 py-6 
-                rounded-lg 
-                text-lg text-black hover:text-[var(--color-perla)] font-medium font-serif tracking-wider 
-                bg-[var(--color-primario)] hover:bg-transparent
-                border border-[var(--color-primario)]
-                shadow-2xl hover:shadow-lg hover:shadow-[var(--color-secundario)]/20 
-                cursor-pointer 
-                transform hover:scale-105 
-                transition-all duration-300 ease-in-out`
-              >
-                Ver Alimento Kürbis
-              </button>
-            </a>
-          </div>
+          <IconoTexto img="/img/productos/icon-nogmo.svg" alt="Icono no modificado geneticamente" text="Nuestras semillas NO son genéticamente modificadas" />
+          <IconoTexto img="/img/productos/icon-nopreserv.svg" alt="Icono proveta" text="Sin Conservantes" />
+          <IconoTexto img="/img/productos/icon-noaditiv.svg" alt="Icono tubo de ensayo" text="Sin Ingredientes Artificiales, ni aditivos" />
+          <IconoTexto img="/img/productos/icon-lactosefree.svg" alt="Icono no lactosa" text="Libre de Lactosa" />
+          <IconoTexto img="/img/productos/icon-vegan.svg" alt="Icono apto vegano" text="Elaborado en base a plantas. Apto Veganos" />
+          <IconoTexto img="/img/productos/icon-noalergeno.svg" alt="Icono libre de alergenos" text="Libre de Alérgenos" />
+          <IconoTexto img="/img/productos/icon-nosugar.svg" alt="Icono sin azucares agregados" text="Sin azúcares agregados" />
+          <IconoTexto img="/img/productos/icon-circular.svg" alt="Icono economia circular" text="Ambientalmente sostenibles" />
         </div>
-      </div>
-    </section>
-
-    <section
-      class="bg-[var(--color-background-alt)] px-4 md:px-10 lg:px-16 xl:px-32 2xl:px-64 py-10 mt-10"
-    >
-      <div class="flex flex-col">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">
-          Hecho con cuidado
-        </h2>
-        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
-          Elaboramos nuestros productos honrando a las personas y al planeta
-        </h3>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <IconoTexto
-          img="/img/productos/icon-nogmo.svg"
-          alt="Icono no modificado geneticamente"
-          text="Nuestras semillas NO son genéticamente modificadas"
-        />
-        <IconoTexto
-          img="/img/productos/icon-nopreserv.svg"
-          alt="Icono proveta"
-          text="Sin Conservantes"
-        />
-        <IconoTexto
-          img="/img/productos/icon-noaditiv.svg"
-          alt="Icono tubo de ensayo"
-          text="Sin Ingredientes Artificiales, ni aditivos"
-        />
-        <IconoTexto
-          img="/img/productos/icon-lactosefree.svg"
-          alt="Icono no lactosa"
-          text="Libre de Lactosa"
-        />
-        <IconoTexto
-          img="/img/productos/icon-vegan.svg"
-          alt="Icono apto vegano"
-          text="Elaborado en base a plantas. Apto Veganos"
-        />
-        <IconoTexto
-          img="/img/productos/icon-noalergeno.svg"
-          alt="Icono libre de alergenos"
-          text="Libre de Alérgenos"
-        />
-        <IconoTexto
-          img="/img/productos/icon-nosugar.svg"
-          alt="Icono sin azucares agregados"
-          text="Sin azúcares agregados"
-        />
-        <IconoTexto
-          img="/img/productos/icon-circular.svg"
-          alt="Icono economia circular"
-          text="Ambientalmente sostenibles"
-        />
-      </div>
-    </section>
-    <EndPage
-      title="¿Necesitas más razones para experimentar este tesoro?"
-      subTitle="Conoce diversas formas de consumir nuestros productos"
-      button="Ver recetas"
-      link="/recetas"
-    />
+      </section>
+      <EndPage title="¿Necesitas más razones para experimentar este tesoro?" subTitle="Conoce diversas formas de consumir nuestros productos" button="Ver recetas" link="/recetas" />
+    </div>
   </div>
 </Layout>

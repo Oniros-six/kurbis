@@ -226,27 +226,30 @@ export default function TimeLine() {
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/5 via-transparent to-[var(--color-primario)]/5 pointer-events-none" />
       <div className="absolute inset-0 bg-black/80 pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
-  
+
       <Music />
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-24 relative">
           {/* Decorative elements */}
-          <div className="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
-          <div className="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
+
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="inline-block px-12 relative"
+            className="inline-block px-6 relative"
           >
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-[var(--color-primario)] mb-8">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-[var(--color-primario)]">
               CULTURA FAMILIAR
             </h2>
+            <div className="relative h-3 my-4 flex items-center justify-between">
+              <div className="w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
+              <div className="w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
+            </div>
             <p className="text-lg md:text-xl text-[var(--color-perla)] max-w-3xl mx-auto leading-relaxed font-light">
-              Semillas,<br className="min-[420px]:hidden" /> memorias que llevan vida <br />
+              Semillas, memorias que llevan vida <br />
               Una apuesta por el patrimonio biológico y cultural de Austria
             </p>
           </motion.div>
