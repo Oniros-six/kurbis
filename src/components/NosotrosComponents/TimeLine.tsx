@@ -199,7 +199,7 @@ export default function TimeLine() {
     {
       title: "Un tesoro invaluable",
       description:
-        "Este aceite es elaborado con las semillas de zapallo Cucurbita pepo var. Styriaca. Pertenecen a la familia de las cucurbitáceas, son oleaginosas, no son transgénicas, son grandes, verdes oscuras, sin cáscaras, cubiertas con una fina piel, libres de gluten. Son una fuente inagotable de nutrientes, ricas en componentes funcionales. Son un tesoro invaluable: guardan en su interior historias de generaciones, tradiciones y prácticas culturales propias del territorio de Austria. \n Un legado vivo creado en Styria por los agricultores locales hace más de 100 años, reconocido por la Unión Europea desde el año 1996.",
+        "Este aceite es elaborado con las semillas de zapallo Cucurbita pepo var. Styriaca. Pertenecen a la familia de las cucurbitáceas, son oleaginosas, no son transgénicas, son grandes, verdes oscuras, sin cáscaras, cubiertas con una fina piel, libres de gluten. Son una fuente inagotable de nutrientes, ricas en componentes funcionales. Son un tesoro invaluable, guardan en su interior historias de generaciones, tradiciones y prácticas culturales propias del territorio de Austria. \n Un legado vivo creado en Styria por los agricultores locales hace más de 100 años, reconocido por la Unión Europea desde el año 1996.",
       image: "/img/nosotros/dedos.webp?height=350&width=500",
       alt: "Dedos con una semilla",
     },
