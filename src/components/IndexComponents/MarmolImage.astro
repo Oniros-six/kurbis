@@ -1,55 +1,38 @@
 ---
-import { Button } from "@/components/LayoutComponents/NavbarButton";
+import { Button } from '@/components/LayoutComponents/NavbarButton';
 
-const { srcBackground, altBackground, srcProduct, altProduct, productClases } =
-  Astro.props;
+const { description, title, srcProduct, altProduct, product } = Astro.props;
 ---
 
 <section class="relative w-full">
-  <!-- Background Image -->
-  <img
-    src={srcBackground}
-    alt={altBackground}
-    class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]"
-  />
+  <!-- Fondo de mármol -->
+  <img src="/img/marmol.webp" alt="Marble background" class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]" />
 
-  <!-- Content Overlay -->
-  <div
-    class="absolute inset-0 flex flex-col items-center justify-center md:justify-start p-4 sm:p-6 md:p-8 lg:p-12 lg:pt-20"
-  >
-    <!-- Title Section -->
-    <div class="mb-14 mt-5 sm:mb-8 md:mb-12 text-center">
-      <slot name="title" />
-    </div>
+  <!-- Capa de contenido -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center md:justify-start p-4 sm:p-6 md:p-8 lg:p-12 lg:pt-20">
+    <!-- Título -->
+    <h1 class="text-center text-black font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl font-[georgia] mb-8 md:mb-18">
+      {title}
+    </h1>
 
-    <!-- Main Content Grid -->
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:gap-16 items-center justify-items-center max-w-6xl w-full"
-    >
-      <!-- Product Image Container -->
-      <div
-        class="flex justify-center items-center order-1 md:order-1 mask-b-from-80% mask-b-to-100%"
-      >
-        <img
-          src={srcProduct}
-          alt={altProduct}
-          class={`object-contain w-full ${productClases}`}
-        />
+    <!-- Contenido principal -->
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:gap-16 items-center justify-items-center max-w-6xl w-full">
+      <!-- Imagen del producto -->
+      <div class="flex justify-center items-center mask-b-from-80% mask-b-to-100%">
+        <img src={srcProduct} alt={altProduct} class="object-contain w-full
+        h-[25rem] xs:h-[30rem] sm:h-[35rem] md:h-fit" />
       </div>
 
-      <!-- Text Content Container -->
-      <div
-        class="self-start text-[var(--color-secundario)] font-medium text-center md:text-left space-y-4 sm:space-y-6 order-2 md:order-2 lg:mt-8 xl:mt-12"
-      >
-        <!-- Description -->
-        <div class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-          <slot name="description" />
-        </div>
+      <!-- Texto y botón -->
+      <div class="self-start text-[var(--color-secundario)] font-medium text-center md:text-left space-y-4 sm:space-y-6 lg:mt-8 xl:mt-12">
+        <!-- Descripción -->
+        <p class="text-black text-center xs:text-left text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed font-[450]">
+          {description}
+          <a href={`/productos/${product}`} class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block ml-1">Saber más →</a>
+        </p>
 
-        <!-- CTA Button -->
-        <Button client:load
-          className="hover:scale-105 transition-all duration-300 ease-in-out items-center group gap-2"
-        >
+        <!-- Botón CTA -->
+        <Button client:load className="hover:scale-105 transition-all duration-300 ease-in-out items-center group gap-2">
           <a href="/comprar">Comprar</a>
         </Button>
       </div>
