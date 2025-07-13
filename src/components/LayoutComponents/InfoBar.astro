@@ -8,9 +8,9 @@ const {
 } = Astro.props;
 ---
 
-<div class="w-full bg-gradient-to-r from-[var(--color-infoBar)] via-[var(--color-complementario)] to-[var(--color-infoBar)] text-black relative">
+<div class="w-full bg-gradient-to-r from-[var(--color-infoBar)] via-[var(--color-complementario)] to-[var(--color-infoBar)] text-black py-2.5 relative">
     <div class="max-w-7xl mx-auto px-4">
-        <p class="text-sm md:text-2xl text-center font-medium font-[arizonia]">
+        <p class="text-xs sm:text-sm md:text-base text-center font-medium">
             <slot set:html={message}></slot>
         </p>
     </div>

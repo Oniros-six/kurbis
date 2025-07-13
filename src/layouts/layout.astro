@@ -16,15 +16,10 @@ const { title } = Astro.props;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Kürbis" />
     <link rel="manifest" href="/site.webmanifest" />
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-    
     <title>{title}</title>
   </head>
   <body class="bg-[var(--color-background)]">
-    <InfoBar message="Calidad y Tradicion Austriaca" />
+    <InfoBar message="Disfruta nuestras exclusivas oportunidades" />
     <!-- Visitá <a href="https://tienda.kurbis.uy" class="underline hover:no-underline">tienda.kurbis.com</a> -->
     <Navbar client:load />
     <main>
