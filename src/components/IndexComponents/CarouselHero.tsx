@@ -8,7 +8,7 @@ const slides = [
   {
     imagen: "/carousel/ubicacion.webp",
     titulo: "el 'oro' verde de austria",
-    alt:"",
+    alt: "",
     subtitulo: "- Ahora en Uruguay -",
   },
   {
@@ -20,7 +20,7 @@ const slides = [
   {
     imagen: "/carousel/semillas.webp",
     titulo: "Un patrimonio biológico & cultural",
-    alt:"Semillas Kurbis",
+    alt: "Semillas Kurbis",
     subtitulo: "- Desde Austria a Uruguay -",
   },
   {
@@ -54,7 +54,7 @@ export function CarouselHero() {
   const prev = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="relative w-full aspect-[16/11] lg:aspect-[2.5/1] xl:aspect-[2.2/1] 2xl:aspect-5/2 group">
+    <div className="relative w-full aspect-[16/11] lg:aspect-[2.4/1] xl:aspect-[2.45/1] 2xl:aspect-5/2 group">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -76,7 +76,7 @@ export function CarouselHero() {
       <button
         onClick={prev}
         className="opacity-80 md:opacity-0 md:group-hover:opacity-100 transition-all duration-200 
-            absolute left-2 top-1/2 z-20
+        absolute left-2 top-1/2 z-20
         flex items-center justify-center hover:scale-110 
         bg-white/80 text-black backdrop-blur-sm border-gray-200/50 shadow-sm 
         h-6 w-6 md:h-8 md:w-8 rounded-full"

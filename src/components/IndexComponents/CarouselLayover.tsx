@@ -4,7 +4,7 @@ export default function carouselLayover({titulo, subtitulo}:{titulo:string, subt
             <div
                 className="bg-[var(--color-secundario)]/50 p-4 sm:p-6 md:p-8
                 max-w-full
-                w-[90%] sm:w-[80%] md:w-[70%] lg:w-[55%] xl:w-[50%]
+                w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]
                 h-25 md:h-35 lg:h-45 xl:h-60
                 content-center text-center"
             >
