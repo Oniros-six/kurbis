@@ -54,7 +54,7 @@ export function CarouselHero() {
   const prev = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="relative w-full aspect-[16/11] lg:aspect-[2.4/1] xl:aspect-[2.2/1] 2xl:aspect-5/2 group">
+    <div className="relative w-full aspect-[16/11] lg:aspect-[2.5/1] xl:aspect-[2.2/1] 2xl:aspect-5/2 group">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -95,7 +95,7 @@ export function CarouselHero() {
       >
         <ArrowRight size={15} />
       </button>
-      <div className="absolute left-3 -bottom-10 lg:-bottom-5 ">
+      <div className="absolute left-3 -bottom-10 lg:-bottom-4 ">
         <Rueda text="BIENVENIDOS A KÜRBIS — WILLKOMMEN BEI KÜRBIS — " />
       </div>
     </div>
