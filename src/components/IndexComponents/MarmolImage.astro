@@ -6,10 +6,18 @@ const { description, title, srcProduct, altProduct, product } = Astro.props;
 
 <section class="relative w-full">
   <!-- Fondo de mármol -->
-  <img src="/img/marmol.webp" alt="Marble background" class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]" />
+  <picture>
+    <!-- Imagen para pantallas hasta 640px (mobile) -->
+    <source srcset="/img/marmol-small-mobile.webp" media="(max-width: 383px)" />
+    <source srcset="/img/marmol-mobile.webp" media="(max-width: 735px)" />
+    <source srcset="/img/marmol-tablet.webp" media="(max-width: 900px)" />
+
+    <!-- Imagen por defecto (pantallas más grandes) -->
+    <img src="/img/marmol.webp" alt="Fondo de mármol" class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]" />
+  </picture>
 
   <!-- Capa de contenido -->
-  <div class="absolute inset-0 flex flex-col items-center md:justify-start p-4 sm:p-6 ">
+  <div class="absolute inset-0 flex flex-col items-center md:justify-start p-4 sm:p-6">
     <!-- Título -->
     <h1 class="text-center text-black font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl font-[georgia] mb-8 mt-14 sm:mt-16 md:my-18 lg:mt-20 xl:mt-24">
       {title}
