@@ -89,29 +89,29 @@ export default function BuySection() {
           </motion.div>
 
         </div>
-          {/* WhatsApp Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-16"
-          >
-            <div className="flex justify-center">
-              <Button
-                onClick={() => smoothScroll("#precios")}
-                size="lg"
-                className="bg-transparent text-[var(--color-perla)] cursor-pointer px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transform hover:scale-105 border border-[var(--color-primario)] transition-all duration-300"
-              >
-                Conoce nuestros precios
-              </Button>
-            </div>
-          </motion.div>
+        {/* WhatsApp Button */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mb-16"
+        >
+          <div className="flex justify-center">
+            <Button
+              onClick={() => smoothScroll("#precios")}
+              size="lg"
+              className="bg-transparent text-[var(--color-perla)] cursor-pointer px-12 py-6 text-lg font-light tracking-wider rounded-none shadow-2xl hover:shadow-[var(--color-secundario)]/20 transform hover:scale-105 border border-[var(--color-primario)] transition-all duration-300"
+            >
+              Conoce nuestros precios
+            </Button>
+          </div>
+        </motion.div>
         {/* Bottom accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
       </section>
 
       {/* Price section */}
-      <section id="precios" className="py-32 px-8 bg-[var(--color-background)] relative">
+      <section id="precios" className="pt-32 pb-16 px-8 bg-[var(--color-background)] relative">
         {/* Luxury Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primario)]/3 via-transparent to-[var(--color-primario)]/3 pointer-events-none" />
 
@@ -133,7 +133,7 @@ export default function BuySection() {
             </div>
           </motion.div>
         </div>
-        <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26"/>
+        <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26" />
         {/* promos section */}
         <div className="max-w-7xl mx-auto text-center relative z-10 ">
           <a href="/#promociones">
@@ -158,7 +158,7 @@ export default function BuySection() {
             </div>
           </motion.div>
         </div>
-        <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26"/>
+        <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26" />
         {/* Soon section */}
         <div className="max-w-4xl mx-auto text-center relative z-10 md:mt-25">
           <motion.div
@@ -177,6 +177,18 @@ export default function BuySection() {
               <Image img="comprar/cacao.webp" titulo="Cacao" />
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[var(--color-background)] relative">
+        <div className="mx-auto text-center px-px">
+
+          <blockquote className="font-[arizonia]">
+            <span className="text-3xl xs:text-4xl sm:text-6xl text-[#D4AF37]/30 mr-1 sm:mr-2">“</span>
+            <span className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-[#D4AF37] ">Calidad y Tradición Austriaca</span>
+            <span className="text-3xl xs:text-4xl sm:text-6xl text-[#D4AF37]/30 mr-1 sm:m-0">”</span>
+          </blockquote>
+
         </div>
       </section>
 
