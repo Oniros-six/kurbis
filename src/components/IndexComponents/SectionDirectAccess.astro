@@ -1,44 +1,29 @@
 ---
-const { imagen, alt, title, description, link, buttonText} = Astro.props;
+const { imagen, alt, title, description, link, buttonText } = Astro.props;
 ---
 
-<div
-    class="relative w-full md:h-screen lg:h-full flex items-center justify-center overflow-hidden p-2 md:p-8"
->
-    {/* Background Image */}
-    <img
-        src=`${imagen}`
-        alt=`${alt}`
-        class="absolute inset-0 w-full h-full object-cover "
-    />
+<div class="relative w-full md:h-screen lg:h-full flex items-center justify-center overflow-hidden p-2 md:p-8">
+  <!-- Background Image -->
+  <img src={imagen} alt={alt} class="absolute inset-0 w-full h-full object-cover" />
 
-    {/* Optional Overlay for better text readability */}
-    <div class="absolute inset-0 bg-black/30"></div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/30"></div>
 
-    {/* Content Overlay */}
-    <div
-        class="relative z-10 w-full h-full flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-black/40 p-4"
+  <!-- Content Overlay -->
+  <div class="relative z-10 w-full max-w-4xl h-80 md:h-full mx-auto p-4 sm:px-15 md:px-18 lg:px-0 xl:px-10 grid grid-rows-[1fr_3fr_1fr] md:grid-rows-[2fr_1fr_2fr] lg:grid-rows-[1fr_2fr_1fr] justify-items-center text-center bg-black/40">
+    <h3 class="text-[1.6rem] xs:text-3xl sm:text-4xl 2xl:text-5xl font-bold text-white drop-shadow-lg self-center md:self-end lg:self-center">
+      {title}
+    </h3>
+
+    <p class=" max-w-2xl text-base sm:text-lg xl:text-xl 2xl:text-2xl text-white/90 leading-relaxed drop-shadow-md self-center">
+      {description}
+    </p>
+
+    <a
+      href={`/${link}`}
+      class="w-fit px-8 py-2 rounded-full font-semibold bg-[var(--color-primario)] text-white hover:bg-[var(--color-secundario)] hover:text-[var(--color-perla)] shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 active:scale-95 self-center md:self-start lg:self-center"
     >
-        <h3
-            class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 drop-shadow-lg"
-        >
-            {title}
-        </h3>
-
-        <p
-            class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-2xl drop-shadow-md"
-        >
-            {description}
-        </p>
-        <a href=`/${link}`>
-            <button
-                class=`w-fit self-center bg-[var(--color-primario)] hover:bg-[var(--color-secundario)] hover:text-[var(--color-perla)] font-semibold
-                     py-2 px-8 rounded-full transition-all duration-200
-                     transform hover:scale-105 active:scale-95
-                     shadow-md hover:shadow-lg`
-            >
-                {buttonText}
-            </button>
-        </a>
-    </div>
+      {buttonText}
+    </a>
+  </div>
 </div>
