@@ -1,7 +1,7 @@
 ---
 import { Button } from '@/components/LayoutComponents/NavbarButton';
 
-const { description, title, srcProduct, altProduct, product } = Astro.props;
+const { description, title, srcProduct, altProduct, product, lazy, priority } = Astro.props;
 ---
 
 <section class="relative w-full">
@@ -13,7 +13,13 @@ const { description, title, srcProduct, altProduct, product } = Astro.props;
     <source srcset="/img/marmol-tablet.webp" media="(max-width: 900px)" />
 
     <!-- Imagen por defecto (pantallas más grandes) -->
-    <img src="/img/marmol.webp" alt="Fondo de mármol" class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]" loading="lazy"/>
+    <img
+      src="/img/marmol.webp"
+      alt="Fondo de mármol"
+      class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]"
+      loading={lazy ? 'lazy' : 'eager'}
+      fetchpriority={priority ? 'high' : 'low'}
+    />
   </picture>
 
   <!-- Capa de contenido -->
@@ -27,8 +33,14 @@ const { description, title, srcProduct, altProduct, product } = Astro.props;
     <div class="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:gap-16 items-center justify-items-center max-w-6xl w-full">
       <!-- Imagen del producto -->
       <div class="flex justify-center items-center mask-b-from-80% mask-b-to-100%">
-        <img src={srcProduct} alt={altProduct} fetchpriority="high" class="object-contain w-full
-        h-[25rem] xs:h-[30rem] sm:h-[35rem] md:h-fit" />
+        <img
+          src={srcProduct}
+          alt={altProduct}
+          loading={lazy ? 'lazy' : 'eager'}
+          fetchpriority={priority ? 'high' : 'low'}
+          class="object-contain w-full
+        h-[25rem] xs:h-[30rem] sm:h-[35rem] md:h-fit"
+        />
       </div>
 
       <!-- Texto y botón -->
