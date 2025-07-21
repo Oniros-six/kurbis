@@ -65,9 +65,9 @@ export default function Component() {
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-[var(--color-perla)]">
             Conocé más acerca de nuestros productos
           </h1>
-          <p className="text-xl text-[var(--color-perla)] max-w-2xl mx-auto">
+          <h2 className="text-xl text-[var(--color-perla)] max-w-2xl mx-auto">
             Encuentra respuestas a las preguntas más frecuentes sobre nuestros productos Kürbis
-          </p>
+          </h2>
         </div>
 
         {/* FAQ Accordion */}

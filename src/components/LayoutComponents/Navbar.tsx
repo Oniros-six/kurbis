@@ -64,6 +64,7 @@ export default function Navbar() {
           className="flex items-center space-x-2 text-sm font-medium cursor-pointer p-2 hover:bg-[var(--color-secundario)] rounded-lg transition-colors z-40 relative"
           aria-expanded={isMenuOpen}
         >
+          <span className="sr-only">Botón de menú</span>
           <div className="relative w-5 h-5">
             <Menu
               className={`w-7 h-7 text-black absolute inset-0 transition-opacity duration-300 m-auto ${isMenuOpen ? "opacity-0" : "opacity-100"
@@ -195,8 +196,8 @@ export default function Navbar() {
               </a>
 
               {/* Mobile Buy Button */}
-              <Button className="flex md:hidden items-center transition-all duration-300">
-                <a href="/comprar">Comprar</a>
+              <Button url="/comprar" className="flex md:hidden items-center transition-all duration-300">
+                Comprar
               </Button>
             </div>
           </div>
@@ -208,15 +209,20 @@ export default function Navbar() {
 
 
       {/* Desktop Buy Button */}
-      <Button className="hidden md:flex absolute right-5 hover:scale-105 transition-all duration-300 ease-in-out items-center group gap-2">
-        <a href="/comprar">Comprar</a>
+      <Button url="/comprar" className="hidden md:flex absolute right-5 hover:scale-105 transition-all duration-300 ease-in-out items-center group gap-2">
+        Comprar
       </Button>
 
       <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
-          <button className="flex absolute right-15 md:right-35 lg:right-40 hover:scale-115 transition-all duration-300 ease-in-out items-center hover:border-1 border-black p-1 rounded-b-sm"><Languages /></button>
+          <button className="flex absolute right-15 md:right-35 lg:right-40 hover:scale-115 transition-all duration-300 ease-in-out items-center hover:border-1 border-black p-1 rounded-b-sm">
+            <Languages />
+             <span className="sr-only">Abrir menú</span>
+          </button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-2"><p>More lenguages available soon...</p></PopoverContent>
+        <PopoverContent className="w-auto p-2">
+          <p>More lenguages available soon...</p>
+        </PopoverContent>
       </Popover>
     </div>
   )
