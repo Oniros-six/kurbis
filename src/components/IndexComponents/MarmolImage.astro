@@ -19,15 +19,15 @@ const { description, title, srcProduct, altProduct, product } = Astro.props;
   <!-- Capa de contenido -->
   <div class="absolute inset-0 flex flex-col items-center md:justify-start p-4 sm:p-6">
     <!-- Título -->
-    <h1 class="text-center text-black font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl font-[georgia] mb-8 mt-14 sm:mt-16 md:my-18 lg:mt-20 xl:mt-24">
+    <h2 class="text-center text-black font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl font-[georgia] mb-8 mt-14 sm:mt-16 md:my-18 lg:mt-20 xl:mt-24">
       {title}
-    </h1>
+    </h2>
 
     <!-- Contenido principal -->
     <div class="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:gap-16 items-center justify-items-center max-w-6xl w-full">
       <!-- Imagen del producto -->
       <div class="flex justify-center items-center mask-b-from-80% mask-b-to-100%">
-        <img src={srcProduct} alt={altProduct} loading="lazy" class="object-contain w-full
+        <img src={srcProduct} alt={altProduct} fetchpriority="high" class="object-contain w-full
         h-[25rem] xs:h-[30rem] sm:h-[35rem] md:h-fit" />
       </div>
 

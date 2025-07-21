@@ -8,26 +8,38 @@ const slides = [
   {
     imagen: "/carousel/ubicacion.webp",
     titulo: "el 'oro' verde de austria",
-    alt: "",
+    alt: "Botella de aceite vertiendo sobre contorno de Uruguay",
     subtitulo: "- Ahora en Uruguay -",
+    priority: 'high',
+    lazy: "eager",
+    isH1: true
   },
   {
     imagen: "/carousel/zapallo.webp",
     titulo: "El Rey del bienestar y la salud",
     alt: "Zapallo",
     subtitulo: "",
+    priority: "auto",
+    lazy: "lazy",
+    isH1: false
   },
   {
     imagen: "/carousel/semillas.webp",
     titulo: "Un patrimonio biológico & cultural",
     alt: "Semillas Kurbis",
     subtitulo: "- Desde Austria a Uruguay -",
+    priority: "auto",
+    lazy: "lazy",
+    isH1: false
   },
   {
     imagen: "/carousel/regalo.webp",
     titulo: "El regalo ideal",
     alt: "Botella de aceite Kurbis como regalo",
     subtitulo: "- Para los amantes de lo saludable & gourmet -",
+    priority: "auto",
+    lazy: "lazy",
+    isH1: false
   },
 ];
 
@@ -67,9 +79,11 @@ export function CarouselHero() {
           <img
             src={slides[index].imagen}
             alt={slides[index].alt}
+            {...(slides[index].priority === 'high' && { fetchpriority: 'high' })}
+            {...(slides[index].lazy === 'lazy' && { loading: 'lazy' })}
             className="w-full h-full object-cover lg:size-auto"
           />
-          <CarouselLayover titulo={slides[index].titulo} subtitulo={slides[index].subtitulo} />
+          <CarouselLayover titulo={slides[index].titulo} subtitulo={slides[index].subtitulo} isH1={slides[index].isH1} />
         </motion.div>
       </AnimatePresence>
       {/* Controles */}

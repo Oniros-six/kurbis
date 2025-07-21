@@ -73,11 +73,11 @@ export default function Recetas() {
                         </div>
 
                         <div className="p-2">
-                            <h2
+                            <h1
                                 className="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8"
                             >
                                 Recetas
-                            </h2>
+                            </h1>
                             <p
                                 className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
                             >

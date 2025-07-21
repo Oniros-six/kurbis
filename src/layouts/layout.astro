@@ -8,7 +8,7 @@ import Footer from '@/components/LayoutComponents/Footer.astro';
 import '../styles/global.css';
 
 // Props de la página
-const { title, description, url, image } = Astro.props;
+const { title, description, url, image, loadFonts = null } = Astro.props;
 ---
 
 <!doctype html>
@@ -44,7 +44,7 @@ const { title, description, url, image } = Astro.props;
     <meta name="twitter:image" content={'localhost:4321/' + image} />
 
     <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    {loadFonts && <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Roboto:wght@500&display=swap" rel="stylesheet" />}
   </head>
   <body class="bg-[var(--color-background)]">
     <InfoBar message="Disfruta nuestras exclusivas oportunidades" />

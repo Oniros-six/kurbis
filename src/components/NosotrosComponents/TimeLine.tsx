@@ -242,9 +242,9 @@ export default function TimeLine() {
             viewport={{ once: true }}
             className="inline-block px-6 relative"
           >
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-[var(--color-primario)]">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-[var(--color-primario)]">
               CULTURA FAMILIAR
-            </h2>
+            </h1>
             <div className="relative h-3 my-4 flex items-center justify-between">
               <div className="w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
               <div className="w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
