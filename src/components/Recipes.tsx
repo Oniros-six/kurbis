@@ -6,6 +6,7 @@ export default function Recetas() {
             id: 1,
             titulo: "Ensalada Styriaca",
             imagen: "/img/recetas/ensalada.webp",
+            alt: "Ensalada con aceite Kürbis",
             descripcion: `Prepara la ensalada que más te guste, sazona y marina con vinagre a tu elección y una cantidad generosa de Aceite Kürbis.
                         Mezcla bien y disfruta de un plato fresco, delicioso y nutritivo.`
         },
@@ -13,6 +14,7 @@ export default function Recetas() {
             id: 2,
             titulo: "Helado Pleasure",
             imagen: "/img/recetas/helado.webp",
+            alt: "Helado con aceite Kürbis",
             descripcion: `Combina el helado clásico de vainilla con el sabor fino y delicado del Aceite Kürbis, que complementará a la vainilla. 
                         Cuando lo pruebes, vas a sentir que es un verdadero placer.`
         },
@@ -20,6 +22,7 @@ export default function Recetas() {
             id: 3,
             titulo: "Pesto Austríaco",
             imagen: "/img/recetas/pesto.webp",
+            alt: "Pesto con aceite Kürbis",
             descripcion: `Mezcla los siguientes ingredientes:
                         1/2 taza de semillas de zapallo tostadas sin aceite, o las semillas que prefieras. 
                         Agrega 2 cucharadas de queso parmesano, 2 dientes de ajo, 1 taza de hojas frescas de albahaca, 1/3 taza de Aceite Kürbis, 1/8 cucharadita de sal marina.
@@ -32,6 +35,7 @@ export default function Recetas() {
             id: 4,
             titulo: "Smoothie Super Cucurbita",
             imagen: "/img/recetas/smoothie.webp",
+            alt: "Smoothie al estilo Kürbis",
             descripcion: `Mezcla 2 tazas de ananá, 1 taza de melón, 1 puñado de espinacas, 3 cucharadas de alimento vegetal Kürbis y yogurt.
                         Licúa bien los ingredientes en una procesadora o batidora a alta velocidad.
                         Vierte en vasos y decora tu smoothie con 1 cucharada de Aceite Kürbis en cada vaso y hojas de menta.
@@ -41,6 +45,7 @@ export default function Recetas() {
             id: 5,
             titulo: "Crosstini Manjar",
             imagen: "/img/recetas/crostini.webp",
+            alt: "Crostini con aceite Kürbis",
             descripcion: `Mezcla el queso crema que te guste con Aceite Kürbis, hasta obtener la consistencia y el sabor deseados.
                         Colócalo encima de rebanadas tostadas del pan que elijas.
                         Decora con Aceite Kürbis y con semillas de zapallo tostadas, y disfruta de esta delicatessen.`
@@ -124,8 +129,8 @@ export default function Recetas() {
                                                     <div className=" bg-[var(--color-primario)]/10 border border-[var(--color-primario)]/30 p-2">
                                                         <img
                                                             src={receta.imagen}
-                                                            alt={receta.titulo}
                                                             className="w-full h-full object-cover aspect-[10/14]"
+                                                            alt={receta.alt}
                                                         />
                                                     </div>
                                                 </div>

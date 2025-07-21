@@ -4,7 +4,7 @@ import { MessageCircle, User, CreditCard, Truck, Phone } from "lucide-react"
 import { smoothScroll } from "../scripts/smoothScroll"
 import { Separator } from "./ui/separator"
 
-const Image = ({ img, titulo }: { img: string, titulo: string }) => {
+const Image = ({ img, titulo, alt }: { img: string, titulo: string, alt:string }) => {
   return (
     <div className="relative flex flex-col gap-2 items-center">
       <div
@@ -17,7 +17,9 @@ const Image = ({ img, titulo }: { img: string, titulo: string }) => {
         <img src={`/img/` + img}
           width={300}
           height={250}
-          className="w-min" />
+          className="w-min" 
+          alt={alt}
+          loading="lazy"/>
       </div>
       <Button
         size="lg"
@@ -128,8 +130,8 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10">
-              <Image img="comprar/oil-bottle.webp" titulo={"$U  " + precioAceite} />
-              <Image img="comprar/natural.webp" titulo={"$U  " + precioAlimento} />
+              <Image img="comprar/oil-bottle.webp" titulo={"$U  " + precioAceite} alt="Aceite Kürbis"/>
+              <Image img="comprar/natural.webp" titulo={"$U  " + precioAlimento} alt="Alimento Kürbis"/>
             </div>
           </motion.div>
         </div>
@@ -152,9 +154,9 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10">
-              <Image img="duo-wellness-sr.webp" titulo={"$U  " + duoWellness} />
-              <Image img="super-vital-sr.webp" titulo={"$U  " + superVital} />
-              <Image img="sabores-austria-sr.webp" titulo={"$U  " + saboresAustria} />
+              <Image img="duo-wellness-sr.webp" titulo={"$U  " + duoWellness} alt="Combo Kürbis duo wellness" />
+              <Image img="super-vital-sr.webp" titulo={"$U  " + superVital} alt="Combo Kürbis super vital" />
+              <Image img="sabores-austria-sr.webp" titulo={"$U  " + saboresAustria} alt="Combo Kürbis sabores de Austria" />
             </div>
           </motion.div>
         </div>
@@ -173,8 +175,8 @@ export default function BuySection() {
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10">
-              <Image img="comprar/vainilla.webp" titulo="Vainas de Vainilla" />
-              <Image img="comprar/cacao.webp" titulo="Cacao" />
+              <Image img="comprar/vainilla.webp" titulo="Vainas de Vainilla" alt="Alimento Kürbis sabor vainilla" />
+              <Image img="comprar/cacao.webp" titulo="Cacao" alt="Alimento Kürbis sabor cacao" />
             </div>
           </motion.div>
         </div>

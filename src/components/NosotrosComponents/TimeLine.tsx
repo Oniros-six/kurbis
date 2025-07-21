@@ -67,7 +67,7 @@ function LuxuryTimelineStep({
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                transition={{ duration: 0.8, delay: index * 0.3 + 0.5 }}
+                transition={{ duration: 0.8, delay: index * 0.3 }}
                 className="relative"
               >
                 <div className="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"></div>
@@ -78,6 +78,7 @@ function LuxuryTimelineStep({
                     width={500}
                     height={350}
                     className="w-full h-fit object-cover aspect-square"
+                    loading="lazy"
                   />
                 </div>
               </motion.div>
@@ -194,7 +195,7 @@ export default function TimeLine() {
       description:
         `Austria es mundialmente famoso por su aceite de semillas de zapallo, el “oro verde de Austria”, sin duda una especialidad culinaria emblemática, arraigada en la historia como patrimonio biológico y cultural del departamento de Styria. El color verde oscuro de este aceite, con matices rojos, su aroma almendrado, su alto valor nutricional, su sabor fino y delicado pero, al mismo tiempo, intenso, y sus propiedades saludables lo hacen único. \n Es un elemento indispensable en la cocina de esta región. Poco a poco se va conociendo en otros países del mundo y ahora en Uruguay.`,
       image: "/img/nosotros/aceite.webp?height=350&width=500",
-      alt: "",
+      alt: "Botella de aceite",
     },
     {
       title: "Un tesoro invaluable",

@@ -1,15 +1,15 @@
 ---
-import Layout from "../layouts/layout.astro";
-import FAQ from "../components/FAQ.js";
-import EndPage from "@/components/EndPage.astro";
+import Layout from '../layouts/layout.astro';
+import FAQ from '../components/FAQ.js';
+import EndPage from '@/components/EndPage.astro';
 ---
 
-<Layout title="Kürbis - FAQ">
+<Layout
+  title="Kürbis - FAQ"
+  description="Respondemos tus preguntas sobre ingredientes, usos, beneficios y cómo comprar nuestros productos vegetales."
+  url="https://kurbis.com.uy/faq"
+  image="imgSEO/kurbis.png"
+>
   <FAQ client:load />
-  <EndPage
-    title="¿Tienes más preguntas?"
-    subTitle="Nuestro equipo está aquí para ayudarte con cualquier consulta adicional"
-    button="Contactanos"
-    links="/faq"
-  />
+  <EndPage title="¿Tienes más preguntas?" subTitle="Nuestro equipo está aquí para ayudarte con cualquier consulta adicional" button="Contactanos" links="/faq" />
 </Layout>

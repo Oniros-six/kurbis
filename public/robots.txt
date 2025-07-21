@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kurbis.com.uy/sitemap-0.xml

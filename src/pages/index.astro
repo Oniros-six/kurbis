@@ -8,7 +8,12 @@ import Suscription from '../components/IndexComponents/Suscription.astro';
 import SectionDirectAccess from '@/components/IndexComponents/SectionDirectAccess.astro';
 ---
 
-<Layout title="Kürbis">
+<Layout
+  title="Kürbis"
+  description="Aceite y alimentos a base de semillas de zapallo, tradición austríaca elaborada en Uruguay. Kurbis: natural, nutritivo y sustentable."
+  url="https://kurbis.com.uy/"
+  image="imgSEO/kurbis.png"
+>
   <CarouselHero client:load />
   <Recuadro texto='<span class="font-medium">Aceite</span>; puro, oscuro, sabroso, versátil y extraordinariamente saludable' />
   <MarmolImage
@@ -20,7 +25,7 @@ import SectionDirectAccess from '@/components/IndexComponents/SectionDirectAcces
   />
 
   <div class="relative flex justify-center content-center md:h-full bg-[var(--color-background)] md:pt-20">
-    <img src="/img/lechuga.webp" alt="Aceite Kurbis sobre una lechuga" class="w-full object-cover md:hidden" />
+    <img src="/img/lechuga.webp" alt="Aceite Kurbis sobre una lechuga" loading="lazy" class="w-full object-cover md:hidden" />
 
     <div class="hidden w-full md:flex justify-center mb-10 mx-50 lg:mx-70 xl:mx-100 2xl:mx-120">
       <div class="relative">
@@ -29,7 +34,7 @@ import SectionDirectAccess from '@/components/IndexComponents/SectionDirectAcces
         <div class="absolute -right-4 -bottom-4 w-full h-full border border-[var(--color-primario)]/30"></div>
 
         <div class="relative overflow-hidden">
-          <img src="/img/lechuga.webp" alt="Aceite Kurbis sobre una lechuga" class="object-cover" />
+          <img src="/img/lechuga.webp" alt="Aceite Kurbis sobre una lechuga" loading="lazy" class="object-cover" />
         </div>
       </div>
     </div>
@@ -45,7 +50,7 @@ import SectionDirectAccess from '@/components/IndexComponents/SectionDirectAcces
   />
 
   <div class="relative flex justify-center content-center md:h-full bg-[var(--color-background)] md:pt-20">
-    <img src="/img/gym.webp" alt="Alimento Kürbis reposado en una maquina de gym" class="w-full object-cover md:hidden" />
+    <img src="/img/gym.webp" alt="Alimento Kürbis reposado en una maquina de gym" loading="lazy" class="w-full object-cover md:hidden" />
 
     <div class="hidden w-full md:flex justify-center mb-10 mx-50 lg:mx-70 xl:mx-100 2xl:mx-120">
       <div class="relative">
@@ -54,7 +59,7 @@ import SectionDirectAccess from '@/components/IndexComponents/SectionDirectAcces
         <div class="absolute -right-4 -bottom-4 w-full h-full border border-[var(--color-primario)]/30"></div>
 
         <div class="relative overflow-hidden">
-          <img src="/img/gym.webp" alt="Alimento Kürbis reposado en una maquina de gym" class="object-cover" />
+          <img src="/img/gym.webp" alt="Alimento Kürbis reposado en una maquina de gym" loading="lazy" class="object-cover" />
         </div>
       </div>
     </div>

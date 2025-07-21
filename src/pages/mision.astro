@@ -1,38 +1,28 @@
 ---
-import Titulos from "@/components/Titulos.astro";
-import HeroWithTitle from "@/components/HeroWithTitle.astro";
-import Layout from "../layouts/layout.astro";
-import Quote from "@/components/Quote.astro";
-import TextImage from "@/components/TextImage.astro";
-import EndPage from "@/components/EndPage.astro";
+import Titulos from '@/components/Titulos.astro';
+import HeroWithTitle from '@/components/HeroWithTitle.astro';
+import Layout from '../layouts/layout.astro';
+import Quote from '@/components/Quote.astro';
+import TextImage from '@/components/TextImage.astro';
+import EndPage from '@/components/EndPage.astro';
 ---
 
-<Layout title="Kürbis - Misión">
-  <div
-    class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
-  >
+<Layout
+  title="Kürbis - Misión"
+  description="Promovemos el bienestar con alimentos éticos y saludables, cuidando el planeta y difundiendo un legado de conciencia y tradición alimentaria."
+  url="https://kurbis.com.uy/mision"
+  image="imgSEO/mision.png"
+>
+  <div class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]">
     {/* Hero Section with Luxury Overlay */}
-    <HeroWithTitle
-      img="/img/mision/ceibo.webp"
-      alt="Ceibos"
-      clases="saturate-150"
-      withFilter={true}
-    />
+    <HeroWithTitle img="/img/mision/ceibo.webp" alt="Ceibos" clases="saturate-150" withFilter={true} />
 
     {/* Elegant Introduction */}
-    <Titulos
-      title="El propósito de Kürbis"
-      subTitle="Nuestra misión con las personas y el planeta"
-    />
-    <Quote
-      quote="Buscamos crear una experiencia única, ayudando a las personas a llevar una vida saludable cuidando al planeta"
-    />
+    <Titulos title="El propósito de Kürbis" subTitle="Nuestra misión con las personas y el planeta" />
+    <Quote quote="Buscamos crear una experiencia única, ayudando a las personas a llevar una vida saludable cuidando al planeta" />
 
     {/* Gold accent line */}
-    <div
-      class="h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-    >
-    </div>
+    <div class="h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
 
     {/* Wellness */}
     <TextImage
@@ -76,31 +66,16 @@ import EndPage from "@/components/EndPage.astro";
 
     <section class="py-24 px-4 bg-[var(--color-background)] relative">
       <div class="max-w-6xl mx-auto text-center relative z-10">
-        <h2
-          class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8"
-        >
-          Creamos productos innovadores y excepcionales
-        </h2>
-        <p
-          class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
-        >
-          Creemos que llevar una vida saludable es un derecho de todos, por este motivo
-          también estamos en la búsqueda de otros productos innovadores y
-          excepcionales a base de plantas, éticos, respaldados por la ciencia,
-          libres de crueldad animal y deliciosos para nuestros clientes.
+        <h2 class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] mb-8">Creamos productos innovadores y excepcionales</h2>
+        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+          Creemos que llevar una vida saludable es un derecho de todos, por este motivo también estamos en la búsqueda de otros productos innovadores y excepcionales a base de plantas, éticos,
+          respaldados por la ciencia, libres de crueldad animal y deliciosos para nuestros clientes.
         </p>
       </div>
     </section>
 
-    <Quote
-      quote="Nos aseguramos que cada producto cumpla con nuestros estándares de calidad, sostenibilidad y nutrición."
-    />
+    <Quote quote="Nos aseguramos que cada producto cumpla con nuestros estándares de calidad, sostenibilidad y nutrición." />
   </div>
 
-  <EndPage
-    title="¿Sabes acerca de nuestra responsabilidad ambiental?"
-    subTitle="Te invitamos a conocer más acerca de nuestra elaboración"
-    button="Sostenibilidad"
-    link="/sostenibilidad"
-  />
+  <EndPage title="¿Sabes acerca de nuestra responsabilidad ambiental?" subTitle="Te invitamos a conocer más acerca de nuestra elaboración" button="Sostenibilidad" link="/sostenibilidad" />
 </Layout>

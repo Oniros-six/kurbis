@@ -1,55 +1,43 @@
 ---
-import Layout from "@/layouts/layout.astro";
-import Quote from "@/components/Quote.astro";
-import Recuadro from "@/components/IndexComponents/Recuadro.astro";
-import EndPage from "@/components/EndPage.astro";
-import { CarouselProduct } from "@/components/ProductsComponents/Carousel";
-import CuadroInformativo from "@/components/ProductsComponents/CuadroInformativo";
+import Layout from '@/layouts/layout.astro';
+import Quote from '@/components/Quote.astro';
+import Recuadro from '@/components/IndexComponents/Recuadro.astro';
+import EndPage from '@/components/EndPage.astro';
+import { CarouselProduct } from '@/components/ProductsComponents/Carousel';
+import CuadroInformativo from '@/components/ProductsComponents/CuadroInformativo';
 
 const beneficios = [
-  "¿Los ácidos grasos omega 3, omega 6 y omega 9 pueden favorecer la salud cardiovascular?",
-  "¿Los compuestos fenólicos presentes poseen propiedades antioxidantes?",
-  "¿El zinc y los fitoesteroles ayudan a la salud de la próstata (hiperplasia prostática benigna) y del tracto urinario?",
-  "¿El contenido de zinc beneficia al sistema inmune y al metabolismo?",
-  "¿El magnesio presente beneficia la función muscular y nerviosa, así como la salud ósea?",
-  "¿El buen aporte de vitamina E y antioxidantes beneficia la salud de la piel y protege contra los radicales libres?",
-  "¿Los fitoesteroles presentes pueden contribuir a disminuir los niveles de colesterol y a mejorar la salud del cuero cabelludo y el crecimiento del cabello?",
+  '¿Los ácidos grasos omega 3, omega 6 y omega 9 pueden favorecer la salud cardiovascular?',
+  '¿Los compuestos fenólicos presentes poseen propiedades antioxidantes?',
+  '¿El zinc y los fitoesteroles ayudan a la salud de la próstata (hiperplasia prostática benigna) y del tracto urinario?',
+  '¿El contenido de zinc beneficia al sistema inmune y al metabolismo?',
+  '¿El magnesio presente beneficia la función muscular y nerviosa, así como la salud ósea?',
+  '¿El buen aporte de vitamina E y antioxidantes beneficia la salud de la piel y protege contra los radicales libres?',
+  '¿Los fitoesteroles presentes pueden contribuir a disminuir los niveles de colesterol y a mejorar la salud del cuero cabelludo y el crecimiento del cabello?',
 ];
 ---
 
-<Layout title="Kürbis - Aceite">
-  <div
-    class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
-  >
+<Layout
+  title="Kürbis - Aceite"
+  description="Aceite virgen de semilla de zapallo, prensado en frío y sin refinar. Rico en omega 3, 6 y 9, antioxidantes y polifenoles naturales."
+  url="https://kurbis.com.uy/productos/aceite"
+  image="imgSEO/productos.png"
+>
+  <div class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]">
     <!-- Hero Section -->
     <section class="py-24 px-4 bg-[var(--color-background)] relative">
       <div class="max-w-6xl mx-auto text-center relative z-10">
         <!-- Decorative elements -->
-        <div
-          class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
-        >
-        </div>
-        <div
-          class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
-        >
-        </div>
+        <div class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"></div>
+        <div class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"></div>
 
-        <h2
-          class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] py-8"
-        >
-          Aceite Kürbis
-        </h2>
+        <h2 class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] py-8">Aceite Kürbis</h2>
       </div>
-      <div
-        class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-      >
-      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
     </section>
 
     <!-- Quote Section -->
-    <Quote
-      quote="Cierra los ojos, huele el maravilloso aroma, disfruta del extraordinario sabor y nutrición inigualable, de nuestro aceite Kürbis"
-    />
+    <Quote quote="Cierra los ojos, huele el maravilloso aroma, disfruta del extraordinario sabor y nutrición inigualable, de nuestro aceite Kürbis" />
 
     <!-- Content Sections -->
     <section class="py-16 px-4 bg-[var(--color-background-alt)]">
@@ -57,79 +45,54 @@ const beneficios = [
         <!-- Description paragraphs -->
         <div class="space-y-8 fade-in-up">
           <p class="text-gray-300 font-light text-lg leading-relaxed">
-            Nuestro aceite Kürbis cien por ciento virgen, es de primera calidad, de único
-            prensado en frío, sin refinar y sin filtrar, otorgando entonces más
-            polifenoles y antioxidantes naturales. Con un perfil único y
-            singular de sabor no invasivo ni amargo, ni con ningún punto picante
-            en el paladar, un delicado y armonioso aroma y un llamativo color
-            verde oscuro con matices rojos.
+            Nuestro aceite Kürbis cien por ciento virgen, es de primera calidad, de único prensado en frío, sin refinar y sin filtrar, otorgando entonces más polifenoles y antioxidantes naturales. Con
+            un perfil único y singular de sabor no invasivo ni amargo, ni con ningún punto picante en el paladar, un delicado y armonioso aroma y un llamativo color verde oscuro con matices rojos.
           </p>
 
           <!-- Carousel Section -->
           <CarouselProduct
             contenido={[
               {
-                imagen: "/img/productos/lechuga.webp",
+                imagen: '/img/productos/lechuga.webp',
                 withInfo: true,
-                info: "10 mg de omega3 + omega 6 + omega 9 \n Rico en fitoesteroles",
-                alt: "Aceite Kürbis cayendo sobre lechuga",
+                info: '10 mg de omega 3 + omega 6 + omega 9 \n Rico en fitoesteroles',
+                alt: 'Aceite Kürbis cayendo sobre lechuga',
               },
               {
-                imagen: "/img/productos/infoAceite.webp",
+                imagen: '/img/productos/infoAceite.webp',
                 withInfo: false,
-                alt: "Información nutricional sobre aceite Kürbis",
+                alt: 'Información nutricional sobre aceite Kürbis',
               },
             ]}
             client:visible
           />
 
           <p class="text-gray-300 font-light text-lg leading-relaxed">
-            El aceite Kürbis tiene increíbles beneficios nutricionales,
-            manteniendo y mejorando los componentes naturales de las semillas de
-            zapallo; más de 80% de ácidos grasos insaturados, siendo el
-            linoléico el más presente como omega 3, omega 6 y además omega 9, vitamina
-            E, polifenoles, fitoesteroles, otros antioxidantes, carotenoides y
-            minerales como el Magnesio, el Zinc, el Hierro, Manganeso y Potasio.
+            El aceite Kürbis tiene increíbles beneficios nutricionales, manteniendo y mejorando los componentes naturales de las semillas de zapallo; más de 80% de ácidos grasos insaturados, siendo el
+            linoléico el más presente como omega 3, omega 6 y además omega 9, vitamina E, polifenoles, fitoesteroles, otros antioxidantes, carotenoides y minerales como el Magnesio, el Zinc, el
+            Hierro, Manganeso y Potasio.
           </p>
         </div>
 
         <div class="w-full flex justify-center mb-10 px-8 sm:px-38 md:px-50 lg:px-70">
           <div class="relative">
-            <div
-              class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
-            >
-            </div>
+            <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"></div>
             <div class="relative overflow-hidden">
-              <img
-                src="/img/productos/cuchara.webp"
-                alt="Cuchara con aceite"
-                class="object-cover"
-              />
+              <img src="/img/productos/cuchara.webp" alt="Cuchara con aceite" class="object-cover" loading="lazy"/>
             </div>
-            <CuadroInformativo info="Rico en Magnesio, Zinc, Hierro y Vitamina E" shouldShowInfo={true} atLeft={false} atTop={false}/>
+            <CuadroInformativo info="Rico en Magnesio, Zinc, Hierro y Vitamina E" shouldShowInfo={true} atLeft={false} atTop={false} />
           </div>
         </div>
 
         <div class="space-y-6 fade-in-up">
           <p class="text-gray-300 font-light text-lg leading-relaxed">
-            La cantidad de aceite Kürbis a usar depende mucho del gusto de cada
-            persona, pero como guía se puede usar una cucharada por plato
-            elaborado que dará un toque especial y nuevo al placer culinario,
-            satisfaciendo los más ricos paladares, enriqueciendo a nivel
-            nutritivo a todo tipo de platos y recetas crudas o como aderezo a
-            comidas ya cocidas: cremas de verduras, pastas, arroces, quesos,
-            sopas, carnes, pescados, salsas, pestos, vinagretas, hummus,
-            panadería, repostería, ensaladas, smoothies, helados de vainilla o
-            dulce de leche y muchos más...
+            La cantidad de aceite Kürbis a usar depende mucho del gusto de cada persona, pero como guía se puede usar una cucharada por plato elaborado que dará un toque especial y nuevo al placer
+            culinario, satisfaciendo los más ricos paladares, enriqueciendo a nivel nutritivo a todo tipo de platos y recetas crudas o como aderezo a comidas ya cocidas: cremas de verduras, pastas,
+            arroces, quesos, sopas, carnes, pescados, salsas, pestos, vinagretas, hummus, panadería, repostería, ensaladas, smoothies, helados de vainilla o dulce de leche y muchos más...
           </p>
 
-          <div
-            class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4"
-          >
-            <p class="text-[var(--color-primario)] font-light italic">
-              *Para preservar la calidad del aceite se recomienda no superar los
-              120 °C
-            </p>
+          <div class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4">
+            <p class="text-[var(--color-primario)] font-light italic">*Para preservar la calidad del aceite se recomienda no superar los 120 °C</p>
           </div>
         </div>
       </div>
@@ -137,33 +100,20 @@ const beneficios = [
 
     <!-- Benefits Section -->
     <section class="py-20 px-4 bg-[var(--color-background)] relative">
-      <div
-        class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-      >
-      </div>
+      <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
 
       <div class="max-w-4xl mx-auto">
         <!-- Benefits Title -->
         <div class="text-center mb-16 relative fade-in-up">
-          <div
-            class="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"
-          >
-          </div>
-          <div
-            class="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"
-          >
-          </div>
+          <div class="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
+          <div class="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
 
           <Recuadro texto="BENEFICIOS" />
         </div>
 
         <div class="mb-12 fade-in-up">
-          <p
-            class="text-gray-300 font-light text-lg leading-relaxed text-center"
-          >
-            Para conocer los beneficios del Aceite Kürbis, se recomienda
-            consultar con un profesional de la salud o acceder a fuentes
-            confiables en línea.
+          <p class="text-gray-300 font-light text-lg leading-relaxed text-center">
+            Para conocer los beneficios del Aceite Kürbis, se recomienda consultar con un profesional de la salud o acceder a fuentes confiables en línea.
           </p>
         </div>
 
@@ -175,10 +125,8 @@ const beneficios = [
                 class="flex items-center gap-4 bg-[var(--color-background-alt)] border border-[var(--color-primario)]/20 p-6 hover:border-[var(--color-primario)]/40 transition-all duration-300 fade-in-up"
                 style={`animation-delay: ${index * 0.1}s`}
               >
-                <img src="/check.png" class="size-6" />
-                <p class="text-gray-300 font-light leading-relaxed">
-                  {beneficio}
-                </p>
+                <img src="/check.png" class="size-6" alt="check" loading="lazy"/>
+                <p class="text-gray-300 font-light leading-relaxed">{beneficio}</p>
               </div>
             ))
           }
@@ -187,15 +135,8 @@ const beneficios = [
     </section>
 
     <!-- Final Quote Section -->
-    <Quote
-      quote="El aceite Kürbis se integra a la perfección con un estilo de vida saludable y gourmet"
-    />
-    <EndPage
-      title="¿Ya conoces nuestra alimento vegetal Kürbis?"
-      subTitle="Te invitamos a saber más"
-      button="Alimento Kürbis"
-      link="/productos/alimento"
-    />
+    <Quote quote="El aceite Kürbis se integra a la perfección con un estilo de vida saludable y gourmet" />
+    <EndPage title="¿Ya conoces nuestra alimento vegetal Kürbis?" subTitle="Te invitamos a saber más" button="Alimento Kürbis" link="/productos/alimento" />
   </div>
 
   <style>
@@ -247,7 +188,7 @@ const beneficios = [
 
     /* Font families */
     .font-serif {
-      font-family: "Playfair Display", Georgia, serif;
+      font-family: 'Playfair Display', Georgia, serif;
     }
 
     /* Smooth scrolling */

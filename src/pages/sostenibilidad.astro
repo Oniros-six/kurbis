@@ -1,173 +1,95 @@
 ---
-import Layout from "../layouts/layout.astro";
-import Titulos from "../components/Titulos.astro";
-import HeroWithTitle from "../components/HeroWithTitle.astro";
-import EndPage from "@/components/EndPage.astro";
-import TextImage from "@/components/TextImage.astro";
-import Quote from "@/components/Quote.astro";
+import Layout from '../layouts/layout.astro';
+import Titulos from '../components/Titulos.astro';
+import HeroWithTitle from '../components/HeroWithTitle.astro';
+import EndPage from '@/components/EndPage.astro';
+import TextImage from '@/components/TextImage.astro';
+import Quote from '@/components/Quote.astro';
 ---
 
-<Layout title="Kürbis - Sostenibilidad">
-    <div
-        class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
-    >
-        {/* Hero Section with Luxury Overlay */}
-        <HeroWithTitle
-            img="/img/sostenibilidad/semillas.webp"
-            alt="Semillas de zapallo"
-            withFilter={true}
-        >
-            <div slot="title" class="relative z-10 flex items-center justify-center h-full">
-                <div class="text-center px-4 max-w-4xl">
-                    <h1
-                        class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-wide mb-6"
-                    >
-                        KÜRBIS
-                    </h1>
-                    <div
-                        class="w-24 h-[1.5px] bg-[var(--color-primario)] mx-auto mb-6"
-                    >
-                    </div>
-                    <p
-                        class="text-xl md:text-2xl font-normal tracking-widest uppercase"
-                    >
-                        Sostenibilidad de Lujo
-                    </p>
-                </div>
-            </div>
-        </HeroWithTitle>
-
-        {/* Elegant Introduction */}
-        <Titulos
-            title="Amigable con el planeta"
-            subTitle="Colaboramos para hacer de este mundo un lugar más sostenible para nosotros y las futuras generaciones"
-        />
-        {/* Gold accent line */}
-        <div
-            class="h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-        >
+<Layout
+  title="Kürbis - Sostenibilidad"
+  description="Producimos sin desperdicios bajo un modelo de economía circular. Tradición austríaca, conciencia ambiental y nutrición responsable."
+  url="https://kurbis.com.uy/sostenibilidad"
+  image="imgSEO/sostenibilidad.png"
+>
+  <div class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]">
+    {/* Hero Section with Luxury Overlay */}
+    <HeroWithTitle img="/img/sostenibilidad/semillas.webp" alt="Semillas de zapallo" withFilter={true}>
+      <div slot="title" class="relative z-10 flex items-center justify-center h-full">
+        <div class="text-center px-4 max-w-4xl">
+          <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-wide mb-6">KÜRBIS</h1>
+          <div class="w-24 h-[1.5px] bg-[var(--color-primario)] mx-auto mb-6"></div>
+          <p class="text-xl md:text-2xl font-normal tracking-widest uppercase">Sostenibilidad de Lujo</p>
         </div>
-        {/* Zero Waste Luxury Section */}
-        <TextImage
-            img="/img/sostenibilidad/circular.webp"
-            alt="Economia circular"
-            title="0% de desecho de alimentos"
-            text="Nuestro modelo de producción transita en prácticas sostenibles de economía circular, produciendo de forma responsable con el medio ambiente, gestionando y logrando cero residuos de producción, dando oídos a la demanda de aceites y alimentos vegetales producidos en forma sostenibles y enfocándonos también en la concientización e importancia en la salud y en el impacto ambiental de las elecciones alimentarias, teniendo el desafío de mejorar día a día nuestra empresa, ayudando al planeta a mitigar los efectos del cambio climático y a las personas a vivir mejor."
-            width="700"
-            height="700"
-        />
+      </div>
+    </HeroWithTitle>
 
-        {/* Luxury Production Section */}
-        <section class="py-24 px-4 bg-[var(--color-background)] relative">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-20 relative">
-                    {/* Decorative elements */}
-                    <div
-                        class="absolute top-1/2 left-0 w-[30%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"
-                    >
-                    </div>
-                    <div
-                        class="absolute top-1/2 right-0 w-[30%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"
-                    >
-                    </div>
+    {/* Elegant Introduction */}
+    <Titulos title="Amigable con el planeta" subTitle="Colaboramos para hacer de este mundo un lugar más sostenible para nosotros y las futuras generaciones" />
+    {/* Gold accent line */}
+    <div class="h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
+    {/* Zero Waste Luxury Section */}
+    <TextImage
+      img="/img/sostenibilidad/circular.webp"
+      alt="Economia circular"
+      title="0% de desecho de alimentos"
+      text="Nuestro modelo de producción transita en prácticas sostenibles de economía circular, produciendo de forma responsable con el medio ambiente, gestionando y logrando cero residuos de producción, dando oídos a la demanda de aceites y alimentos vegetales producidos en forma sostenibles y enfocándonos también en la concientización e importancia en la salud y en el impacto ambiental de las elecciones alimentarias, teniendo el desafío de mejorar día a día nuestra empresa, ayudando al planeta a mitigar los efectos del cambio climático y a las personas a vivir mejor."
+      width="700"
+      height="700"
+    />
 
-                    <h2
-                        class="font-serif text-4xl md:text-5xl font-light text-[var(--color-primario)] inline-block px-8 bg-[var(--color-background)] relative"
-                    >
-                        Elaboración
-                    </h2>
-                </div>
+    {/* Luxury Production Section */}
+    <section class="py-24 px-4 bg-[var(--color-background)] relative">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20 relative">
+          {/* Decorative elements */}
+          <div class="absolute top-1/2 left-0 w-[30%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
+          <div class="absolute top-1/2 right-0 w-[30%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
 
-                <div class="grid md:grid-cols-2 gap-16 md:gap-8 mb-20">
-                    {/* Traditional Method */}
-                    <div class="bg-[var(--color-background-alt)] p-1">
-                        <div
-                            class="flex flex-col h-full border border-[var(--color-primario)]/20 p-3"
-                        >
-                            <div class="relative mb-8 overflow-hidden">
-                                <img
-                                    src="/img/sostenibilidad/museo.webp?height=400&width=600"
-                                    alt="Museo de elaboración tradicional"
-                                    width={600}
-                                    height={400}
-                                    class="object-cover w-full h-[300px] lg:h-[500px]"
-                                />
-                            </div>
-                            <h3
-                                class="font-serif text-2xl md:text-3xl font-light text-[var(--color-primario)] mb-6"
-                            >
-                                Elaboración tradicional Austríaca
-                            </h3>
-                            <p class="text-gray-300 leading-relaxed font-light">
-                                El método de elaboración se consigue manteniendo
-                                el estilo tradicional transmitido de generación
-                                en generación de los antepasados austriacos,
-                                combinado con la tecnología actual, sin refinar,
-                                sin filtrar, tostando las semillas de zapallo,
-                                aportando a través de la temperatura correcta la
-                                formación del aroma y la mejora de la
-                                composición nutricional, transportándonos a una
-                                dimensión de sabor y aroma exquisito,
-                                finalizando con el prensado para la obtención
-                                del aceite y la molienda para la obtención del
-                                alimento vegetal con una textura en polvo
-                                ligera.
-                            </p>
-                        </div>
-                    </div>
+          <h2 class="font-serif text-4xl md:text-5xl font-light text-[var(--color-primario)] inline-block px-8 bg-[var(--color-background)] relative">Elaboración</h2>
+        </div>
 
-                    {/* Quality Products */}
-                    <div class="bg-[var(--color-background-alt)] p-1">
-                        <div
-                            class="flex flex-col h-full border border-[var(--color-primario)]/20 p-2"
-                        >
-                            <div class="relative mb-8 overflow-hidden">
-                                <img
-                                    src="/img/sostenibilidad/tests.webp?height=400&width=600"
-                                    alt="Tubos de ensayo de calidad"
-                                    width={600}
-                                    height={400}
-                                    class="object-cover w-full h-[300px] lg:h-[500px]"
-                                />
-                            </div>
-                            <h3
-                                class="font-serif text-2xl md:text-3xl font-light text-[var(--color-primario)] mb-6"
-                            >
-                                Productos de primera calidad
-                            </h3>
-                            <p class="text-gray-300 leading-relaxed font-light">
-                                Nuestro aceite y alimento vegetal son producidos
-                                minuciosamente en forma artesanal, cumpliendo
-                                con las especificaciones del Codex Alimentarius,
-                                controlando el proceso personalmente bajo un
-                                exhaustivo protocolo de seguridad y respeto por
-                                la salud y el medio ambiente, cuidando las
-                                condiciones de producción, operación y ética de
-                                la empresa, pasando por último, antes de
-                                embotellarse el aceite y embolsarse el alimento
-                                vegetal, por un examen sensorial y bromatológico para
-                                finalmente lograr confianza y seguridad en nuestros
-                                productos de primera calidad, quienes logran
-                                mejorar la nutrición, el sabor y aroma que estas
-                                preciadas semillas nos ofrecen.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div class="grid md:grid-cols-2 gap-16 md:gap-8 mb-20">
+          {/* Traditional Method */}
+          <div class="bg-[var(--color-background-alt)] p-1">
+            <div class="flex flex-col h-full border border-[var(--color-primario)]/20 p-3">
+              <div class="relative mb-8 overflow-hidden">
+                <img src="/img/sostenibilidad/museo.webp?height=400&width=600" alt="Museo de elaboración tradicional" loading="lazy" width={600} height={400} class="object-cover w-full h-[300px] lg:h-[500px]" />
+              </div>
+              <h3 class="font-serif text-2xl md:text-3xl font-light text-[var(--color-primario)] mb-6">Elaboración tradicional Austríaca</h3>
+              <p class="text-gray-300 leading-relaxed font-light">
+                El método de elaboración se consigue manteniendo el estilo tradicional transmitido de generación en generación de los antepasados austriacos, combinado con la tecnología actual, sin
+                refinar, sin filtrar, tostando las semillas de zapallo, aportando a través de la temperatura correcta la formación del aroma y la mejora de la composición nutricional, transportándonos
+                a una dimensión de sabor y aroma exquisito, finalizando con el prensado para la obtención del aceite y la molienda para la obtención del alimento vegetal con una textura en polvo
+                ligera.
+              </p>
             </div>
-        </section>
+          </div>
 
-        {/* Luxury Quote Section */}
-        <Quote
-            quote="Con Kürbis llevas un legado de tradición, salud y sabor, cuidadosamente preservado para las futuras generaciones"
-        />
+          {/* Quality Products */}
+          <div class="bg-[var(--color-background-alt)] p-1">
+            <div class="flex flex-col h-full border border-[var(--color-primario)]/20 p-2">
+              <div class="relative mb-8 overflow-hidden">
+                <img src="/img/sostenibilidad/tests.webp?height=400&width=600" alt="Tubos de ensayo de calidad" loading="lazy" width={600} height={400} class="object-cover w-full h-[300px] lg:h-[500px]" />
+              </div>
+              <h3 class="font-serif text-2xl md:text-3xl font-light text-[var(--color-primario)] mb-6">Productos de primera calidad</h3>
+              <p class="text-gray-300 leading-relaxed font-light">
+                Nuestro aceite y alimento vegetal son producidos minuciosamente en forma artesanal, cumpliendo con las especificaciones del Codex Alimentarius, controlando el proceso personalmente
+                bajo un exhaustivo protocolo de seguridad y respeto por la salud y el medio ambiente, cuidando las condiciones de producción, operación y ética de la empresa, pasando por último, antes
+                de embotellarse el aceite y embolsarse el alimento vegetal, por un examen sensorial y bromatológico para finalmente lograr confianza y seguridad en nuestros productos de primera
+                calidad, quienes logran mejorar la nutrición, el sabor y aroma que estas preciadas semillas nos ofrecen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        {/* Luxury CTA Section */}
-        <EndPage
-            title="Conoce nuestros productos"
-            subTitle="Mejor de lo que puedes imaginar"
-            button="Nuestros productos"
-            link="/productos"
-        />
-    </div>
+    {/* Luxury Quote Section */}
+    <Quote quote="Con Kürbis llevas un legado de tradición, salud y sabor, cuidadosamente preservado para las futuras generaciones" />
+
+    {/* Luxury CTA Section */}
+    <EndPage title="Conoce nuestros productos" subTitle="Mejor de lo que puedes imaginar" button="Nuestros productos" link="/productos" />
+  </div>
 </Layout>

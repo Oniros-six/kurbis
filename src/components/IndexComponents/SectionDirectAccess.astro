@@ -4,7 +4,7 @@ const { imagen, alt, title, description, link, buttonText } = Astro.props;
 
 <div class="relative w-full md:h-screen lg:h-full flex items-center justify-center overflow-hidden p-2 md:p-8">
   <!-- Background Image -->
-  <img src={imagen} alt={alt} class="absolute inset-0 w-full h-full object-cover" />
+  <img src={imagen} alt={alt} class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black/30"></div>

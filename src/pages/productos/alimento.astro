@@ -1,305 +1,229 @@
 ---
-import Layout from "@/layouts/layout.astro";
-import Quote from "@/components/Quote.astro";
-import Recuadro from "@/components/IndexComponents/Recuadro.astro";
-import EndPage from "@/components/EndPage.astro";
-import { CarouselProduct } from "@/components/ProductsComponents/Carousel";
-import CuadroInformativo from "@/components/ProductsComponents/CuadroInformativo";
+import Layout from '@/layouts/layout.astro';
+import Quote from '@/components/Quote.astro';
+import Recuadro from '@/components/IndexComponents/Recuadro.astro';
+import EndPage from '@/components/EndPage.astro';
+import { CarouselProduct } from '@/components/ProductsComponents/Carousel';
+import CuadroInformativo from '@/components/ProductsComponents/CuadroInformativo';
 
 const beneficios = [
-    "¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?",
-    "¿El alto contenido de fibra favorece la salud intestinal y la flora, previene el estreñimiento, reduce el colesterol y ayuda a prevenir el cáncer de colon?",
-    "¿La presencia de triptófano ayuda a descansar mejor?",
-    "¿El contenido de zinc beneficia al sistema inmune y al metabolismo?",
-    "¿El contenido de magnesio beneficia la función muscular y nerviosa, así como la salud ósea?",
-    "¿El contenido de sodio presente puede afectar la salud cardiovascular?",
+  '¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?',
+  '¿El alto contenido de fibra favorece la salud intestinal y la flora, previene el estreñimiento, reduce el colesterol y ayuda a prevenir el cáncer de colon?',
+  '¿La presencia de triptófano ayuda a descansar mejor?',
+  '¿El contenido de zinc beneficia al sistema inmune y al metabolismo?',
+  '¿El contenido de magnesio beneficia la función muscular y nerviosa, así como la salud ósea?',
+  '¿El contenido de sodio presente puede afectar la salud cardiovascular?',
 ];
 ---
 
-<Layout title="Kürbis - Aceite">
-    <div
-        class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]"
-    >
-        <!-- Hero Section -->
-        <section class="py-24 px-4 bg-[var(--color-background)] relative">
-            <div class="max-w-6xl mx-auto text-center relative z-10">
-                <!-- Decorative elements -->
-                <div
-                    class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"
-                >
-                </div>
-                <div
-                    class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"
-                >
-                </div>
+<Layout
+  title="Kürbis - Aceite"
+  description="Alimento vegetal de semilla de zapallo, rico en proteína completa, fibra y minerales. Ideal para dietas veganas, keto y clean."
+  url="https://kurbis.com.uy/productos/alimento"
+  image="imgSEO/productos.png"
+>
+  <div class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]">
+    <!-- Hero Section -->
+    <section class="py-24 px-4 bg-[var(--color-background)] relative">
+      <div class="max-w-6xl mx-auto text-center relative z-10">
+        <!-- Decorative elements -->
+        <div class="absolute -top-3 left-0 w-20 h-20 border-l-2 border-t-2 border-[var(--color-primario)]/30"></div>
+        <div class="absolute -bottom-3 right-0 w-20 h-20 border-r-2 border-b-2 border-[var(--color-primario)]/30"></div>
 
-                <h2
-                    class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] py-8"
-                >
-                    Alimento Kürbis
-                </h2>
+        <h2 class="font-serif text-3xl md:text-5xl font-light text-[var(--color-primario)] py-8">Alimento Kürbis</h2>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
+    </section>
+
+    <!-- Quote Section -->
+    <Quote quote="Nutrición saludable que se adapta a tu estilo de vida" />
+
+    <!-- Content Sections -->
+    <section class="py-16 px-4 bg-[var(--color-background-alt)]">
+      <div class="max-w-4xl mx-auto space-y-12">
+        <!-- Carrousel -->
+        <div class="space-y-8 fade-in-up">
+          <p class="text-gray-300 font-light text-lg leading-relaxed">
+            Nuestro alimento Kürbis de excelente calidad, es una fuente natural inagotable de nutrición, fácil de digerir, con excelentes propiedades funcionales, con casi 20% de proteínas de
+            excelente calidad por porción, con los 9 aminoácidos esenciales y un muy buen aporte de triptófano, con alto contenido de fibra, distinguiéndose las vitaminas E y B1, además de minerales,
+            detacándose el Magnesio, el Zinc, el Hierro y el Potasio, así también antioxidantes y esteroles para respaldar el bienestar y la vitalidad general. <br />
+            Tiene algunas otras ventajas nutricionales por el bajo contenido de carbohidratos de 2,45g con 121kcal por porción y del total de ácidos grasos presentes, casi 80% son ácidos grasos insaturados
+            prevaleciendo el ácido oléico y linoléico, que lo hacen deseable desde el punto de vista nutricional y gastronómico.
+          </p>
+
+          <!-- Carousel Section -->
+          <CarouselProduct
+            contenido={[
+              {
+                imagen: '/img/productos/smoothie.webp',
+                withInfo: true,
+                info: 'Plant Food \n Rico en Proteínas \n Bajo en Carbohidratos \n y Kcal',
+                alt: 'Smoothie de alimento vegetal',
+              },
+              {
+                imagen: '/img/productos/polvo.webp',
+                withInfo: false,
+                alt: 'Polvo de alimento vegetal',
+              },
+              {
+                imagen: '/img/productos/infoAlimento.webp',
+                withInfo: false,
+                alt: 'Información nutricional sobre alimento vegetal Kurbis',
+              },
+            ]}
+            client:visible
+          />
+
+          <p class="text-gray-300 font-light text-lg leading-relaxed">
+            El alimento vegetal Kürbis es delicioso, presentado en sabor Natural y próximamente en sabor Cacao y Vaina de Vainilla, es de primera calidad y la consistencia en polvo permite una fácil
+            digestión y asimilación.<br />
+            Es una buena opción para aquellos que no incluyen productos animales en su dieta o para alternar con otros alimentos que hay en el mercado, mejorando el aporte nutricional sobre todo para quienes
+            siguen una dieta vegana, whole 30, keto, clean, detox, ayuno intermitente, inmunonutritiva, páleo, un estilo de vida wellness y más...
+          </p>
+        </div>
+
+        <!-- Notes -->
+        <div class="flex flex-col space-y-1 mb-30">
+          <div class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4">
+            <p class="text-[var(--color-primario)] font-light italic">* Sin azucares agregados ni edulcorantes.</p>
+          </div>
+          <div class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4">
+            <p class="text-[var(--color-primario)] font-light italic">* Contiene 0,17g de sodio por porción de 35g de Alimento vegetal Kürbis.</p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="w-full flex justify-center mb-10 px-8 sm:px-38 md:px-50 lg:px-70">
+          <div class="relative">
+            <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"></div>
+            <div class="relative overflow-hidden">
+              <img src="/img/productos/training.webp" alt="Hombre tomando un brebaje mientras entrena" class="object-cover" loading="lazy"/>
             </div>
-            <div
-                class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-            >
-            </div>
-        </section>
+            <CuadroInformativo atLeft={false} atTop={false} info="Rico en Fibra, \n Magnesio, Zinc, \n Triptófano, \n Omega 3 + 6 + 9" shouldShowInfo={true} />
+          </div>
+        </div>
 
-        <!-- Quote Section -->
-        <Quote quote="Nutrición saludable que se adapta a tu estilo de vida" />
+        <!-- Paragraph -->
+        <div class="fade-in-up">
+          <p class="text-gray-300 font-light text-lg leading-relaxed">
+            La cantidad de alimento vegetal Kürbis a usar depende de cada persona, aproximadamente 35 gr por porción. La versatilidad en los usos de este alimento permite que se pueda aplicar como un
+            ingrediente adicional ya sea que esté mezclado en un batido post- entrenamiento con leche láctea o vegetal o con yogurt para obtener cremosidad, además de agregarlo a los smoothies junto a
+            un hilo de aceite Kübis, también incorporándolo como un refuerzo nutricional a otras harinas y a platos salados o dulces. Se integra perfectamente y eleva el sabor y nutrición a las
+            comidas, repostería, panqueques, panes, pastas, hummus y más...
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Content Sections -->
-        <section class="py-16 px-4 bg-[var(--color-background-alt)]">
-            <div class="max-w-4xl mx-auto space-y-12">
-                <!-- Carrousel -->
-                <div class="space-y-8 fade-in-up">
-                    <p class="text-gray-300 font-light text-lg leading-relaxed">
-                        Nuestro alimento Kürbis de excelente calidad, es una
-                        fuente natural inagotable de nutrición, fácil de
-                        digerir, con excelentes propiedades funcionales, con
-                        casi 20% de proteínas de excelente calidad por porción,
-                        con los 9 aminoácidos esenciales y un muy buen aporte de
-                        triptófano, con alto contenido de fibra, distinguiéndose
-                        las vitaminas E y B1, además de minerales, detacándose
-                        el Magnesio, el Zinc, el Hierro y el Potasio, así
-                        también antioxidantes y esteroles para respaldar el
-                        bienestar y la vitalidad general. <br />
-                        Tiene algunas otras ventajas nutricionales por el bajo contenido
-                        de carbohidratos de 2,45g con 121kcal por porción y del total
-                        de ácidos grasos presentes, casi 80% son ácidos grasos insaturados
-                        prevaleciendo el ácido oléico y linoléico, que lo hacen deseable
-                        desde el punto de vista nutricional y gastronómico.
-                    </p>
+    <!-- Benefits Section -->
+    <section class="py-20 px-4 bg-[var(--color-background)] relative">
+      <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
 
-                    <!-- Carousel Section -->
-                    <CarouselProduct
-                        contenido={[
-                            {
-                                imagen: "/img/productos/smoothie.webp",
-                                withInfo: true,
-                                info: "Plant Food \n Rico en Proteínas \n Bajo en Carbohidratos \n y Kcal",
-                                alt: "Smoothie de alimento vegetal",
-                            },
-                            {
-                                imagen: "/img/productos/polvo.webp",
-                                withInfo: false,
-                                alt: "Polvo de alimento vegetal",
-                            },
-                            {
-                                imagen: "/img/productos/infoAlimento.webp",
-                                withInfo: false,
-                                alt: "Información nutricional sobre alimento vegetal Kurbis",
-                            },
-                        ]}
-                        client:visible
-                    />
+      <div class="max-w-4xl mx-auto">
+        <!-- Benefits Title -->
+        <div class="text-center mb-16 relative fade-in-up">
+          <div class="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
+          <div class="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
 
-                    <p class="text-gray-300 font-light text-lg leading-relaxed">
-                        El alimento vegetal Kürbis es delicioso, presentado en
-                        sabor Natural y próximamente en sabor Cacao y Vaina de
-                        Vainilla, es de primera calidad y la consistencia en
-                        polvo permite una fácil digestión y asimilación.<br />
-                        Es una buena opción para aquellos que no incluyen productos
-                        animales en su dieta o para alternar con otros alimentos
-                        que hay en el mercado, mejorando el aporte nutricional sobre
-                        todo para quienes siguen una dieta vegana, whole 30, keto,
-                        clean, detox, ayuno intermitente, inmunonutritiva, páleo,
-                        un estilo de vida wellness y más...
-                    </p>
-                </div>
+          <Recuadro texto="BENEFICIOS" />
+        </div>
 
-                <!-- Notes -->
-                <div class="flex flex-col space-y-1 mb-30">
-                    <div
-                        class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4"
-                    >
-                        <p
-                            class="text-[var(--color-primario)] font-light italic"
-                        >
-                            * Sin azucares agregados ni edulcorantes.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4"
-                    >
-                        <p
-                            class="text-[var(--color-primario)] font-light italic"
-                        >
-                            * Contiene 0,17g de sodio por porción de 35g de
-                            Alimento vegetal Kürbis.
-                        </p>
-                    </div>
-                </div>
+        <div class="mb-12 fade-in-up">
+          <p class="text-gray-300 font-light text-lg leading-relaxed text-center">
+            Para conocer los beneficios del Alimento Kürbis, se recomienda consultar con un profesional de la salud o acceder a fuentes confiables en línea.
+          </p>
+        </div>
 
-                <!-- Image -->
-                <div class="w-full flex justify-center mb-10 px-8 sm:px-38 md:px-50 lg:px-70">
-                    <div class="relative">
-                        <div
-                            class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"
-                        >
-                        </div>
-                        <div class="relative overflow-hidden">
-                            <img
-                                src="/img/productos/training.webp"
-                                alt="Hombre tomando un brebaje mientras entrena"
-                                class="object-cover"
-                            />
-                        </div>
-                        <CuadroInformativo atLeft={false} atTop={false} info="Rico en Fibra, \n Magnesio, Zinc, \n Triptófano, \n Omega 3 + 6 + 9" shouldShowInfo={true} />
-                    </div>
-                </div>
+        <!-- Benefits List -->
+        <div class="space-y-6">
+          {
+            beneficios.map((beneficio, index) => (
+              <div
+                class="flex items-center gap-4 bg-[var(--color-background-alt)] border border-[var(--color-primario)]/20 p-6 hover:border-[var(--color-primario)]/40 transition-all duration-300 fade-in-up"
+                style={`animation-delay: ${index * 0.1}s`}
+              >
+                <img src="/check.png" class="size-6" alt="check" loading="lazy" />
+                <p class="text-gray-300 font-light leading-relaxed">{beneficio}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
-                <!-- Paragraph -->
-                <div class="fade-in-up">
-                    <p class="text-gray-300 font-light text-lg leading-relaxed">
-                        La cantidad de alimento vegetal Kürbis a usar depende de
-                        cada persona, aproximadamente 35 gr por porción. La
-                        versatilidad en los usos de este alimento permite que se
-                        pueda aplicar como un ingrediente adicional ya sea que
-                        esté mezclado en un batido post- entrenamiento con leche
-                        láctea o vegetal o con yogurt para obtener cremosidad,
-                        además de agregarlo a los smoothies junto a un hilo de
-                        aceite Kübis, también incorporándolo como un refuerzo
-                        nutricional a otras harinas y a platos salados o dulces.
-                        Se integra perfectamente y eleva el sabor y nutrición a
-                        las comidas, repostería, panqueques, panes, pastas,
-                        hummus y más...
-                    </p>
-                </div>
-            </div>
-        </section>
+    <!-- Final Quote Section -->
+    <Quote quote="Con el alimento Kürbis logras una experiencia natural, de nutrición saludable y deliciosa" />
+    <EndPage title="¿Ya conoces nuestro aceite Kürbis?" subTitle="Te invitamos a saber más" button="Aceite Kürbis" link="/productos/aceite" />
+  </div>
 
-        <!-- Benefits Section -->
-        <section class="py-20 px-4 bg-[var(--color-background)] relative">
-            <div
-                class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"
-            >
-            </div>
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
 
-            <div class="max-w-4xl mx-auto">
-                <!-- Benefits Title -->
-                <div class="text-center mb-16 relative fade-in-up">
-                    <div
-                        class="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"
-                    >
-                    </div>
-                    <div
-                        class="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"
-                    >
-                    </div>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
 
-                    <Recuadro texto="BENEFICIOS" />
-                </div>
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
 
-                <div class="mb-12 fade-in-up">
-                    <p
-                        class="text-gray-300 font-light text-lg leading-relaxed text-center"
-                    >
-                        Para conocer los beneficios del Alimento Kürbis, se
-                        recomienda consultar con un profesional de la salud o
-                        acceder a fuentes confiables en línea.
-                    </p>
-                </div>
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-                <!-- Benefits List -->
-                <div class="space-y-6">
-                    {
-                        beneficios.map((beneficio, index) => (
-                            <div
-                                class="flex items-center gap-4 bg-[var(--color-background-alt)] border border-[var(--color-primario)]/20 p-6 hover:border-[var(--color-primario)]/40 transition-all duration-300 fade-in-up"
-                                style={`animation-delay: ${index * 0.1}s`}
-                            >
-                                <img src="/check.png" class="size-6" />
-                                <p class="text-gray-300 font-light leading-relaxed">
-                                    {beneficio}
-                                </p>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-        </section>
+    /* Staggered animations */
+    .fade-in-up:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    .fade-in-up:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .fade-in-up:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    .fade-in-up:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    .fade-in-up:nth-child(5) {
+      animation-delay: 0.5s;
+    }
 
-        <!-- Final Quote Section -->
-        <Quote
-            quote="Con el alimento Kürbis logras una experiencia natural, de nutrición saludable y deliciosa"
-        />
-        <EndPage
-            title="¿Ya conoces nuestro aceite Kürbis?"
-            subTitle="Te invitamos a saber más"
-            button="Aceite Kürbis"
-            link="/productos/aceite"
-        />
-    </div>
+    /* Hover effects */
+    .hover\:border-\[#D4AF37\]\/40:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+    }
 
-    <style>
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out forwards;
-        }
+    /* Font families */
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
 
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+    /* Custom spacing */
+    .space-y-12 > * + * {
+      margin-top: 3rem;
+    }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .space-y-8 > * + * {
+      margin-top: 2rem;
+    }
 
-        /* Staggered animations */
-        .fade-in-up:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        .fade-in-up:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .fade-in-up:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        .fade-in-up:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-        .fade-in-up:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-
-        /* Hover effects */
-        .hover\:border-\[#D4AF37\]\/40:hover {
-            border-color: rgba(212, 175, 55, 0.4);
-        }
-
-        /* Font families */
-        .font-serif {
-            font-family: "Playfair Display", Georgia, serif;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom spacing */
-        .space-y-12 > * + * {
-            margin-top: 3rem;
-        }
-
-        .space-y-8 > * + * {
-            margin-top: 2rem;
-        }
-
-        .space-y-6 > * + * {
-            margin-top: 1.5rem;
-        }
-    </style>
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+  </style>
 </Layout>

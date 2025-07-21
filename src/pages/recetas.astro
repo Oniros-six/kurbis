@@ -1,9 +1,13 @@
 ---
-import Layout from "../layouts/layout.astro";
-import Recipes from "../components/Recipes"
+import Layout from '../layouts/layout.astro';
+import Recipes from '../components/Recipes';
 ---
 
-    <Layout title="Kürbis - Recetas">
-        <Recipes client:load/>
-    </Layout>
-
+<Layout
+  title="Kürbis - Recetas"
+  description="Inspirate con recetas fáciles y deliciosas usando los productos Kürbis. Cociná saludable y compartí momentos únicos."
+  url="https://kurbis.com.uy/recetas"
+  image="imgSEO/kurbis.png"
+>
+  <Recipes client:load />
+</Layout>
