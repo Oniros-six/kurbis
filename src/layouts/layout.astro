@@ -1,14 +1,14 @@
 ---
 // Imports de componentes
-import InfoBar from '../components/LayoutComponents/InfoBar.astro';
-import Navbar from '../components/LayoutComponents/Navbar.tsx';
+import InfoBar from '@/components/LayoutComponents/InfoBar.astro';
+import Navbar from '@/components/LayoutComponents/Navbar.tsx';
 import Footer from '@/components/LayoutComponents/Footer.astro';
 
 // Import global de estilos
-import '../styles/global.css';
+import '@/styles/global.css'
 
 // Props de la página
-const { title, description, url, image, loadFonts = null } = Astro.props;
+const { title, description, url, image, loadFonts = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -33,7 +33,7 @@ const { title, description, url, image, loadFonts = null } = Astro.props;
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={'localhost:4321/' + image} />
+    <meta property="og:image" content={'https://kurbis.com.uy/' + image} />
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
 
@@ -41,7 +41,7 @@ const { title, description, url, image, loadFonts = null } = Astro.props;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={'localhost:4321/' + image} />
+    <meta name="twitter:image" content={'https://kurbis.com.uy/' + image} />
 
     <!-- Fuentes -->
     {loadFonts && <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Roboto:wght@500&display=swap" rel="stylesheet" />}
