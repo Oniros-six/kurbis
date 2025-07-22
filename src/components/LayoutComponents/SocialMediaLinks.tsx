@@ -68,7 +68,7 @@ export const SocialMediaLinks = () => {
     return (
         <Popover open={isOpen} onOpenChange={setIsOpen}>
             <PopoverTrigger asChild>
-                <button className="focus:outline-none">{socialIcons}</button>
+                <button className="focus:outline-none">{socialIcons} <span className="sr-only">Iconos de redes sociales</span></button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-2">{content}</PopoverContent>
         </Popover>

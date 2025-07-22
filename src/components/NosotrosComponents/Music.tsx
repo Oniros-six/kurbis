@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Music() {
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isLoaded, setIsLoaded] = useState( true)
+  const [isLoaded, setIsLoaded] = useState(true)
   const [volume, setVolume] = useState(0.5)
   const [showVolumeControl, setShowVolumeControl] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null)
@@ -83,9 +83,8 @@ export default function Music() {
       >
         {/* Volume Control - Desktop only */}
         <div
-          className={`hidden md:flex items-center transition-all duration-300 ${
-            showVolumeControl ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"
-          }`}
+          className={`hidden md:flex items-center transition-all duration-300 ${showVolumeControl ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"
+            }`}
         >
           <div className="bg-slate-700 rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
             <Volume2 className="w-4 h-4 text-white" />
@@ -109,9 +108,9 @@ export default function Music() {
           className="w-16 h-16 rounded-full bg-slate-700 hover:bg-slate-800 transition-colors shadow-lg"
         >
           {isPlaying ? <Pause className="w-6 h-6 fill-white" /> : <Play className="w-6 h-6 fill-white ml-0.5" />}
+          <span className="sr-only">Control del reproductor de música</span>
         </Button>
       </div>
-
       <audio ref={audioRef} loop preload="auto" autoPlay>
         <source src="/img/nosotros/jodel.mp3" type="audio/mpeg" />
         Tu navegador no soporta audio.
