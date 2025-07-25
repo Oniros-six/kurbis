@@ -8,7 +8,7 @@ const { description, title, srcProduct, altProduct, product, lazy, priority } = 
   <!-- Fondo de mármol -->
   <picture>
     <!-- Imagen para pantallas hasta 640px (mobile) -->
-    <source srcset="/img/marmol-small-mobile.webp" media="(max-width: 383px)" />
+    <source srcset="/img/marmol-small-mobile.webp" media="(max-width: 640px)" />
     <source srcset="/img/marmol-mobile.webp" media="(max-width: 735px)" />
     <source srcset="/img/marmol-tablet.webp" media="(max-width: 900px)" />
 
@@ -16,7 +16,7 @@ const { description, title, srcProduct, altProduct, product, lazy, priority } = 
     <img
       src="/img/marmol.webp"
       alt="Fondo de mármol"
-      class="w-full object-cover h-[54rem] xs:h-[52rem] sm:h-[55rem] md:h-[45rem] lg:h-[55rem]"
+      class="w-full object-cover h-[54rem] xs:h-[56rem] sm:h-[56rem] md:h-[45rem] lg:h-[55rem]"
       loading={lazy ? 'lazy' : 'eager'}
       fetchpriority={priority ? 'high' : 'low'}
     />
