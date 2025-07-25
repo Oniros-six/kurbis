@@ -5,15 +5,20 @@ import EmailInput from "./EmailInput";
 <div
   class="w-full bg-[var(--color-background)] py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-y-8 md:gap-4 lg:gap-12 xl:px-[5rem]"
 >
-  <h3 class="font-bold text-5xl lg:order-1 text-[var(--color-perla)]">Suscribirse</h3>
-  <span class="font-medium text-lg text-center md:order-3 lg:order-2 text-[var(--color-perla)]"
-    >Forma parte de nuestra lista de correo electrónico</span
-  >
-  <form
-    class="flex flex-col xl:flex-row gap-2 items-center md:row-span-2 lg:row-span-1 lg:order-3"
-  >
+  <!-- Título -->
+  <h3 class="font-bold text-5xl text-[var(--color-perla)] lg:order-1">
+    Suscribirse
+  </h3>
+
+  <!-- Descripción -->
+  <span class="font-medium text-lg text-center text-[var(--color-perla)] md:order-3 lg:order-2">
+    Forma parte de nuestra lista de correo electrónico
+  </span>
+
+  <!-- Input de email -->
+  <div class="flex flex-col xl:flex-row gap-2 items-center md:row-span-2 lg:row-span-1 lg:order-3">
     <div class="flex flex-col sm:flex-row gap-4 items-center max-w-md mx-auto">
-      <EmailInput client:load/>
+      <EmailInput client:load />
     </div>
-  </form>
+  </div>
 </div>
