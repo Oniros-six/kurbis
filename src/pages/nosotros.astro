@@ -15,11 +15,8 @@ import Quote from '@/components/Quote.astro';
   <div class="min-h-screen bg-[var(--color-background)] text-[var(--color-perla)]">
     {/* Hero Section with Luxury Overlay */}
     <HeroWithTitle img="/img/nosotros/panorama.webp" alt="Austria y Piriapolis" />
-    <section class="bg-[url(/img/nosotros/laboratorio.webp)] bg-scroll">
-      <TimeLine client:load />
-    </section>
+    <TimeLine client:load />
     <Quote quote="Nos honra preservar el patrimonio biocultural y el sabor auténtico de Austria, con productos saludables, sabrosos y sostenibles, de la más alta calidad." />
-
     <EndPage title="¿Quieres conocer el origen de Kürbis?" subTitle="Conoce la tradición detrás del proyecto" button="Nuestra mision" link="/mision" />
   </div>
 </Layout>
