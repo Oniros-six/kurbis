@@ -9,6 +9,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://www.kurbis.com.uy",
+  site: "https://kurbis.com.uy",
   integrations: [react(), tunnel(), sitemap()],
 });
