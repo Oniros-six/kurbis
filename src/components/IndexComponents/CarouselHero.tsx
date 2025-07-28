@@ -26,7 +26,7 @@ const slides = [
   {
     imagen: "/carousel/semillas.webp",
     titulo: "Un patrimonio biológico & cultural",
-    alt: "Semillas Kurbis",
+    alt: "Semillas Kürbis",
     subtitulo: "- Desde Austria a Uruguay -",
     priority: "auto",
     lazy: "lazy",
@@ -35,7 +35,7 @@ const slides = [
   {
     imagen: "/carousel/regalo.webp",
     titulo: "El regalo ideal",
-    alt: "Botella de aceite Kurbis como regalo",
+    alt: "Botella de aceite Kürbis como regalo",
     subtitulo: "- Para los amantes de lo saludable & gourmet -",
     priority: "auto",
     lazy: "lazy",
