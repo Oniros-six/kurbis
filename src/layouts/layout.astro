@@ -3,9 +3,10 @@
 import InfoBar from '@/components/LayoutComponents/InfoBar.astro';
 import Navbar from '@/components/LayoutComponents/Navbar.tsx';
 import Footer from '@/components/LayoutComponents/Footer.astro';
+import { Toaster } from '@/components/Toaster';
 
 // Import global de estilos
-import '@/styles/global.css'
+import '@/styles/global.css';
 
 // Props de la página
 const { title, description, url, image, loadFonts = false } = Astro.props;
@@ -30,7 +31,6 @@ const { title, description, url, image, loadFonts = false } = Astro.props;
     <link rel="canonical" href={url} />
 
     <!-- Open Graph -->
-
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={'https://kurbis.com.uy/' + image} />
@@ -45,6 +45,7 @@ const { title, description, url, image, loadFonts = false } = Astro.props;
 
     <!-- Fuentes -->
     {loadFonts && <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Roboto:wght@500&display=swap" rel="stylesheet" />}
+
   </head>
   <body class="bg-[var(--color-background)]">
     <InfoBar message="Disfruta nuestras exclusivas oportunidades" />
@@ -55,5 +56,6 @@ const { title, description, url, image, loadFonts = false } = Astro.props;
     </main>
 
     <Footer />
+    <Toaster client:load />
   </body>
 </html>

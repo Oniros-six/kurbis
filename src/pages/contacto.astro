@@ -1,10 +1,7 @@
 ---
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
 import { Phone, Clock, MessageCircle } from 'lucide-react';
 import Layout from '../layouts/layout.astro';
+import ContactForm from '../components/ContactComponents/Form';
 ---
 
 <Layout
@@ -25,72 +22,7 @@ import Layout from '../layouts/layout.astro';
       </div>
 
       {/* Contact Form */}
-      <div class="max-w-5xl mx-auto mb-16">
-        <div class="bg-gradient-to-br from-[var(--color-secundario)] to-[var(--color-secundario)] rounded-lg p-3 md:p-8 lg:p-12 shadow-2xl">
-          <form class="grid grid-cols-1 lg:grid-cols-2 gap-8" action="https://formsubmit.co/14ea0da9a8bb20dda61676db831c09ab" method="POST">
-            {/* Left Column */}
-            <div class="space-y-6">
-              <div>
-                <Label htmlFor="nombre" className="text-[var(--color-perla)] text-lg font-medium mb-3 block"> Nombre </Label>
-                <Input
-                  id="nombre"
-                  name="nombre"
-                  type="text"
-                  className="capitalize h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
-                  placeholder="Tu nombre completo"
-                  required
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="email" className="text-[var(--color-perla)] text-lg font-medium mb-3 block"> Email </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  name="email"
-                  className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
-                  placeholder="ejemplo@email.com"
-                  required
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="telefono" className="text-[var(--color-perla)] text-lg font-medium mb-3 block"> Nro de Teléfono </Label>
-                <Input
-                  id="telefono"
-                  type="tel"
-                  name="telefono"
-                  className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)]"
-                  placeholder="094 123 456"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div class="space-y-6">
-              <div class="h-full flex flex-col">
-                <Label htmlFor="mensaje" className="text-[var(--color-perla)] text-lg font-medium mb-3 block"> Mensaje </Label>
-                <Textarea
-                  id="mensaje"
-                  name="mensaje"
-                  className="capitalize flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none"
-                  placeholder="Escribe tu mensaje aquí..."
-                  required
-                />
-                <div class="mt-6 flex justify-center md:justify-end">
-                  <Button
-                    type="submit"
-                    className="bg-gradient-to-r from-amber-700 to-amber-500 hover:from-amber-800 hover:to-amber-600 text-[var(--color-perla)] font-semibold px-8 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-                  >
-                    Enviar Mensaje
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+      <ContactForm client:load />
 
       {/* Information Section */}
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -132,12 +64,4 @@ import Layout from '../layouts/layout.astro';
       </div>
     </div>
   </div>
-  <script type="module">
-    document.querySelectorAll('.capitalizar').forEach((input) => {
-      input.addEventListener('blur', () => {
-        const value = input.value;
-        input.value = value.charAt(0).toUpperCase() + value.slice(1);
-      });
-    });
-  </script>
 </Layout>
