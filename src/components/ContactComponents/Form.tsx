@@ -208,7 +208,7 @@ export default function ContactForm() {
                 type="text"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="capitalize h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] transition-all duration-200"
+                className="capitalize h-12 bg-[var(--color-perla)] dark:bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] transition-all duration-200"
                 placeholder="Tu nombre completo"
                 required
               />
@@ -224,7 +224,7 @@ export default function ContactForm() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] transition-all duration-200"
+                className="h-12 bg-[var(--color-perla)] dark:bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] transition-all duration-200"
                 placeholder="ejemplo@email.com"
                 required
               />
@@ -240,7 +240,7 @@ export default function ContactForm() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] transition-all duration-200"
+                className="h-12 bg-[var(--color-perla)] dark:bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] transition-all duration-200"
                 placeholder="094 123 456"
                 required
               />
@@ -258,7 +258,7 @@ export default function ContactForm() {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                className=" flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none transition-all duration-200"
+                className=" flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] dark:bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none transition-all duration-200"
                 placeholder="Escribe tu mensaje aquí..."
                 required
               />
