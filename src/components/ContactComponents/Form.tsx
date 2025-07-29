@@ -27,13 +27,13 @@ export default function ContactForm() {
   // Personalizar mensajes de validación nativos
   useEffect(() => {
     const inputs = document.querySelectorAll('input, textarea');
-    
+
     inputs.forEach((input) => {
       input.addEventListener('invalid', (e) => {
         e.preventDefault();
         const target = e.target as HTMLInputElement | HTMLTextAreaElement;
         const fieldName = target.name;
-        
+
         // Mensajes personalizados según el campo
         let message = '';
         switch (fieldName) {
@@ -52,7 +52,7 @@ export default function ContactForm() {
           default:
             message = 'Por favor, completa este campo';
         }
-        
+
         // Mostrar toast de error
         toast.error('Campo requerido', {
           description: message,
@@ -67,16 +67,16 @@ export default function ContactForm() {
             fontWeight: '500'
           }
         });
-        
+
         // Agregar clase de error visual
         target.classList.add('border-red-500', 'ring-red-500');
-        
+
         // Remover clase después de un tiempo
         setTimeout(() => {
           target.classList.remove('border-red-500', 'ring-red-500');
         }, 3000);
       });
-      
+
       // Limpiar clases de error cuando el usuario empieza a escribir
       input.addEventListener('input', () => {
         input.classList.remove('border-red-500', 'ring-red-500');
@@ -86,10 +86,18 @@ export default function ContactForm() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    if (name === "message") {
+      const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1);
+      setFormData(prev => ({
+        ...prev,
+        [name]: capitalizedValue
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   const validateForm = (data: FormData): boolean => {
@@ -127,7 +135,7 @@ export default function ContactForm() {
         }
       });
     });
-    
+
     return Object.keys(errors).length === 0;
   };
 
@@ -184,17 +192,6 @@ export default function ContactForm() {
     }
   };
 
-  const handleCapitalize = (e: React.FocusEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    if (value) {
-      const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1);
-      setFormData(prev => ({
-        ...prev,
-        [e.target.name]: capitalizedValue
-      }));
-    }
-  };
-
   return (
     <div className="max-w-5xl mx-auto mb-16">
       <div className="bg-gradient-to-br from-[var(--color-secundario)] to-[var(--color-secundario)] rounded-lg p-3 md:p-8 lg:p-12 shadow-2xl">
@@ -211,7 +208,6 @@ export default function ContactForm() {
                 type="text"
                 value={formData.name}
                 onChange={handleInputChange}
-                onBlur={handleCapitalize}
                 className="capitalize h-12 bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] transition-all duration-200"
                 placeholder="Tu nombre completo"
                 required
@@ -262,7 +258,7 @@ export default function ContactForm() {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                className="capitalize flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none transition-all duration-200"
+                className=" flex-1 min-h-[200px] lg:min-h-[280px] bg-[var(--color-perla)] border-0 rounded text-gray-800 placeholder:text-gray-500 focus:ring-2 focus:ring-[var(--color-primario)] focus:ring-offset-2 focus:ring-offset-[var(--color-secundario)] resize-none transition-all duration-200"
                 placeholder="Escribe tu mensaje aquí..."
                 required
               />
