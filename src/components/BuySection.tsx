@@ -155,7 +155,7 @@ export default function BuySection() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10">
               <Image img="duo-wellness-sr.webp" titulo={"$U  " + duoWellness} alt="Combo Kürbis duo wellness" />
-              <Image img="super-vital-sr.webp" titulo={"$U  " + superVital} alt="Combo Kürbis super vital" />
+              {/* <Image img="super-vital-sr.webp" titulo={"$U  " + superVital} alt="Combo Kürbis super vital" /> */}
               <Image img="sabores-austria-sr.webp" titulo={"$U  " + saboresAustria} alt="Combo Kürbis sabores de Austria" />
             </div>
           </motion.div>
