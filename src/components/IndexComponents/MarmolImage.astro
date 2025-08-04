@@ -23,9 +23,9 @@ const { description, title, srcProduct, altProduct, product, lazy, priority } = 
   </picture>
 
   <!-- Capa de contenido -->
-  <div class="absolute inset-0 flex flex-col items-center md:justify-start p-4 sm:p-6">
+  <div class="absolute inset-0 flex flex-col items-center self-center md:justify-start p-4 pt-0 sm:p-6">
     <!-- Título -->
-    <h3 class="text-center text-black font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl font-[georgia] mb-8 mt-14 sm:mt-16 md:my-18 lg:mt-20 xl:mt-24">
+    <h3 class="text-center text-black font-bold text-xl xs:text-2xl sm:text-3xl xl:text-4xl font-[georgia] mb-6">
       {title}
     </h3>
 
@@ -48,7 +48,8 @@ const { description, title, srcProduct, altProduct, product, lazy, priority } = 
         <!-- Descripción -->
         <p class="text-black text-center xs:text-left text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 leading-relaxed font-[450]">
           {description}
-          <a href={`/productos/${product}`} class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block ml-1">Saber más →</a>
+          <br/>
+          <a href={`/productos/${product}`} class="text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:underline inline-block">Saber más →</a>
         </p>
 
         <!-- Botón CTA -->
