@@ -13,8 +13,8 @@ const beneficios = [
   '¿El contenido de zinc beneficia al sistema inmune y al metabolismo?',
   '¿El contenido de magnesio beneficia la función muscular y nerviosa, así como la salud ósea?',
   '¿El contenido de sodio presente puede afectar la salud cardiovascular?',
-  '¿La composición del alimento Kürbis puede regular la flora intestinal, actuando como prebiótico?'
-  ];
+  '¿La composición del alimento Kürbis puede regular la flora intestinal, actuando como prebiótico?',
+];
 ---
 
 <Layout
@@ -98,7 +98,7 @@ const beneficios = [
           <div class="relative">
             <div class="absolute -top-4 -left-4 w-full h-full border border-[var(--color-primario)]/30"></div>
             <div class="relative overflow-hidden">
-              <img src="/img/productos/training.webp" alt="Hombre tomando un brebaje mientras entrena" class="object-cover" loading="lazy"/>
+              <img src="/img/productos/training.webp" alt="Hombre tomando un brebaje mientras entrena" class="object-cover" loading="lazy" />
             </div>
             <CuadroInformativo atLeft={false} atTop={false} info="Rico en Fibra, \n Magnesio, Zinc, \n Triptófano, \n Omega 3 + 6 + 9" shouldShowInfo={true} />
           </div>
@@ -113,118 +113,127 @@ const beneficios = [
             comidas, repostería, panqueques, panes, pastas, hummus y más...
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="py-20 px-4 bg-[var(--color-background)] relative">
-      <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
-
-      <div class="max-w-4xl mx-auto">
-        <!-- Benefits Title -->
-        <div class="text-center mb-16 relative fade-in-up">
-          <div class="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
-          <div class="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
-
-          <Recuadro texto="BENEFICIOS" />
-        </div>
-
-        <div class="mb-12 fade-in-up">
-          <p class="text-gray-300 font-light text-lg leading-relaxed text-center">
-            Para conocer los beneficios del Alimento Kürbis, se recomienda consultar con un profesional de la salud o acceder a fuentes confiables en línea.
-          </p>
-        </div>
-
-        <!-- Benefits List -->
-        <div class="space-y-6">
-          {
-            beneficios.map((beneficio, index) => (
-              <div
-                class="flex items-center gap-4 bg-[var(--color-background-alt)] border border-[var(--color-primario)]/20 p-6 hover:border-[var(--color-primario)]/40 transition-all duration-300 fade-in-up"
-                style={`animation-delay: ${index * 0.1}s`}
-              >
-                <img src="/check.png" class="size-6" alt="check" loading="lazy" />
-                <p class="text-gray-300 font-light leading-relaxed">{beneficio}</p>
-              </div>
-            ))
-          }
+        <div class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4 mb-8">
+            <p class="text-[var(--color-primario)] font-light italic">Cómo preparar el alimento sin grumos:</p>
+            <ul class="list-disc pl-6 text-[var(--color-primario)] font-light italic">
+              <li>Vierte primero el alimento.</li>
+              <li>Añade una pequeña cantidad de líquido sobre el alimento.</li>
+              <li>Mezcla hasta que el líquido se absorba.</li>
+              <li>Agita bien para asegurar una mezcla homogénea.</li>
+            </ul>
+          </ul>
         </div>
       </div>
+      <!-- Benefits Section -->
+      <section class="py-20 px-4 bg-[var(--color-background)] relative">
+        <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--color-primario)]/0 via-[var(--color-primario)] to-[var(--color-primario)]/0"></div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Benefits Title -->
+          <div class="text-center mb-16 relative fade-in-up">
+            <div class="absolute top-1/2 left-0 w-[25%] h-[1px] bg-gradient-to-r from-[var(--color-primario)] to-transparent"></div>
+            <div class="absolute top-1/2 right-0 w-[25%] h-[1px] bg-gradient-to-l from-[var(--color-primario)] to-transparent"></div>
+
+            <Recuadro texto="BENEFICIOS" />
+          </div>
+
+          <div class="mb-12 fade-in-up">
+            <p class="text-gray-300 font-light text-lg leading-relaxed text-center">
+              Para conocer los beneficios del Alimento Kürbis, se recomienda consultar con un profesional de la salud o acceder a fuentes confiables en línea.
+            </p>
+          </div>
+
+          <!-- Benefits List -->
+          <div class="space-y-6">
+            {
+              beneficios.map((beneficio, index) => (
+                <div
+                  class="flex items-center gap-4 bg-[var(--color-background-alt)] border border-[var(--color-primario)]/20 p-6 hover:border-[var(--color-primario)]/40 transition-all duration-300 fade-in-up"
+                  style={`animation-delay: ${index * 0.1}s`}
+                >
+                  <img src="/check.png" class="size-6" alt="check" loading="lazy" />
+                  <p class="text-gray-300 font-light leading-relaxed">{beneficio}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- Final Quote Section -->
+      <Quote quote="Con el alimento Kürbis logras una experiencia natural, de nutrición saludable y deliciosa" />
+      <EndPage title="¿Ya conoces nuestro aceite Kürbis?" subTitle="Te invitamos a saber más" button="Aceite Kürbis" link="/productos/aceite" />
     </section>
 
-    <!-- Final Quote Section -->
-    <Quote quote="Con el alimento Kürbis logras una experiencia natural, de nutrición saludable y deliciosa" />
-    <EndPage title="¿Ya conoces nuestro aceite Kürbis?" subTitle="Te invitamos a saber más" button="Aceite Kürbis" link="/productos/aceite" />
+    <style>
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Staggered animations */
+      .fade-in-up:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .fade-in-up:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .fade-in-up:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .fade-in-up:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .fade-in-up:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      /* Hover effects */
+      .hover\:border-\[#D4AF37\]\/40:hover {
+        border-color: rgba(212, 175, 55, 0.4);
+      }
+
+      /* Font families */
+      .font-serif {
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom spacing */
+      .space-y-12 > * + * {
+        margin-top: 3rem;
+      }
+
+      .space-y-8 > * + * {
+        margin-top: 2rem;
+      }
+
+      .space-y-6 > * + * {
+        margin-top: 1.5rem;
+      }
+    </style>
   </div>
-
-  <style>
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 0.8s ease-out forwards;
-    }
-
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Staggered animations */
-    .fade-in-up:nth-child(1) {
-      animation-delay: 0.1s;
-    }
-    .fade-in-up:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-    .fade-in-up:nth-child(3) {
-      animation-delay: 0.3s;
-    }
-    .fade-in-up:nth-child(4) {
-      animation-delay: 0.4s;
-    }
-    .fade-in-up:nth-child(5) {
-      animation-delay: 0.5s;
-    }
-
-    /* Hover effects */
-    .hover\:border-\[#D4AF37\]\/40:hover {
-      border-color: rgba(212, 175, 55, 0.4);
-    }
-
-    /* Font families */
-    .font-serif {
-      font-family: 'Playfair Display', Georgia, serif;
-    }
-
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Custom spacing */
-    .space-y-12 > * + * {
-      margin-top: 3rem;
-    }
-
-    .space-y-8 > * + * {
-      margin-top: 2rem;
-    }
-
-    .space-y-6 > * + * {
-      margin-top: 1.5rem;
-    }
-  </style>
 </Layout>
