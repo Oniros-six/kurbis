@@ -1,13 +1,10 @@
-import { useState } from "react"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-
 export const SocialMediaLinks = () => {
-    const [isOpen, setIsOpen] = useState(false)
 
-    const socialIcons = (
+    return (
         <div className="flex items-center space-x-2">
-            <div
-                className="border-3 roundedLg border-[var(--color-primario)]"
+            <a
+                href="#"
+                className="border-3 rounded-lg border-[var(--color-primario)]"
             >
                 <svg
                     className="m-0.5"
@@ -17,16 +14,16 @@ export const SocialMediaLinks = () => {
                     viewBox="0 0 24 24"
                     fill="var(--color-primario)"
                     stroke="var(--color-primario)"
-                    strokeWidth="1"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                 >
                     <path
                         d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
                     ></path>
                 </svg>
-            </div>
-            <div>
+            </a>
+            <a href="https://www.instagram.com/kurbis_uy/">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
@@ -34,7 +31,7 @@ export const SocialMediaLinks = () => {
                     viewBox="0 0 256 256"
                     fill="none"
                     stroke="var(--color-primario)"
-                    strokeWidth="2"
+                    stroke-width="2"
                 >
                     <g transform="scale(5.12,5.12)">
                         <path
@@ -42,8 +39,8 @@ export const SocialMediaLinks = () => {
                         ></path>
                     </g>
                 </svg>
-            </div>
-            <div>
+            </a>
+            <a href="#">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="37"
@@ -51,7 +48,7 @@ export const SocialMediaLinks = () => {
                     viewBox="0 0 256 256"
                     fill="var(--color-primario)"
                     stroke="var(--color-primario)"
-                    strokeWidth="2"
+                    stroke-width="2"
                 >
                     <g transform="scale(5.12,5.12)">
                         <path
@@ -59,18 +56,8 @@ export const SocialMediaLinks = () => {
                         ></path>
                     </g>
                 </svg>
-            </div>
+            </a>
         </div>
-    )
 
-    const content = <p>Muy pronto...</p>
-
-    return (
-        <Popover open={isOpen} onOpenChange={setIsOpen}>
-            <PopoverTrigger asChild>
-                <button className="focus:outline-none">{socialIcons} <span className="sr-only">Iconos de redes sociales</span></button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-2">{content}</PopoverContent>
-        </Popover>
     )
 }
