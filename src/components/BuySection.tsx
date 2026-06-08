@@ -35,11 +35,10 @@ export default function BuySection() {
   const phone = "59894398865";
   const message = "Hola, quiero más información sobre sus productos";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-  const precioAceite = "800,00"
+  const precioAceite = "890,00"
   const precioAlimento = "1.450,00"
-  const duoWellness = "1.800,00"
-  const superVital = "3.600,00"
-  const saboresAustria = "4.000,00"
+  const duoWellness = "1.870,00"
+  const saboresAustria = "4.450,00"
   const steps = [
     {
       number: "01",
