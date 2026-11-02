@@ -55,7 +55,7 @@ export function CarouselProduct({ contenido }: { contenido: content[] }) {
 
             {/* Mostrar el div con transición desde la esquina */}
            <CuadroInformativo info={info} shouldShowInfo={shouldShowInfo} />
-
+{/* 
             <CarouselPrevious className="opacity-80 md:opacity-0 md:group-hover:opacity-100 transition-all duration-200 
             absolute -left-7 top-1/2 md:-left-8 z-20
         flex items-center justify-center hover:scale-110 
@@ -67,7 +67,7 @@ export function CarouselProduct({ contenido }: { contenido: content[] }) {
         flex items-center justify-center hover:scale-110 
         bg-white/80 text-black backdrop-blur-sm border-gray-200/50 shadow-sm 
         h-6 w-6 md:h-8 md:w-8 rounded-full"
-            />
+            /> */}
           </Carousel>
         </div>
       </div>

@@ -7,13 +7,17 @@ import { CarouselProduct } from '@/components/ProductsComponents/Carousel';
 import CuadroInformativo from '@/components/ProductsComponents/CuadroInformativo';
 
 const beneficios = [
-  '¿Los aminoácidos esenciales y ramificados (BCAAs) presentes en las proteínas ayudan en la recuperación muscular?',
+  '¿Los aminoácidos esenciales presentes en las proteínas ayudan en la recuperación muscular?',
   '¿El alto contenido de fibra favorece la salud intestinal y la flora, previene el estreñimiento, reduce el colesterol y ayuda a prevenir el cáncer de colon?',
   '¿La presencia de triptófano ayuda a descansar mejor?',
-  '¿El contenido de zinc beneficia al sistema inmune y al metabolismo?',
+  '¿El contenido de zinc beneficia al sistema inmune, al metabolismo, a la salud de la prostota y al cabello?',
   '¿El contenido de magnesio beneficia la función muscular y nerviosa, así como la salud ósea?',
   '¿El contenido de sodio presente puede afectar la salud cardiovascular?',
   '¿La composición del alimento Kürbis puede regular la flora intestinal, actuando como prebiótico?',
+  '¿El alto porcentaje de polifenoles es un potente antioxidante que frena el envejecimiento celular, reduce la inflamación y protege la salud cardiovascular?',
+  '¿Su alto contenido de hierro combate la anemia? (se aconseja acompañarlo de una fuente de vitamina C para absorberlo mejor)',
+  '¿La combinación de tirosina, zinc y selenio presentes en la torta optimiza la producción de hormonas tiroidea?',
+  '¿La espermidina presente en la torta promueve la longevidad celular, promueve la autofagia celular y protege la salud del cerebro del deterioro cognitivo?'
 ];
 ---
 
@@ -45,10 +49,10 @@ const beneficios = [
         <!-- Carrousel -->
         <div class="space-y-8 fade-in-up">
           <p class="text-gray-300 font-light text-lg leading-relaxed">
-            Nuestro alimento Kürbis de excelente calidad, es una fuente natural inagotable de nutrición, fácil de digerir, con excelentes propiedades funcionales, con casi 20 gramos de proteínas de
+            Nuestro alimento Kürbis de excelente calidad, es una fuente natural inagotable de nutrición, fácil de digerir, con excelentes propiedades funcionales, con más de 15 gramos de proteínas de
             excelente calidad por porción, con los 9 aminoácidos esenciales y un muy buen aporte de triptófano, con alto contenido de fibra, distinguiéndose las vitaminas E y B1, además de minerales,
-            detacándose el Magnesio, el Zinc, el Hierro y el Potasio, así también antioxidantes y esteroles para respaldar el bienestar y la vitalidad general. <br />
-            Tiene algunas otras ventajas nutricionales por el bajo contenido de carbohidratos de 2,45g con 121kcal por porción y del total de ácidos grasos presentes, casi 80% son ácidos grasos insaturados
+            detacándose el Magnesio, el Zinc, el Hierro y el Potasio, así también antioxidantes, polifenoles, esteroles y tirosina para respaldar el bienestar y la vitalidad general. <br />
+            Tiene algunas otras ventajas nutricionales por el bajo contenido de carbohidratos de 9,90g con 147kcal por porción y del total de ácidos grasos presentes, casi 80% son ácidos grasos insaturados
             prevaleciendo el ácido oléico y linoléico, que lo hacen deseable desde el punto de vista nutricional y gastronómico.
           </p>
 
@@ -89,7 +93,7 @@ const beneficios = [
             <p class="text-[var(--color-primario)] font-light italic">* Sin azucares agregados ni edulcorantes.</p>
           </div>
           <div class="bg-[var(--color-primario)]/10 border-l-4 border-[var(--color-primario)] p-4">
-            <p class="text-[var(--color-primario)] font-light italic">* Contiene 0,17g de sodio por porción de 35g de Alimento vegetal Kürbis.</p>
+            <p class="text-[var(--color-primario)] font-light italic">* Contiene 0,13g de sodio por porción de 35g de Alimento vegetal Kürbis.</p>
           </div>
         </div>
 
@@ -100,7 +104,7 @@ const beneficios = [
             <div class="relative overflow-hidden">
               <img src="/img/productos/training.webp" alt="Hombre tomando un brebaje mientras entrena" class="object-cover" loading="lazy" />
             </div>
-            <CuadroInformativo atLeft={false} atTop={false} info="Rico en Fibra, \n Magnesio, Zinc, \n Triptófano, \n Omega 3 + 6 + 9" shouldShowInfo={true} />
+            <CuadroInformativo atLeft={false} atTop={false} info="Rico en Fibra, \n Magnesio, Zinc, \n Triptófano" shouldShowInfo={true} />
           </div>
         </div>
 

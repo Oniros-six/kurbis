@@ -159,9 +159,9 @@ export default function BuySection() {
             </div>
           </motion.div>
         </div>
-        <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26" />
+       {/* <Separator className="max-w-70 md:max-w-100 lg:max-w-130 mx-auto border-[var(--color-primario)] my-20 md:my-22 lg:my-26" /> */}
         {/* Soon section */}
-        <div className="max-w-4xl mx-auto text-center relative z-10 md:mt-25">
+        {/* <div className="max-w-4xl mx-auto text-center relative z-10 md:mt-25">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -179,6 +179,7 @@ export default function BuySection() {
             </div>
           </motion.div>
         </div>
+         */}
       </section>
 
       <section className="py-20 bg-[var(--color-background)] relative">
