@@ -1,0 +1,51 @@
+---
+// Layout mínimo para las páginas de documentos de Empresa Kürbis.
+// Si querés que lleven el header/footer de tu sitio, reemplazá este layout
+// por el tuyo en el import de cada página (el contenido va en el <slot />).
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = '' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body>
+    <main class="kurbis-doc">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: #fff;
+    color: #2b2b2b;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .kurbis-doc {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 3.5rem;
+  }
+  :where(.kurbis-doc) :is(h1, h2, p, ul) {
+    margin: 0;
+  }
+</style>

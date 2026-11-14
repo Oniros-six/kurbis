@@ -1,0 +1,173 @@
+---
+import KurbisDocLayout from '../layouts/KurbisDocLayout.astro';
+---
+
+<KurbisDocLayout
+  title="Empresa Kürbis | Propiedades y Bienestar para la Familia"
+  description="Informe ejecutivo: propiedades y bienestar para la familia con el Aceite de Semillas de Zapallo Austríaco Kürbis."
+>
+  <header class="head">
+    <h1>EMPRESA KÜRBIS</h1>
+    <p class="subtitle">Informe Ejecutivo: Propiedades y Bienestar para la Familia</p>
+  </header>
+
+  <p class="intro">
+    El Aceite de Semillas de Zapallo Austríaco Kürbis es un producto premium de perfil gourmet,
+    extraído mediante un único proceso de prensado en frío. Este método mecánico resguarda de forma
+    intacta sus nutrientes activos y su máxima pureza biológica. A continuación, se detallan los
+    beneficios específicos orientados al bienestar integral de cada integrante del núcleo familiar.
+  </p>
+
+  <section>
+    <h2>Bienestar General y Nutrición Familiar</h2>
+    <ul>
+      <li>
+        <strong>Alto Valor Antioxidante:</strong> Excepcionalmente rico en vitamina E (tocofenoles) y
+        compuestos fenólicos esenciales que combaten el envejecimiento celular de niños y adultos.
+      </li>
+      <li>
+        <strong>Reducción del Colesterol:</strong> El aporte conjunto de Omega 9 (ácido oleico) y
+        fitoesteroles naturales contribuye de manera directa a disminuir los niveles de colesterol en
+        sangre, potenciando la salud cardiovascular.
+      </li>
+      <li>
+        <strong>Refuerzo Inmunitario:</strong> Su denso contenido de grasas saludables refuerza
+        activamente las defensas del organismo de toda la familia.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Beneficios Específicos para Hombres</h2>
+    <ul>
+      <li>
+        <strong>Prevención de la Hiperplasia Prostática Benigna (HPB):</strong> La acción concentrada
+        de los fitoesteroles disminuye significativamente la inflamación y el agrandamiento de la
+        próstata.
+      </li>
+      <li>
+        <strong>Protección de las Vías Urinarias:</strong> Ayuda a optimizar el funcionamiento de la
+        vejiga y el esfínter, reduciendo la frecuencia urinaria nocturna y mejorando sensiblemente el
+        flujo urinario.
+      </li>
+      <li>
+        <strong>Regulación Hormonal y Alopecia:</strong> Inhibe de forma natural la enzima 5-alfa
+        reductasa, regulando los niveles de la hormona DHT, responsable de la caída del cabello
+        androgénica.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Beneficios Específicos para Mujeres</h2>
+    <ul>
+      <li>
+        <strong>Soporte Hormonal y Menopausia:</strong> Contiene fitoestrógenos naturales que brindan
+        un soporte clave en la regulación hormonal, ayudando a mitigar y aliviar los sofocos.
+      </li>
+      <li>
+        <strong>Control Urinario y Suelo Pélvico:</strong> Fortalece y relaja los músculos del aparato
+        urinario, mejorando el control de la vejiga y disminuyendo los síntomas de incontinencia de
+        urgencia.
+      </li>
+      <li>
+        <strong>Cuidado Profundo de la Piel:</strong> Su combinación de ácidos grasos y antioxidantes
+        nutre profundamente los tejidos, favoreciendo la elasticidad y previniendo los signos del
+        envejecimiento prematuro.
+      </li>
+    </ul>
+  </section>
+
+  <aside class="warning" role="note">
+    <h2>¡ATENCIÓN! RECOMENDACIONES DE USO CRÍTICO Y ALMACENAMIENTO</h2>
+    <ul>
+      <li>
+        <strong>Uso exclusivo en frío:</strong> Este aceite es de consumo exclusivamente crudo (en
+        ensaladas, sopas o directo con cuchara). Nunca debe calentarse ni usarse para cocinar, ya que
+        las altas temperaturas destruyen por completo sus ácidos grasos esenciales y compuestos
+        antioxidantes.
+      </li>
+      <li>
+        <strong>Almacenamiento:</strong> Guardar siempre en su envase hermético en un lugar fresco,
+        seco y completamente protegido de la luz solar directa o fuentes de calor para evitar la
+        oxidación y preservar su exquisito sabor.
+      </li>
+    </ul>
+  </aside>
+
+  <p class="disclaimer">
+    Información con fines informativos. Para consejo o diagnóstico médico, consulte a un profesional
+    de la salud.
+  </p>
+</KurbisDocLayout>
+
+<style>
+  .head {
+    text-align: center;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid #d3a243;
+    margin-bottom: 1.75rem;
+  }
+  h1 {
+    font-size: clamp(1.7rem, 6vw, 2.4rem);
+    line-height: 1.15;
+    color: #2e5a44;
+  }
+  .subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  .intro {
+    margin-bottom: 2.25rem;
+  }
+  section {
+    margin-bottom: 2.25rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: #2e5a44;
+    margin-bottom: 0.75rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+  .warning {
+    margin-top: 2.5rem;
+    padding: 1.1rem 1.25rem 0.5rem;
+    background: #fff3cd;
+    border: 1px solid #ffebaa;
+    color: #856404;
+    font-size: 0.95rem;
+  }
+  .warning h2 {
+    font-size: 1rem;
+    color: #856404;
+    margin-bottom: 1rem;
+  }
+  .disclaimer {
+    margin-top: 1.75rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+  }
+  @media (min-width: 640px) {
+    .intro,
+    li {
+      text-align: justify;
+    }
+  }
+</style>
