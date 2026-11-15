@@ -36,6 +36,7 @@ export default function BuySection() {
   const message = "Hola, quiero más información sobre sus productos";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   const precioAceite = "890,00"
+  const precioCucurvita = "1.550,00"
   const precioAlimento = "1.450,00"
   const duoWellness = "1.870,00"
   const saboresAustria = "4.450,00"
@@ -128,9 +129,10 @@ export default function BuySection() {
             </h2>
             <div className="w-24 h-[1px] bg-[var(--color-primario)] mx-auto mb-8"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10">
-              <Image img="comprar/oil-bottle.webp" titulo={"$U  " + precioAceite} alt="Aceite Kürbis"/>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10">
               <Image img="comprar/natural.webp" titulo={"$U  " + precioAlimento} alt="Alimento Kürbis"/>
+              <Image img="comprar/oil-bottle.webp" titulo={"$U  " + precioAceite} alt="Aceite Kürbis"/>
+              <Image img="comprar/cucurvita.webp" titulo={"$U  " + precioCucurvita} alt="Cucurvita Kürbis"/>
             </div>
           </motion.div>
         </div>
